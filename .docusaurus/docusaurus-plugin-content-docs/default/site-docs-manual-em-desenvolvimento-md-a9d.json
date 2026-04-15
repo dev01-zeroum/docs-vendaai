@@ -1,0 +1,21 @@
+{
+  "unversionedId": "manual/em-desenvolvimento",
+  "id": "manual/em-desenvolvimento",
+  "title": "Manual",
+  "description": "Esta seção está em desenvolvimento e em breve será disponibilizada para todos os usuários do VendaAI.",
+  "source": "@site/docs/manual/em-desenvolvimento.md",
+  "sourceDirName": "manual",
+  "slug": "/manual/em-desenvolvimento",
+  "permalink": "/manual/em-desenvolvimento",
+  "draft": false,
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "Manual"
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "Perguntas e respostas (FAQ)",
+    "permalink": "/faq/perguntas-respostas"
+  }
+}

@@ -1,0 +1,56 @@
+/* src/css/custom.css */
+
+/* ===== TEMA LIGHT ===== */
+[data-theme='light'] {
+  --navbar-bg: #ffffff;          /* Navbar branca */
+  --navbar-text: #1f2937;       /* Textos pretos */
+  --navbar-hover: #2563eb;      /* Azul no hover */
+  --title-color: #4fc3f7;       /* Títulos azuis */
+  --toggle-icon-color: #1f2937; /* Ícone do toggle preto */
+}
+
+/* ===== TEMA DARK ===== */
+[data-theme='dark'] {
+  --title-color: #ffffff;       /* Títulos brancos */
+  --toggle-icon-color: #ffffff; /* Ícone do toggle branco */
+  /* O resto mantém o padrão do Docusaurus */
+}
+
+/* ===== ESTILOS GERAIS ===== */
+.navbar {
+  background-color: var(--navbar-bg, var(--ifm-navbar-background-color)) !important;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+
+
+/* Títulos */
+h1, h2, h3, h4, h5, h6 {
+  color: var(--title-color) !important;
+}
+
+/* Navbar links */
+.navbar__title,
+.navbar__link {
+  color: var(--navbar-text, var(--ifm-navbar-link-color)) !important;
+}
+
+.navbar__link:hover {
+  color: var(--navbar-hover) !important;
+}
+
+/* Mantém o ícone visível no light theme */
+.theme-toggle-button {
+  color: black; /* ícone escuro no light theme */
+}
+
+/* Opcional: melhora a aparência ao passar o mouse */
+.theme-toggle-button:hover {
+  opacity: 0.8;
+}
+
+
+/* Logo simples */
+.navbar__logo img {
+  height: 2rem;
+}

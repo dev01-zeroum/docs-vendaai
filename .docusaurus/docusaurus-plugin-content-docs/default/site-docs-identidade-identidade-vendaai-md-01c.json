@@ -1,0 +1,14 @@
+{
+  "unversionedId": "identidade/identidade-vendaai",
+  "id": "identidade/identidade-vendaai",
+  "title": "identidade-vendaai",
+  "description": "",
+  "source": "@site/docs/identidade/identidade-vendaai.md",
+  "sourceDirName": "identidade",
+  "slug": "/identidade/identidade-vendaai",
+  "permalink": "/identidade/identidade-vendaai",
+  "draft": false,
+  "tags": [],
+  "version": "current",
+  "frontMatter": {}
+}

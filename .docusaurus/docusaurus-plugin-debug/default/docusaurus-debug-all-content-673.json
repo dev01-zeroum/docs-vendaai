@@ -1,0 +1,453 @@
+{
+  "docusaurus-plugin-content-docs": {
+    "default": {
+      "loadedVersions": [
+        {
+          "versionName": "current",
+          "label": "Next",
+          "banner": null,
+          "badge": false,
+          "noIndex": false,
+          "className": "docs-version-current",
+          "path": "/",
+          "tagsPath": "/tags",
+          "isLast": true,
+          "routePriority": -1,
+          "sidebarFilePath": "C:\\Projects\\Boletim\\vendaai-docs\\sidebars.js",
+          "contentPath": "C:\\Projects\\Boletim\\vendaai-docs\\docs",
+          "contentPathLocalized": "C:\\Projects\\Boletim\\vendaai-docs\\i18n\\en\\docusaurus-plugin-content-docs\\current",
+          "docs": [
+            {
+              "unversionedId": "boletim-01-2025",
+              "id": "boletim-01-2025",
+              "title": "Boletim ZeroUm – Jan/25",
+              "description": "📅 Publicado em: Janeiro de 2025",
+              "source": "@site/docs/boletim-01-2025.md",
+              "sourceDirName": ".",
+              "slug": "/boletim-01-2025",
+              "permalink": "/boletim-01-2025",
+              "draft": false,
+              "tags": [],
+              "version": "current",
+              "frontMatter": {}
+            },
+            {
+              "unversionedId": "boletim-06-2025",
+              "id": "boletim-06-2025",
+              "title": "Boletim ZeroUm – Jun/25",
+              "description": "📅 Publicado em: Junho de 2025",
+              "source": "@site/docs/boletim-06-2025.md",
+              "sourceDirName": ".",
+              "slug": "/boletim-06-2025",
+              "permalink": "/boletim-06-2025",
+              "draft": false,
+              "tags": [],
+              "version": "current",
+              "frontMatter": {}
+            },
+            {
+              "unversionedId": "boletim/boletim-01-2025",
+              "id": "boletim/boletim-01-2025",
+              "title": "Boletim ZeroUm – v1.0",
+              "description": "📅 Publicado em: Janeiro de 2024",
+              "source": "@site/docs/boletim/boletim-01-2025.md",
+              "sourceDirName": "boletim",
+              "slug": "/boletim/boletim-01-2025",
+              "permalink": "/boletim/boletim-01-2025",
+              "draft": false,
+              "tags": [],
+              "version": "current",
+              "frontMatter": {},
+              "sidebar": "docs",
+              "previous": {
+                "title": "Boletim ZeroUm – v2.0",
+                "permalink": "/boletim/boletim-06-2025"
+              },
+              "next": {
+                "title": "Comercial",
+                "permalink": "/fale-conosco/comercial"
+              }
+            },
+            {
+              "unversionedId": "boletim/boletim-06-2025",
+              "id": "boletim/boletim-06-2025",
+              "title": "Boletim ZeroUm – v2.0",
+              "description": "📅 Publicado em: Junho de 2025",
+              "source": "@site/docs/boletim/boletim-06-2025.md",
+              "sourceDirName": "boletim",
+              "slug": "/boletim/boletim-06-2025",
+              "permalink": "/boletim/boletim-06-2025",
+              "draft": false,
+              "tags": [],
+              "version": "current",
+              "frontMatter": {},
+              "sidebar": "docs",
+              "previous": {
+                "title": "Boletim ZeroUm",
+                "permalink": "/"
+              },
+              "next": {
+                "title": "Boletim ZeroUm – v1.0",
+                "permalink": "/boletim/boletim-01-2025"
+              }
+            },
+            {
+              "unversionedId": "fale-conosco/comercial",
+              "id": "fale-conosco/comercial",
+              "title": "Comercial",
+              "description": "Se você se interessou pelas melhorias, novas funcionalidades ou atualizações apresentadas no Boletim ZeroUm e deseja implementá-las em sua operação, nosso time comercial está pronto para ajudá-lo.",
+              "source": "@site/docs/fale-conosco/comercial.md",
+              "sourceDirName": "fale-conosco",
+              "slug": "/fale-conosco/comercial",
+              "permalink": "/fale-conosco/comercial",
+              "draft": false,
+              "tags": [],
+              "version": "current",
+              "frontMatter": {
+                "title": "Comercial"
+              },
+              "sidebar": "docs",
+              "previous": {
+                "title": "Boletim ZeroUm – v1.0",
+                "permalink": "/boletim/boletim-01-2025"
+              },
+              "next": {
+                "title": "Suporte e dúvidas de uso",
+                "permalink": "/fale-conosco/suporte-duvida-uso"
+              }
+            },
+            {
+              "unversionedId": "fale-conosco/sugestoes",
+              "id": "fale-conosco/sugestoes",
+              "title": "Sugestões",
+              "description": "Sua opinião é fundamental para a evolução do Boletim ZeroUm. Se você tiver ideias de melhorias, novos conteúdos que gostaria de ver nas próximas edições ou sugestões para aprimorar nossas ferramentas, queremos ouvir você.",
+              "source": "@site/docs/fale-conosco/sugestoes.md",
+              "sourceDirName": "fale-conosco",
+              "slug": "/fale-conosco/sugestoes",
+              "permalink": "/fale-conosco/sugestoes",
+              "draft": false,
+              "tags": [],
+              "version": "current",
+              "frontMatter": {
+                "title": "Sugestões"
+              },
+              "sidebar": "docs",
+              "previous": {
+                "title": "Suporte e dúvidas de uso",
+                "permalink": "/fale-conosco/suporte-duvida-uso"
+              },
+              "next": {
+                "title": "Perguntas e respostas (FAQ)",
+                "permalink": "/faq/perguntas-respostas"
+              }
+            },
+            {
+              "unversionedId": "fale-conosco/suporte-duvida-uso",
+              "id": "fale-conosco/suporte-duvida-uso",
+              "title": "Suporte e dúvidas de uso",
+              "description": "Caso surjam dúvidas sobre o uso de alguma ferramenta do VendaAI ou se você precisar de suporte técnico, nosso time está pronto para ajudá-lo.",
+              "source": "@site/docs/fale-conosco/suporte-duvida-uso.md",
+              "sourceDirName": "fale-conosco",
+              "slug": "/fale-conosco/suporte-duvida-uso",
+              "permalink": "/fale-conosco/suporte-duvida-uso",
+              "draft": false,
+              "tags": [],
+              "version": "current",
+              "frontMatter": {
+                "title": "Suporte e dúvidas de uso"
+              },
+              "sidebar": "docs",
+              "previous": {
+                "title": "Comercial",
+                "permalink": "/fale-conosco/comercial"
+              },
+              "next": {
+                "title": "Sugestões",
+                "permalink": "/fale-conosco/sugestoes"
+              }
+            },
+            {
+              "unversionedId": "faq/perguntas-respostas",
+              "id": "faq/perguntas-respostas",
+              "title": "Perguntas e respostas (FAQ)",
+              "description": "Esta seção é dedicada a esclarecer dúvidas frequentes sobre o Boletim ZeroUm e suas novidades. Aqui você encontrará respostas rápidas para questões comuns relacionadas às edições, funcionalidades e uso das ferramentas do VendaAI.",
+              "source": "@site/docs/faq/perguntas-respostas.md",
+              "sourceDirName": "faq",
+              "slug": "/faq/perguntas-respostas",
+              "permalink": "/faq/perguntas-respostas",
+              "draft": false,
+              "tags": [],
+              "version": "current",
+              "frontMatter": {
+                "title": "Perguntas e respostas (FAQ)"
+              },
+              "sidebar": "docs",
+              "previous": {
+                "title": "Sugestões",
+                "permalink": "/fale-conosco/sugestoes"
+              },
+              "next": {
+                "title": "Manual",
+                "permalink": "/manual/em-desenvolvimento"
+              }
+            },
+            {
+              "unversionedId": "identidade/identidade-vendaai",
+              "id": "identidade/identidade-vendaai",
+              "title": "identidade-vendaai",
+              "description": "",
+              "source": "@site/docs/identidade/identidade-vendaai.md",
+              "sourceDirName": "identidade",
+              "slug": "/identidade/identidade-vendaai",
+              "permalink": "/identidade/identidade-vendaai",
+              "draft": false,
+              "tags": [],
+              "version": "current",
+              "frontMatter": {}
+            },
+            {
+              "unversionedId": "index",
+              "id": "index",
+              "title": "Boletim ZeroUm",
+              "description": "Bem-vindo à documentação oficial do VendaAI ZeroUm.",
+              "source": "@site/docs/index.md",
+              "sourceDirName": ".",
+              "slug": "/",
+              "permalink": "/",
+              "draft": false,
+              "tags": [],
+              "version": "current",
+              "frontMatter": {},
+              "sidebar": "docs",
+              "next": {
+                "title": "Boletim ZeroUm – v2.0",
+                "permalink": "/boletim/boletim-06-2025"
+              }
+            },
+            {
+              "unversionedId": "manual/acesso",
+              "id": "manual/acesso",
+              "title": "acesso",
+              "description": "",
+              "source": "@site/docs/manual/acesso.md",
+              "sourceDirName": "manual",
+              "slug": "/manual/acesso",
+              "permalink": "/manual/acesso",
+              "draft": false,
+              "tags": [],
+              "version": "current",
+              "frontMatter": {}
+            },
+            {
+              "unversionedId": "manual/crm",
+              "id": "manual/crm",
+              "title": "crm",
+              "description": "",
+              "source": "@site/docs/manual/crm.md",
+              "sourceDirName": "manual",
+              "slug": "/manual/crm",
+              "permalink": "/manual/crm",
+              "draft": false,
+              "tags": [],
+              "version": "current",
+              "frontMatter": {}
+            },
+            {
+              "unversionedId": "manual/em-desenvolvimento",
+              "id": "manual/em-desenvolvimento",
+              "title": "Manual",
+              "description": "Esta seção está em desenvolvimento e em breve será disponibilizada para todos os usuários do VendaAI.",
+              "source": "@site/docs/manual/em-desenvolvimento.md",
+              "sourceDirName": "manual",
+              "slug": "/manual/em-desenvolvimento",
+              "permalink": "/manual/em-desenvolvimento",
+              "draft": false,
+              "tags": [],
+              "version": "current",
+              "frontMatter": {
+                "title": "Manual"
+              },
+              "sidebar": "docs",
+              "previous": {
+                "title": "Perguntas e respostas (FAQ)",
+                "permalink": "/faq/perguntas-respostas"
+              }
+            },
+            {
+              "unversionedId": "manual/expedicao",
+              "id": "manual/expedicao",
+              "title": "expedicao",
+              "description": "",
+              "source": "@site/docs/manual/expedicao.md",
+              "sourceDirName": "manual",
+              "slug": "/manual/expedicao",
+              "permalink": "/manual/expedicao",
+              "draft": false,
+              "tags": [],
+              "version": "current",
+              "frontMatter": {}
+            },
+            {
+              "unversionedId": "manual/introducao",
+              "id": "manual/introducao",
+              "title": "introducao",
+              "description": "",
+              "source": "@site/docs/manual/introducao.md",
+              "sourceDirName": "manual",
+              "slug": "/manual/introducao",
+              "permalink": "/manual/introducao",
+              "draft": false,
+              "tags": [],
+              "version": "current",
+              "frontMatter": {}
+            },
+            {
+              "unversionedId": "manual/pedidos",
+              "id": "manual/pedidos",
+              "title": "pedidos",
+              "description": "",
+              "source": "@site/docs/manual/pedidos.md",
+              "sourceDirName": "manual",
+              "slug": "/manual/pedidos",
+              "permalink": "/manual/pedidos",
+              "draft": false,
+              "tags": [],
+              "version": "current",
+              "frontMatter": {}
+            },
+            {
+              "unversionedId": "manual/telas",
+              "id": "manual/telas",
+              "title": "telas",
+              "description": "",
+              "source": "@site/docs/manual/telas.md",
+              "sourceDirName": "manual",
+              "slug": "/manual/telas",
+              "permalink": "/manual/telas",
+              "draft": false,
+              "tags": [],
+              "version": "current",
+              "frontMatter": {}
+            },
+            {
+              "unversionedId": "sugestoes",
+              "id": "sugestoes",
+              "title": "Envie sua sugestão",
+              "description": "Sua opinião é importante!",
+              "source": "@site/docs/sugestoes.md",
+              "sourceDirName": ".",
+              "slug": "/sugestoes",
+              "permalink": "/sugestoes",
+              "draft": false,
+              "tags": [],
+              "version": "current",
+              "frontMatter": {}
+            }
+          ],
+          "drafts": [],
+          "sidebars": {
+            "docs": [
+              {
+                "type": "doc",
+                "id": "index",
+                "label": "Início",
+                "translatable": true
+              },
+              {
+                "type": "category",
+                "label": "Boletins",
+                "items": [
+                  {
+                    "type": "doc",
+                    "id": "boletim/boletim-06-2025",
+                    "label": "Boletim - Jun/25",
+                    "translatable": true
+                  },
+                  {
+                    "type": "doc",
+                    "id": "boletim/boletim-01-2025",
+                    "label": "Boletim - Jan/25",
+                    "translatable": true
+                  }
+                ],
+                "collapsed": true,
+                "collapsible": true
+              },
+              {
+                "type": "category",
+                "label": "Fale Conosco",
+                "items": [
+                  {
+                    "type": "doc",
+                    "id": "fale-conosco/comercial",
+                    "label": "Comercial",
+                    "translatable": true
+                  },
+                  {
+                    "type": "doc",
+                    "id": "fale-conosco/suporte-duvida-uso",
+                    "label": "Suporte e Dúvidas de Uso",
+                    "translatable": true
+                  },
+                  {
+                    "type": "doc",
+                    "id": "fale-conosco/sugestoes",
+                    "label": "Sugestões",
+                    "translatable": true
+                  }
+                ],
+                "collapsed": true,
+                "collapsible": true
+              },
+              {
+                "type": "category",
+                "label": "FAQ",
+                "items": [
+                  {
+                    "type": "doc",
+                    "id": "faq/perguntas-respostas",
+                    "label": "Perguntas e Respostas",
+                    "translatable": true
+                  }
+                ],
+                "collapsed": true,
+                "collapsible": true
+              },
+              {
+                "type": "category",
+                "label": "Manual",
+                "items": [
+                  {
+                    "type": "doc",
+                    "id": "manual/em-desenvolvimento",
+                    "label": "Em Desenvolvimento",
+                    "translatable": true
+                  }
+                ],
+                "collapsed": true,
+                "collapsible": true
+              }
+            ]
+          }
+        }
+      ]
+    }
+  },
+  "docusaurus-plugin-content-blog": {
+    "default": {
+      "blogSidebarTitle": "Recent posts",
+      "blogPosts": [],
+      "blogListPaginated": [],
+      "blogTags": {},
+      "blogTagsListPath": "/blog/tags",
+      "blogTagsPaginated": []
+    }
+  },
+  "docusaurus-plugin-content-pages": {
+    "default": null
+  },
+  "docusaurus-plugin-debug": {},
+  "docusaurus-theme-classic": {},
+  "docusaurus-bootstrap-plugin": {},
+  "docusaurus-mdx-fallback-plugin": {}
+}

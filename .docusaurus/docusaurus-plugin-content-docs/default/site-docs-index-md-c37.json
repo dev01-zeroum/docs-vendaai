@@ -1,0 +1,19 @@
+{
+  "unversionedId": "index",
+  "id": "index",
+  "title": "Boletim ZeroUm",
+  "description": "Bem-vindo à documentação oficial do VendaAI ZeroUm.",
+  "source": "@site/docs/index.md",
+  "sourceDirName": ".",
+  "slug": "/",
+  "permalink": "/",
+  "draft": false,
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "docs",
+  "next": {
+    "title": "Boletim ZeroUm – v2.0",
+    "permalink": "/boletim/boletim-06-2025"
+  }
+}

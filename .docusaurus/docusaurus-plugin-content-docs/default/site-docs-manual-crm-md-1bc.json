@@ -1,0 +1,14 @@
+{
+  "unversionedId": "manual/crm",
+  "id": "manual/crm",
+  "title": "crm",
+  "description": "",
+  "source": "@site/docs/manual/crm.md",
+  "sourceDirName": "manual",
+  "slug": "/manual/crm",
+  "permalink": "/manual/crm",
+  "draft": false,
+  "tags": [],
+  "version": "current",
+  "frontMatter": {}
+}

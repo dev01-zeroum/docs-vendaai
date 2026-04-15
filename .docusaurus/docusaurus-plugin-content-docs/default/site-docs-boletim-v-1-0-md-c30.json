@@ -1,0 +1,14 @@
+{
+  "unversionedId": "boletim-v1.0",
+  "id": "boletim-v1.0",
+  "title": "Boletim ZeroUm – v1.0",
+  "description": "📅 Publicado em: Janeiro de 2024",
+  "source": "@site/docs/boletim-v1.0.md",
+  "sourceDirName": ".",
+  "slug": "/boletim-v1.0",
+  "permalink": "/boletim-v1.0",
+  "draft": false,
+  "tags": [],
+  "version": "current",
+  "frontMatter": {}
+}

@@ -1,0 +1,25 @@
+{
+  "unversionedId": "fale-conosco/comercial",
+  "id": "fale-conosco/comercial",
+  "title": "Comercial",
+  "description": "Se você se interessou pelas melhorias, novas funcionalidades ou atualizações apresentadas no Boletim ZeroUm e deseja implementá-las em sua operação, nosso time comercial está pronto para ajudá-lo.",
+  "source": "@site/docs/fale-conosco/comercial.md",
+  "sourceDirName": "fale-conosco",
+  "slug": "/fale-conosco/comercial",
+  "permalink": "/fale-conosco/comercial",
+  "draft": false,
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "Comercial"
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "Boletim ZeroUm – v1.0",
+    "permalink": "/boletim/boletim-01-2025"
+  },
+  "next": {
+    "title": "Suporte e dúvidas de uso",
+    "permalink": "/fale-conosco/suporte-duvida-uso"
+  }
+}

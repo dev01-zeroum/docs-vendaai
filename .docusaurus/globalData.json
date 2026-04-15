@@ -1,0 +1,108 @@
+{
+  "docusaurus-plugin-content-docs": {
+    "default": {
+      "path": "/",
+      "versions": [
+        {
+          "name": "current",
+          "label": "Next",
+          "isLast": true,
+          "path": "/",
+          "mainDocId": "index",
+          "docs": [
+            {
+              "id": "boletim-01-2025",
+              "path": "/boletim-01-2025"
+            },
+            {
+              "id": "boletim-06-2025",
+              "path": "/boletim-06-2025"
+            },
+            {
+              "id": "boletim/boletim-01-2025",
+              "path": "/boletim/boletim-01-2025",
+              "sidebar": "docs"
+            },
+            {
+              "id": "boletim/boletim-06-2025",
+              "path": "/boletim/boletim-06-2025",
+              "sidebar": "docs"
+            },
+            {
+              "id": "fale-conosco/comercial",
+              "path": "/fale-conosco/comercial",
+              "sidebar": "docs"
+            },
+            {
+              "id": "fale-conosco/sugestoes",
+              "path": "/fale-conosco/sugestoes",
+              "sidebar": "docs"
+            },
+            {
+              "id": "fale-conosco/suporte-duvida-uso",
+              "path": "/fale-conosco/suporte-duvida-uso",
+              "sidebar": "docs"
+            },
+            {
+              "id": "faq/perguntas-respostas",
+              "path": "/faq/perguntas-respostas",
+              "sidebar": "docs"
+            },
+            {
+              "id": "identidade/identidade-vendaai",
+              "path": "/identidade/identidade-vendaai"
+            },
+            {
+              "id": "index",
+              "path": "/",
+              "sidebar": "docs"
+            },
+            {
+              "id": "manual/acesso",
+              "path": "/manual/acesso"
+            },
+            {
+              "id": "manual/crm",
+              "path": "/manual/crm"
+            },
+            {
+              "id": "manual/em-desenvolvimento",
+              "path": "/manual/em-desenvolvimento",
+              "sidebar": "docs"
+            },
+            {
+              "id": "manual/expedicao",
+              "path": "/manual/expedicao"
+            },
+            {
+              "id": "manual/introducao",
+              "path": "/manual/introducao"
+            },
+            {
+              "id": "manual/pedidos",
+              "path": "/manual/pedidos"
+            },
+            {
+              "id": "manual/telas",
+              "path": "/manual/telas"
+            },
+            {
+              "id": "sugestoes",
+              "path": "/sugestoes"
+            }
+          ],
+          "draftIds": [],
+          "sidebars": {
+            "docs": {
+              "link": {
+                "path": "/",
+                "label": "Início"
+              }
+            }
+          }
+        }
+      ],
+      "breadcrumbs": true
+    }
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "unversionedId": "fale-conosco/sugestoes",
+  "id": "fale-conosco/sugestoes",
+  "title": "Sugestões",
+  "description": "Sua opinião é fundamental para a evolução do Boletim ZeroUm. Se você tiver ideias de melhorias, novos conteúdos que gostaria de ver nas próximas edições ou sugestões para aprimorar nossas ferramentas, queremos ouvir você.",
+  "source": "@site/docs/fale-conosco/sugestoes.md",
+  "sourceDirName": "fale-conosco",
+  "slug": "/fale-conosco/sugestoes",
+  "permalink": "/fale-conosco/sugestoes",
+  "draft": false,
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "Sugestões"
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "Suporte e dúvidas de uso",
+    "permalink": "/fale-conosco/suporte-duvida-uso"
+  },
+  "next": {
+    "title": "Perguntas e respostas (FAQ)",
+    "permalink": "/faq/perguntas-respostas"
+  }
+}

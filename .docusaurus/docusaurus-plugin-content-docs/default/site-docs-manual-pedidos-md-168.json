@@ -1,0 +1,14 @@
+{
+  "unversionedId": "manual/pedidos",
+  "id": "manual/pedidos",
+  "title": "pedidos",
+  "description": "",
+  "source": "@site/docs/manual/pedidos.md",
+  "sourceDirName": "manual",
+  "slug": "/manual/pedidos",
+  "permalink": "/manual/pedidos",
+  "draft": false,
+  "tags": [],
+  "version": "current",
+  "frontMatter": {}
+}

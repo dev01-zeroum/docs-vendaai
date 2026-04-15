@@ -1,0 +1,25 @@
+{
+  "unversionedId": "faq/perguntas-respostas",
+  "id": "faq/perguntas-respostas",
+  "title": "Perguntas e respostas (FAQ)",
+  "description": "Esta seção é dedicada a esclarecer dúvidas frequentes sobre o Boletim ZeroUm e suas novidades. Aqui você encontrará respostas rápidas para questões comuns relacionadas às edições, funcionalidades e uso das ferramentas do VendaAI.",
+  "source": "@site/docs/faq/perguntas-respostas.md",
+  "sourceDirName": "faq",
+  "slug": "/faq/perguntas-respostas",
+  "permalink": "/faq/perguntas-respostas",
+  "draft": false,
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "Perguntas e respostas (FAQ)"
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "Sugestões",
+    "permalink": "/fale-conosco/sugestoes"
+  },
+  "next": {
+    "title": "Manual",
+    "permalink": "/manual/em-desenvolvimento"
+  }
+}

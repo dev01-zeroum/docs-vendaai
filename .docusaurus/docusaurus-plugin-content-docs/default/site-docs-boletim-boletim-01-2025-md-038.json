@@ -1,0 +1,23 @@
+{
+  "unversionedId": "boletim/boletim-01-2025",
+  "id": "boletim/boletim-01-2025",
+  "title": "Boletim ZeroUm – v1.0",
+  "description": "📅 Publicado em: Janeiro de 2024",
+  "source": "@site/docs/boletim/boletim-01-2025.md",
+  "sourceDirName": "boletim",
+  "slug": "/boletim/boletim-01-2025",
+  "permalink": "/boletim/boletim-01-2025",
+  "draft": false,
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "docs",
+  "previous": {
+    "title": "Boletim ZeroUm – v2.0",
+    "permalink": "/boletim/boletim-06-2025"
+  },
+  "next": {
+    "title": "Comercial",
+    "permalink": "/fale-conosco/comercial"
+  }
+}

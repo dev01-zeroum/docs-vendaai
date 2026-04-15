@@ -1,0 +1,14 @@
+{
+  "unversionedId": "sugestoes",
+  "id": "sugestoes",
+  "title": "Envie sua sugestão",
+  "description": "Sua opinião é importante!",
+  "source": "@site/docs/sugestoes.md",
+  "sourceDirName": ".",
+  "slug": "/sugestoes",
+  "permalink": "/sugestoes",
+  "draft": false,
+  "tags": [],
+  "version": "current",
+  "frontMatter": {}
+}

@@ -1,0 +1,14 @@
+{
+  "unversionedId": "manual/introducao",
+  "id": "manual/introducao",
+  "title": "introducao",
+  "description": "",
+  "source": "@site/docs/manual/introducao.md",
+  "sourceDirName": "manual",
+  "slug": "/manual/introducao",
+  "permalink": "/manual/introducao",
+  "draft": false,
+  "tags": [],
+  "version": "current",
+  "frontMatter": {}
+}

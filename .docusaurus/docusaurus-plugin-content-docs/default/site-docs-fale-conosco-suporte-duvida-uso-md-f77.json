@@ -1,0 +1,25 @@
+{
+  "unversionedId": "fale-conosco/suporte-duvida-uso",
+  "id": "fale-conosco/suporte-duvida-uso",
+  "title": "Suporte e dúvidas de uso",
+  "description": "Caso surjam dúvidas sobre o uso de alguma ferramenta do VendaAI ou se você precisar de suporte técnico, nosso time está pronto para ajudá-lo.",
+  "source": "@site/docs/fale-conosco/suporte-duvida-uso.md",
+  "sourceDirName": "fale-conosco",
+  "slug": "/fale-conosco/suporte-duvida-uso",
+  "permalink": "/fale-conosco/suporte-duvida-uso",
+  "draft": false,
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "Suporte e dúvidas de uso"
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "Comercial",
+    "permalink": "/fale-conosco/comercial"
+  },
+  "next": {
+    "title": "Sugestões",
+    "permalink": "/fale-conosco/sugestoes"
+  }
+}

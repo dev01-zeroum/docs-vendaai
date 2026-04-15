@@ -1,0 +1,14 @@
+{
+  "unversionedId": "manual/acesso",
+  "id": "manual/acesso",
+  "title": "acesso",
+  "description": "",
+  "source": "@site/docs/manual/acesso.md",
+  "sourceDirName": "manual",
+  "slug": "/manual/acesso",
+  "permalink": "/manual/acesso",
+  "draft": false,
+  "tags": [],
+  "version": "current",
+  "frontMatter": {}
+}

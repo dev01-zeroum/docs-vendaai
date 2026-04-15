@@ -1,0 +1,194 @@
+{
+  "pluginId": "default",
+  "version": "current",
+  "label": "Next",
+  "banner": null,
+  "badge": false,
+  "noIndex": false,
+  "className": "docs-version-current",
+  "isLast": true,
+  "docsSidebars": {
+    "docs": [
+      {
+        "type": "link",
+        "label": "Início",
+        "href": "/",
+        "docId": "index"
+      },
+      {
+        "type": "category",
+        "label": "Boletins",
+        "items": [
+          {
+            "type": "link",
+            "label": "Boletim - Jun/25",
+            "href": "/boletim/boletim-06-2025",
+            "docId": "boletim/boletim-06-2025"
+          },
+          {
+            "type": "link",
+            "label": "Boletim - Jan/25",
+            "href": "/boletim/boletim-01-2025",
+            "docId": "boletim/boletim-01-2025"
+          }
+        ],
+        "collapsed": true,
+        "collapsible": true
+      },
+      {
+        "type": "category",
+        "label": "Fale Conosco",
+        "items": [
+          {
+            "type": "link",
+            "label": "Comercial",
+            "href": "/fale-conosco/comercial",
+            "docId": "fale-conosco/comercial"
+          },
+          {
+            "type": "link",
+            "label": "Suporte e Dúvidas de Uso",
+            "href": "/fale-conosco/suporte-duvida-uso",
+            "docId": "fale-conosco/suporte-duvida-uso"
+          },
+          {
+            "type": "link",
+            "label": "Sugestões",
+            "href": "/fale-conosco/sugestoes",
+            "docId": "fale-conosco/sugestoes"
+          }
+        ],
+        "collapsed": true,
+        "collapsible": true
+      },
+      {
+        "type": "category",
+        "label": "FAQ",
+        "items": [
+          {
+            "type": "link",
+            "label": "Perguntas e Respostas",
+            "href": "/faq/perguntas-respostas",
+            "docId": "faq/perguntas-respostas"
+          }
+        ],
+        "collapsed": true,
+        "collapsible": true
+      },
+      {
+        "type": "category",
+        "label": "Manual",
+        "items": [
+          {
+            "type": "link",
+            "label": "Em Desenvolvimento",
+            "href": "/manual/em-desenvolvimento",
+            "docId": "manual/em-desenvolvimento"
+          }
+        ],
+        "collapsed": true,
+        "collapsible": true
+      }
+    ]
+  },
+  "docs": {
+    "boletim-01-2025": {
+      "id": "boletim-01-2025",
+      "title": "Boletim ZeroUm – Jan/25",
+      "description": "📅 Publicado em: Janeiro de 2025"
+    },
+    "boletim-06-2025": {
+      "id": "boletim-06-2025",
+      "title": "Boletim ZeroUm – Jun/25",
+      "description": "📅 Publicado em: Junho de 2025"
+    },
+    "boletim/boletim-01-2025": {
+      "id": "boletim/boletim-01-2025",
+      "title": "Boletim ZeroUm – v1.0",
+      "description": "📅 Publicado em: Janeiro de 2024",
+      "sidebar": "docs"
+    },
+    "boletim/boletim-06-2025": {
+      "id": "boletim/boletim-06-2025",
+      "title": "Boletim ZeroUm – v2.0",
+      "description": "📅 Publicado em: Junho de 2025",
+      "sidebar": "docs"
+    },
+    "fale-conosco/comercial": {
+      "id": "fale-conosco/comercial",
+      "title": "Comercial",
+      "description": "Se você se interessou pelas melhorias, novas funcionalidades ou atualizações apresentadas no Boletim ZeroUm e deseja implementá-las em sua operação, nosso time comercial está pronto para ajudá-lo.",
+      "sidebar": "docs"
+    },
+    "fale-conosco/sugestoes": {
+      "id": "fale-conosco/sugestoes",
+      "title": "Sugestões",
+      "description": "Sua opinião é fundamental para a evolução do Boletim ZeroUm. Se você tiver ideias de melhorias, novos conteúdos que gostaria de ver nas próximas edições ou sugestões para aprimorar nossas ferramentas, queremos ouvir você.",
+      "sidebar": "docs"
+    },
+    "fale-conosco/suporte-duvida-uso": {
+      "id": "fale-conosco/suporte-duvida-uso",
+      "title": "Suporte e dúvidas de uso",
+      "description": "Caso surjam dúvidas sobre o uso de alguma ferramenta do VendaAI ou se você precisar de suporte técnico, nosso time está pronto para ajudá-lo.",
+      "sidebar": "docs"
+    },
+    "faq/perguntas-respostas": {
+      "id": "faq/perguntas-respostas",
+      "title": "Perguntas e respostas (FAQ)",
+      "description": "Esta seção é dedicada a esclarecer dúvidas frequentes sobre o Boletim ZeroUm e suas novidades. Aqui você encontrará respostas rápidas para questões comuns relacionadas às edições, funcionalidades e uso das ferramentas do VendaAI.",
+      "sidebar": "docs"
+    },
+    "identidade/identidade-vendaai": {
+      "id": "identidade/identidade-vendaai",
+      "title": "identidade-vendaai",
+      "description": ""
+    },
+    "index": {
+      "id": "index",
+      "title": "Boletim ZeroUm",
+      "description": "Bem-vindo à documentação oficial do VendaAI ZeroUm.",
+      "sidebar": "docs"
+    },
+    "manual/acesso": {
+      "id": "manual/acesso",
+      "title": "acesso",
+      "description": ""
+    },
+    "manual/crm": {
+      "id": "manual/crm",
+      "title": "crm",
+      "description": ""
+    },
+    "manual/em-desenvolvimento": {
+      "id": "manual/em-desenvolvimento",
+      "title": "Manual",
+      "description": "Esta seção está em desenvolvimento e em breve será disponibilizada para todos os usuários do VendaAI.",
+      "sidebar": "docs"
+    },
+    "manual/expedicao": {
+      "id": "manual/expedicao",
+      "title": "expedicao",
+      "description": ""
+    },
+    "manual/introducao": {
+      "id": "manual/introducao",
+      "title": "introducao",
+      "description": ""
+    },
+    "manual/pedidos": {
+      "id": "manual/pedidos",
+      "title": "pedidos",
+      "description": ""
+    },
+    "manual/telas": {
+      "id": "manual/telas",
+      "title": "telas",
+      "description": ""
+    },
+    "sugestoes": {
+      "id": "sugestoes",
+      "title": "Envie sua sugestão",
+      "description": "Sua opinião é importante!"
+    }
+  }
+}
