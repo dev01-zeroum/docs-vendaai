@@ -4,8 +4,8 @@ module.exports = {
   tagline: 'Documentação oficial',
   favicon: 'img/favicon.ico',
 
-  organizationName: 'ThiagoOthero',
-  projectName: 'vendaai-docs',
+  organizationName: 'dev01-zeroum',
+  projectName: 'docs-vendaai',
   url: 'https://docs.vendaai.com.br',
   baseUrl: '/',
 
