@@ -1,31 +1,25 @@
-# Boletim ZeroUm
-
-Bem-vindo à documentação oficial do **VendaAI ZeroUm**.
-
-Este espaço reúne edições técnicas do boletim, sugestões de melhorias enviadas por usuários e conteúdos voltados à evolução contínua dos nossos processos, ferramentas e práticas internas.
-
+---
+title: 'Início'
+slug: /
+hide_title: true
+hide_table_of_contents: true
+description: 'Documentação oficial das Atualizações ZEROUM — acompanhe a evolução do VendaAI a cada edição.'
 ---
 
-## O que é o Boletim ZeroUm?
+import Hero from '@site/src/components/landing/Hero';
+import TiposMelhorias from '@site/src/components/landing/TiposMelhorias';
+import EdicoesGrid from '@site/src/components/landing/EdicoesGrid';
+import CtaCard from '@site/src/components/shared/CtaCard';
 
-O Boletim ZeroUm é uma publicação periódica criada para registrar aprendizados, decisões técnicas, padrões recomendados e outras informações relevantes para nossos times e parceiros.
+<Hero />
 
-Cada edição foca em temas práticos, organizados de forma direta e aplicável no dia a dia.
+<TiposMelhorias />
 
----
+<EdicoesGrid />
 
-## Acesse as edições disponíveis
-
-- [Boletim - Jun/2025](/boletim/boletim-06-2025)
-- [Boletim - Jan/2025](/boletim/boletim-01-2025)
-
----
-
-## Quer sugerir algo?
-
-Tem alguma ideia de melhoria ou conteúdo que gostaria de ver nas próximas edições?  
-[Acesse aqui e envie sua sugestão.](/fale-conosco/sugestoes)
-
----
-
-_Última atualização: Setembro/2025_
+<CtaCard
+  titulo="Tem uma ideia para o VendaAI?"
+  desc="Sua sugestão pode entrar nas próximas edições. A gente lê e prioriza as ideias mais pedidas."
+  ctaLabel="Enviar sugestão →"
+  ctaTo="/fale-conosco/sugestoes"
+/>

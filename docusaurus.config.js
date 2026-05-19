@@ -1,11 +1,11 @@
 // docusaurus.config.js
 module.exports = {
-  title: 'Boletim VendaAI',
+  title: 'Atualizações ZEROUM',
   tagline: 'Documentação oficial',
-  favicon: 'img/favicon.ico',
+  favicon: '/favicon.ico',
 
   organizationName: 'dev01-zeroum',
-  projectName: 'docs-vendaai',
+  projectName: 'docs-boletim',
   url: 'https://docs.vendaai.com.br',
   baseUrl: '/',
 
@@ -13,8 +13,13 @@ module.exports = {
     customDomain: 'docs.vendaai.com.br',
   },
 
-  onBrokenLinks: 'warn',
-  onBrokenMarkdownLinks: 'warn',
+  onBrokenLinks: 'throw',
+  onBrokenMarkdownLinks: 'throw',
+
+  i18n: {
+    defaultLocale: 'pt-BR',
+    locales: ['pt-BR'],
+  },
  
   presets: [
     [
@@ -37,6 +42,12 @@ module.exports = {
       respectPrefersColorScheme: false,
       disableSwitch: false,
     },
+    docs: {
+      sidebar: {
+        autoCollapseCategories: true,
+        hideable: true,
+      },
+    },
     navbar: {
       title: '',
       logo: {
@@ -44,26 +55,69 @@ module.exports = {
         src: 'img/logo.svg',
         srcDark: 'img/logo_branco.svg',
         width: 130,
-      //height: 39,
-      // height: undefined, // deixa automático
       },
       items: [
-        //{
-        //  type: 'doc',
-        //  docId: 'index',
-        //  position: 'left',
-        //  label: 'Página Inicial',
-        //},
         {
           href: 'https://vendaai.com.br',
           label: 'Site Oficial',
           position: 'right',
+          className: 'navbar-cta',
+          'aria-label': 'Site oficial VendaAI (abre em nova aba)',
         },
       ],
     },
     footer: {
       style: 'dark',
-      copyright: `Copyright © ${new Date().getFullYear()} ZeroUm Software House, Inc.`,
+      links: [
+        {
+          title: 'Suporte',
+          items: [
+            {
+              label: 'Abrir chamado',
+              href: 'https://zeroum.zumdesk.com.br',
+            },
+            {
+              label: 'suporte@vendaai.com.br',
+              href: 'mailto:suporte@vendaai.com.br',
+            },
+            {
+              label: 'WhatsApp +55 11 97438-4612',
+              href: 'https://wa.me/5511974384612',
+            },
+          ],
+        },
+        {
+          title: 'Comercial',
+          items: [
+            {
+              label: 'Falar com o Comercial',
+              to: '/fale-conosco/comercial',
+            },
+            {
+              label: 'contato@itzeroum.com.br',
+              href: 'mailto:contato@itzeroum.com.br',
+            },
+          ],
+        },
+        {
+          title: 'Links',
+          items: [
+            {
+              label: 'Site oficial',
+              href: 'https://vendaai.com.br',
+            },
+            {
+              label: 'Última edição',
+              to: '/boletim/atualizacoes-06-2026',
+            },
+            {
+              label: 'Sugestões',
+              to: '/fale-conosco/sugestoes',
+            },
+          ],
+        },
+      ],
+      copyright: `Copyright © ${new Date().getFullYear()} ZEROUM Software House. Todos os direitos reservados.`,
     },
   },
 };
