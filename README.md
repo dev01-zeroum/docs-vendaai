@@ -20,9 +20,10 @@ Repositório oficial da **documentação pública do VendaAI** (boletins de atua
 10. [Fluxo de trabalho em equipe (Git/PR)](#-fluxo-de-trabalho-em-equipe-gitpr)
 11. [Como publicar (deploy)](#-como-publicar-deploy)
 12. [Scripts disponíveis](#-scripts-disponíveis)
-13. [Troubleshooting](#-troubleshooting)
-14. [Convenções do time](#-convenções-do-time)
-15. [Contato](#-contato)
+13. [Comandos rápidos (cheat sheet)](#-comandos-rápidos-cheat-sheet)
+14. [Troubleshooting](#-troubleshooting)
+15. [Convenções do time](#-convenções-do-time)
+16. [Contato](#-contato)
 
 ---
 
@@ -419,6 +420,76 @@ npm run deploy         # Deploy manual pro GitHub Pages (Tech Lead)
 ```
 
 > ⚠️ **Não use `npm run clear` no Windows** — o script usa `rm -rf` (Linux) e não funciona aqui. Para limpar cache, apague manualmente a pasta `node_modules\.cache`.
+
+---
+
+## ⚡ Comandos rápidos (cheat sheet)
+
+Cola com o que o time mais usa no dia a dia. Copie e cole conforme a necessidade.
+
+### Git — fluxo do dia a dia
+
+```bash
+git status                          # o que mudou / em que branch estou
+git pull origin main                # atualizar a main local (faça sempre antes de criar branch)
+git checkout main                   # voltar pra branch main
+git checkout -b docs/minha-mudanca  # criar e entrar numa branch nova
+git checkout docs/minha-mudanca     # trocar pra uma branch existente
+git branch                          # listar branches locais
+
+git add .                           # preparar TODAS as mudanças pro commit
+git add docs/manual/vendas.md       # preparar só um arquivo
+git commit -m "docs: descrição"     # commitar o que está preparado
+git push origin docs/minha-mudanca  # enviar a branch pro GitHub
+git push -u origin docs/minha-mudanca  # 1ª vez na branch (cria no remoto)
+```
+
+### Git — sincronizar e consertar
+
+```bash
+git fetch origin                    # baixar atualizações do remoto (sem aplicar)
+git merge origin/main               # trazer a main pra sua branch atual
+git pull origin main                # fetch + merge da main de uma vez
+
+git log --oneline -10               # ver os últimos 10 commits
+git diff                            # ver mudanças ainda não preparadas
+git diff --staged                   # ver mudanças já preparadas (git add)
+
+git restore docs/arquivo.md         # descartar mudanças de um arquivo (CUIDADO)
+git reset --soft HEAD~1             # desfazer último commit, mantendo as alterações
+git revert HASH-DO-COMMIT           # criar commit que desfaz outro já enviado
+git checkout -- .                   # descartar TODAS as mudanças locais (CUIDADO)
+```
+
+> ⚠️ Nunca use `git push -f` (force push) neste repo.
+
+### PowerShell — navegação e arquivos
+
+```powershell
+cd C:\Projetos\docs-boletim         # entrar na pasta do projeto
+Get-Location                        # mostrar a pasta atual (= pwd)
+Get-ChildItem                       # listar arquivos da pasta (= ls / dir)
+Get-ChildItem docs -Recurse         # listar tudo dentro de docs/ recursivamente
+code .                              # abrir a pasta no VS Code
+
+New-Item docs/manual/nova.md -ItemType File   # criar arquivo vazio
+Get-Content docs/index.md           # ver o conteúdo de um arquivo (= cat)
+Remove-Item node_modules\.cache -Recurse -Force   # limpar o cache do Docusaurus
+```
+
+### PowerShell — projeto (npm) e deploy
+
+```powershell
+npm install                         # instalar dependências
+npm start                           # rodar local em http://localhost:3000
+npm start -- --port 3001            # rodar em outra porta
+npm run build                       # build de produção (falha se houver link quebrado)
+npm run serve                       # servir o build pra conferência
+
+# Deploy (Tech Lead, após o merge na main):
+$env:GIT_USER = "ThiagoOthero"      # define a variável só nesta sessão
+npm run deploy
+```
 
 ---
 
