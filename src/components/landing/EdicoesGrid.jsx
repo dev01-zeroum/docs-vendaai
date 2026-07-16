@@ -2,12 +2,19 @@ import React from 'react';
 import Link from '@docusaurus/Link';
 
 const EDICOES = [
+    {
+    slug: '/boletim/atualizacoes-07-2026',
+    periodo: 'Jul/2026',
+    titulo: 'Atualizações ZEROUM – Julho/26',
+    destaque: 'Registro de ticket em pedidos, Novos filtros de clientes e painel de análise de Crédito',
+    novo: true,
+  },
   {
     slug: '/boletim/atualizacoes-06-2026',
     periodo: 'Jun/2026',
     titulo: 'Atualizações ZEROUM – Junho/26',
-    destaque: 'Pedidos em dólar, integrações de pagamento e logística',
-    novo: true,
+    destaque: 'Pedidos em dólar, integrações de pagamento e logística'
+   
   },
   {
     slug: '/boletim/atualizacoes-01-2026',
