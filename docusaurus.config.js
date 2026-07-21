@@ -32,6 +32,11 @@ module.exports = {
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
         },
+        sitemap: {
+          // Manual técnico é acessível apenas por link: fora do sitemap
+          // (os próprios arquivos também enviam <meta robots noindex>).
+          ignorePatterns: ['/manual-tecnico', '/manual-tecnico/', '/manual-tecnico/**'],
+        },
       },
     ],
   ],
@@ -66,58 +71,7 @@ module.exports = {
         },
       ],
     },
-    footer: {
-      style: 'dark',
-      links: [
-        {
-          title: 'Suporte',
-          items: [
-            {
-              label: 'Abrir chamado',
-              href: 'https://zeroum.zumdesk.com.br',
-            },
-            {
-              label: 'suporte@vendaai.com.br',
-              href: 'mailto:suporte@vendaai.com.br',
-            },
-            {
-              label: 'WhatsApp +55 11 97438-4612',
-              href: 'https://wa.me/5511974384612',
-            },
-          ],
-        },
-        {
-          title: 'Comercial',
-          items: [
-            {
-              label: 'Falar com o Comercial',
-              to: '/fale-conosco/comercial',
-            },
-            {
-              label: 'contato@itzeroum.com.br',
-              href: 'mailto:contato@itzeroum.com.br',
-            },
-          ],
-        },
-        {
-          title: 'Links',
-          items: [
-            {
-              label: 'Site oficial',
-              href: 'https://vendaai.com.br',
-            },
-            {
-              label: 'Última edição',
-              to: '/boletim/atualizacoes-06-2026',
-            },
-            {
-              label: 'Sugestões',
-              to: '/fale-conosco/sugestoes',
-            },
-          ],
-        },
-      ],
-      copyright: `Copyright © ${new Date().getFullYear()} ZEROUM Software House. Todos os direitos reservados.`,
-    },
+    // Rodapé é customizado em src/theme/Footer/index.js
+    // (colunas, ícones e links são definidos lá).
   },
 };

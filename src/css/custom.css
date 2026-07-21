@@ -346,40 +346,111 @@
 }
 
 /* ============================================================
- * FOOTER — compacto e neutro (cinza, sem azul)
+ * FOOTER (custom, swizzle @theme/Footer) — 3 colunas, compacto
+ * Ícones SVG, botão único em destaque, divisória + copyright discreto.
  * ============================================================ */
-.footer {
-  --ifm-footer-background-color: #2a2a2e; /* cinza neutro escuro */
-  --ifm-footer-color: #d1d5db;
-  --ifm-footer-link-color: #e5e7eb;
-  --ifm-footer-link-hover-color: var(--ifm-color-primary-lighter);
-  --ifm-footer-title-color: #f3f4f6;
-  padding: 1.25rem 0 0.75rem;
+.footer-x {
+  border-top: 1px solid var(--vendaai-border);
+  background-color: var(--vendaai-surface-elevated);
+  padding: 1.4rem 1.5rem 0.85rem;
 }
 
-.footer__links {
-  margin-bottom: 0.75rem;
+.footer-x__inner {
+  max-width: 1140px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.75rem;
 }
 
-.footer__title {
-  font-size: 0.78rem;
-  margin-bottom: 0.5rem;
-  text-transform: uppercase;
-  letter-spacing: 0.06em;
+.footer-x__ico {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+}
+
+.footer-x__col-title {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 0 0 0.6rem;
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--vendaai-text);
+}
+
+.footer-x__col-title .footer-x__ico {
+  width: 17px;
+  height: 17px;
+  color: var(--ifm-color-primary);
+}
+
+.footer-x__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.footer-x__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--vendaai-text-muted) !important;
+  font-size: 0.88rem;
+  line-height: 1.2;
+  text-decoration: none !important;
+  transition: color 0.15s ease;
+}
+
+.footer-x__link:hover {
+  color: var(--ifm-color-primary) !important;
+}
+
+/* Único item em destaque: Abrir chamado */
+.footer-x__cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  background-color: var(--ifm-color-primary);
+  color: #0a2540 !important;
+  font-size: 0.86rem;
   font-weight: 600;
+  text-decoration: none !important;
+  transition: background-color 0.15s ease;
 }
 
-.footer__item {
-  font-size: 0.85rem;
-  padding-bottom: 0.3rem;
+.footer-x__cta:hover {
+  background-color: var(--ifm-color-primary-dark);
+  color: #0a2540 !important;
 }
 
-.footer__copyright {
-  font-size: 0.75rem;
-  opacity: 0.6;
-  padding-top: 0.75rem;
-  border-top: 1px solid rgba(255, 255, 255, 0.06);
-  margin-top: 0.5rem;
+/* Divisória sutil + copyright discreto */
+.footer-x__bottom {
+  max-width: 1140px;
+  margin: 0.9rem auto 0;
+  padding-top: 0.8rem;
+  border-top: 1px solid var(--vendaai-border);
+  text-align: center;
+}
+
+.footer-x__copyright {
+  margin: 0;
+  font-size: 0.74rem;
+  line-height: 1.6;
+  color: var(--vendaai-text-muted);
+  opacity: 0.75;
+}
+
+@media (max-width: 640px) {
+  .footer-x__inner {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
 }
 
 /* ============================================================
@@ -1402,6 +1473,217 @@
   border-bottom: none;
   padding-top: 0.25rem;
   padding-bottom: 0.25rem;
+}
+
+/* ============================================================
+ * MANUAL TÉCNICO — grid compacto de abas (Página Inicial)
+ * Cards pequenos (ícone + título + descrição curta) p/ as 16 abas
+ * ============================================================ */
+.param-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(215px, 1fr));
+  gap: 0.6rem;
+  margin: 1.5rem 0 0;
+}
+
+.param-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.7rem;
+  padding: 0.7rem 0.85rem;
+  border: 1px solid var(--vendaai-border);
+  border-radius: 10px;
+  background-color: var(--vendaai-surface);
+  text-decoration: none !important;
+  color: inherit !important;
+  transition: border-color 0.15s, transform 0.15s, box-shadow 0.15s;
+}
+
+.param-card:hover {
+  border-color: var(--ifm-color-primary);
+  transform: translateY(-1px);
+  box-shadow: 0 3px 10px rgba(15, 23, 42, 0.07);
+}
+
+[data-theme='dark'] .param-card:hover {
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.4);
+}
+
+.param-card__icon {
+  font-size: 1.15rem;
+  line-height: 1.35;
+  flex-shrink: 0;
+}
+
+.param-card__body {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.param-card__titulo {
+  font-weight: 700;
+  font-size: 0.9rem;
+  color: var(--vendaai-text);
+  line-height: 1.3;
+}
+
+[data-theme='dark'] .param-card__titulo {
+  color: #f1f5f9;
+}
+
+.param-card__desc {
+  font-size: 0.78rem;
+  color: var(--vendaai-text-muted);
+  line-height: 1.4;
+  margin-top: 0.15rem;
+}
+
+/* ============================================================
+ * MANUAL TÉCNICO — cabeçalho das abas + figura do print
+ * ============================================================ */
+
+/* ----- Cabeçalho da aba (ícone + eyebrow + título) ----- */
+.manual-tab-header {
+  margin: 0 0 1.75rem;
+  padding-bottom: 1.25rem;
+  border-bottom: 1px solid var(--vendaai-border);
+}
+
+.manual-tab-header__eyebrow {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--ifm-color-primary-darker);
+  margin: 0 0 0.15rem;
+}
+
+[data-theme='dark'] .manual-tab-header__eyebrow {
+  color: var(--ifm-color-primary);
+}
+
+.manual-tab-header__title {
+  font-size: clamp(1.6rem, 3.5vw, 2.1rem) !important;
+  font-weight: 800;
+  line-height: 1.1;
+  margin: 0 !important;
+  letter-spacing: -0.02em;
+  color: var(--vendaai-text) !important;
+}
+
+[data-theme='dark'] .manual-tab-header__title {
+  color: #f8fafc !important;
+}
+
+/* ----- Figura com o print da aba ----- */
+.tela-parametro {
+  margin: 1.75rem 0;
+}
+
+.tela-parametro__img {
+  display: block;
+  width: 100%;
+  border-radius: 10px;
+  border: 1px solid var(--vendaai-border);
+  box-shadow: 0 4px 16px rgba(15, 23, 42, 0.08);
+}
+
+[data-theme='dark'] .tela-parametro__img {
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.45);
+}
+
+.tela-parametro__placeholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  min-height: 180px;
+  border: 2px dashed var(--vendaai-border);
+  border-radius: 10px;
+  background-color: var(--vendaai-surface-elevated);
+  color: var(--vendaai-text-muted);
+}
+
+.tela-parametro__placeholder-icon {
+  font-size: 1.75rem;
+  line-height: 1;
+  opacity: 0.7;
+}
+
+.tela-parametro__placeholder-text {
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+.tela-parametro__legenda {
+  margin-top: 0.6rem;
+  text-align: center;
+  font-size: 0.82rem;
+  color: var(--vendaai-text-muted);
+  font-style: italic;
+}
+
+/* ============================================================
+ * SIDEBAR — botões de recolher / expandir (hideable) mais fluidos
+ * Troca o visual de "caixa dura" padrão por algo suave e sutil.
+ * Classes com hash do Docusaurus → seletor por [class*=...].
+ * ============================================================ */
+
+/* Recolher (rodapé): minimalista — só um chevron limpo, sem caixa/fundo */
+button[class*='collapseSidebarButton'] {
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  border: 0 !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  color: var(--vendaai-text-muted) !important;
+  transition: color 0.2s ease !important;
+}
+
+button[class*='collapseSidebarButton']:hover {
+  background: transparent !important;
+  color: var(--ifm-color-primary) !important;
+}
+
+/* esconde a seta padrão e usa um chevron */
+button[class*='collapseSidebarButton'] svg {
+  display: none !important;
+}
+
+button[class*='collapseSidebarButton']::before {
+  content: '‹';
+  font-size: 1.9rem;
+  line-height: 1;
+}
+
+/* Expandir (quando recolhida): mesmo chevron minimalista, virado */
+[class*='expandButton'] {
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  background: transparent !important;
+  color: var(--vendaai-text-muted) !important;
+  transition: color 0.2s ease !important;
+}
+
+[class*='expandButton']:hover {
+  background: transparent !important;
+  color: var(--ifm-color-primary) !important;
+}
+
+[class*='expandButton'] svg {
+  display: none !important;
+}
+
+[class*='expandButton']::before {
+  content: '›';
+  font-size: 1.9rem;
+  line-height: 1;
 }
 
 /* ============================================================
