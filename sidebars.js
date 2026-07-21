@@ -1,4 +1,22 @@
+const manualTecnicoTabs = require('./src/manualTecnicoTabs');
+
 module.exports = {
+  // Menu lateral próprio do Manual Técnico — aparece apenas dentro do
+  // manual (acesso por link) e não interfere no menu principal do site.
+  manualTecnico: [
+    { type: 'doc', id: 'manual-tecnico/00inicio', label: 'Página Inicial' },
+    {
+      type: 'category',
+      label: 'Parâmetros',
+      collapsed: false,
+      items: manualTecnicoTabs.map((tab) => ({
+        type: 'doc',
+        id: tab.id,
+        label: tab.titulo,
+      })),
+    },
+  ],
+
   docs: [
     {
       type: 'doc',
