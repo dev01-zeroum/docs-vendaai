@@ -22,6 +22,9 @@ module.exports = {
       type: 'doc',
       id: 'index',
       label: 'Página Inicial',
+      // `key` desambigua a chave de tradução: existe outra "Página
+      // Inicial" (a do Manual). Sem isso o write-translations falha.
+      key: 'home-docs',
     },
     {
       type: 'category',
@@ -52,7 +55,7 @@ module.exports = {
       items: [
         { type: 'doc', id: 'manual/sobreovendaai', label: 'Sobre o VendaAI' },
         { type: 'doc', id: 'manual/acessandovendaai', label: 'Acessando o VendaAI' },
-        { type: 'doc', id: 'manual/paginainicial', label: 'Página Inicial' },
+        { type: 'doc', id: 'manual/paginainicial', label: 'Página Inicial', key: 'home-manual' },
         { type: 'doc', id: 'manual/dashboard', label: 'Dashboard' },
         { type: 'doc', id: 'manual/negocios', label: 'Negócios (CRM)' },
         { type: 'doc', id: 'manual/agenda', label: 'Agenda' },

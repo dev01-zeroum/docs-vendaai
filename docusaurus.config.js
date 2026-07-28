@@ -52,6 +52,31 @@ module.exports = {
     ],
   ],
 
+  // Busca local: indexa em tempo de build e roda no navegador, sem
+  // depender de serviço externo (Algolia e afins).
+  themes: [
+    [
+      require.resolve('@easyops-cn/docusaurus-search-local'),
+      {
+        hashed: true,
+        language: ['pt', 'en'],
+        docsRouteBasePath: '/', // docs estão na raiz
+        indexDocs: true,
+        indexBlog: false,
+        indexPages: false,
+        // Manual Técnico é acesso por link (tem noindex e fica fora do
+        // sitemap). Pela mesma razão, fora da busca pública.
+        ignoreFiles: [/^\/manual-tecnico/],
+        highlightSearchTermsOnTargetPage: true,
+        searchResultLimits: 8,
+        searchResultContextMaxLength: 60,
+        searchBarShortcut: true,
+        searchBarShortcutHint: true,
+        searchBarPosition: 'right',
+      },
+    ],
+  ],
+
   themeConfig: {
     colorMode: {
       defaultMode: 'dark',
@@ -82,6 +107,8 @@ module.exports = {
           className: 'navbar-cta',
           'aria-label': 'Site oficial VendaAI (abre em nova aba)',
         },
+        // Caixa de busca no canto superior direito.
+        { type: 'search', position: 'right' },
       ],
     },
     // Rodapé é customizado em src/theme/Footer/index.js

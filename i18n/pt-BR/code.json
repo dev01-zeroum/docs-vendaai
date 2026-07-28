@@ -1,0 +1,42 @@
+{
+  "theme.SearchBar.label": {
+    "message": "Pesquisar",
+    "description": "ATENÇÃO: mantenha aqui só o que o Docusaurus não traduz sozinho. As traduções pt-BR de busca vivem em theme-search-algolia.json, que não é carregado porque usamos busca local. Chaves já cobertas pelo pt-BR embutido não devem entrar: o valor daqui tem precedência e congelaria a tradução oficial."
+  },
+  "theme.SearchBar.noResultsText": {
+    "message": "Nenhum resultado",
+    "description": "The text when no results are found for the search"
+  },
+  "theme.SearchBar.seeAll": {
+    "message": "Ver todos os resultados",
+    "description": "See all results"
+  },
+  "theme.SearchBar.searchInContext": {
+    "message": "Ver todos os resultados em \"{context}\"",
+    "description": "The label for search bar context"
+  },
+  "theme.SearchBar.seeAllOutsideContext": {
+    "message": "Ver resultados fora de \"{context}\"",
+    "description": "See all outside context"
+  },
+  "theme.SearchPage.emptyResultsTitle": {
+    "message": "Pesquisar na documentação",
+    "description": "The search page title for empty query"
+  },
+  "theme.SearchPage.existingResultsTitle": {
+    "message": "Resultados da pesquisa por \"{query}\"",
+    "description": "The search page title for non-empty query"
+  },
+  "theme.SearchPage.searchContext.everywhere": {
+    "message": "Em todo o site",
+    "description": "The label for search contexts in search page"
+  },
+  "theme.SearchPage.documentsFound.plurals": {
+    "message": "Um documento encontrado|{count} documentos encontrados",
+    "description": "Pluralized label for the number of documents found"
+  },
+  "theme.SearchPage.noResultsText": {
+    "message": "Nenhum documento encontrado",
+    "description": "The paragraph for empty search result"
+  }
+}
