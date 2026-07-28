@@ -215,40 +215,50 @@ body {
   --search-local-highlight-color: var(--ifm-color-primary);
 }
 
-/* ----- Centraliza a caixa no meio da navbar (desktop) ----- */
+/* ----- Centraliza a caixa no eixo da navbar (desktop) -----
+ * Seletor com 2 classes de propósito: o plugin declara regras de mesma
+ * especificidade depois das nossas (e em `npm start` a ordem de injeção
+ * do CSS ainda difere da do build). Com especificidade maior, a ordem
+ * deixa de importar. O margin-left:16px do plugin precisa ser zerado,
+ * senão o campo fica 16px fora do centro. */
 @media (min-width: 997px) {
   .navbar__inner {
     position: relative;
   }
 
-  .navbar__search {
+  .navbar__inner .navbar__search {
     position: absolute;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-    width: min(420px, 32vw);
+    width: min(380px, 30vw);
+    margin: 0;
     padding-left: 0;
   }
 
-  .navbar__search-input {
+  .navbar__inner .navbar__search-input {
     width: 100%;
   }
 }
 
-/* ----- Campo: retângulo suave em vez da pílula padrão ----- */
-.navbar__search-input {
-  background-color: var(--vendaai-surface-elevated);
+/* ----- Campo discreto: contorno leve, sem preenchimento ----- */
+.navbar__inner .navbar__search-input {
+  background-color: transparent;
   border: 1px solid var(--vendaai-border);
   border-radius: 8px;
-  height: 2.15rem;
-  font-size: 0.875rem;
+  height: 2rem;
+  font-size: 0.85rem;
   color: var(--vendaai-text);
   transition: border-color 0.15s ease, background-color 0.15s ease;
 }
 
-.navbar__search-input::placeholder {
+.navbar__inner .navbar__search-input:hover {
+  border-color: var(--vendaai-text-muted);
+}
+
+.navbar__inner .navbar__search-input::placeholder {
   color: var(--vendaai-text-muted);
-  opacity: 0.85;
+  opacity: 0.75;
 }
 
 /* O plugin zera a lupa do Infima (background-image: none) e joga todo o
@@ -273,21 +283,32 @@ body {
   background-color: var(--vendaai-surface);
 }
 
-/* ----- Atalho de teclado: presente, mas discreto ----- */
-[class*='searchHint'] {
+/* ----- Atalho de teclado: só texto, sem caixa -----
+ * O plugin desenha um <kbd> com borda e box-shadow interno. Anulamos
+ * com 2 classes, senão a regra dele (declarada depois) prevalece. */
+.navbar__search [class*='searchHint'] {
+  background: none;
   background-color: transparent;
   border: 0;
   box-shadow: none;
   color: var(--vendaai-text-muted);
-  opacity: 0.5;
-  font-size: 0.68rem;
+  opacity: 0.45;
+  font-size: 0.7rem;
   font-weight: 500;
-  padding: 0 0.15rem;
+  font-family: inherit;
+  line-height: 1;
+  padding: 0;
+  transition: opacity 0.15s ease;
+}
+
+.navbar__search [class*='searchHintContainer'] {
+  right: 0.7rem;
+  gap: 2px;
   transition: opacity 0.15s ease;
 }
 
 /* Some ao começar a digitar — já cumpriu o papel dele */
-.navbar__search-input:focus ~ [class*='searchHintContainer'] {
+.navbar__search .navbar__search-input:focus ~ [class*='searchHintContainer'] {
   opacity: 0;
 }
 
