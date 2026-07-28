@@ -416,8 +416,15 @@ O site atualiza em **1-2 minutos** em https://docs.vendaai.com.br.
 npm start              # Dev local com hot reload (http://localhost:3000)
 npm run build          # Build de produção (falha se houver link quebrado)
 npm run serve          # Serve o build local pra conferência final
+npm run preview        # build + serve num comando só (use pra testar a busca)
 npm run deploy         # Deploy manual pro GitHub Pages (Tech Lead)
 ```
+
+> **A busca não funciona com `npm start`.** O índice é gerado no `postBuild`,
+> um passo que só roda no `docusaurus build` — em modo dev o arquivo
+> `search-index.json` não existe e o campo dá erro ao digitar. Para testar a
+> busca use `npm run preview`. Não é bug de configuração: é como o
+> `@easyops-cn/docusaurus-search-local` funciona.
 
 > **Não use `npm run clear` no Windows** — o script usa `rm -rf` (Linux) e não funciona aqui. Para limpar cache, apague manualmente a pasta `node_modules\.cache`.
 

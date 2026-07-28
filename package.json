@@ -8,6 +8,7 @@
     "deploy": "docusaurus deploy",
     "clear": "npm cache clean --force && rm -rf node_modules/.cache",
     "serve": "docusaurus serve",
+    "preview": "docusaurus build && docusaurus serve",
     "swizzle": "docusaurus swizzle",
     "upgrade": "npm install @docusaurus/core@latest @docusaurus/preset-classic@latest"
   },
