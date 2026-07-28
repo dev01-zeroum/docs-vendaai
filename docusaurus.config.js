@@ -16,7 +16,14 @@ module.exports = {
   },
 
   onBrokenLinks: 'throw',
-  onBrokenMarkdownLinks: 'throw',
+  onBrokenAnchors: 'throw',
+
+  markdown: {
+    hooks: {
+      // No v3 esta opção saiu da raiz da config para cá.
+      onBrokenMarkdownLinks: 'throw',
+    },
+  },
 
   i18n: {
     defaultLocale: 'pt-BR',
@@ -31,6 +38,8 @@ module.exports = {
           routeBasePath: '/', // deixa docs na raiz
           sidebarPath: require.resolve('./sidebars.js'),
         },
+        // O site não tem blog; sem isso o v3 publica uma rota /blog vazia.
+        blog: false,
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
         },

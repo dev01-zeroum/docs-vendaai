@@ -28,7 +28,7 @@ Após informar o **e-mail**, você receberá uma mensagem com **instruções par
 
 Após concluir o **processo de redefinição da senha**, o usuário será direcionado para a **página inicial da plataforma**.
 
-:::caution Ponto de atenção
+:::warning[Ponto de atenção]
 
 O **VendaAI** disponibiliza dois **ambientes de acesso**:
 
