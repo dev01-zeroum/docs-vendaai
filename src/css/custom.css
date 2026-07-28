@@ -33,6 +33,11 @@
   --vendaai-error-text: #991b1b;
   --vendaai-warning-bg: #fef3c7;
   --vendaai-warning-text: #92400e;
+
+  /* Moldura dos prints — fonte única para as imagens do conteúdo e para
+   * o <TelaParametro>, que antes usavam raio e sombra diferentes. */
+  --vendaai-print-radius: 10px;
+  --vendaai-print-shadow: 0 4px 16px rgba(15, 23, 42, 0.08);
 }
 
 /* ===== PALETA — TEMA DARK ===== */
@@ -58,6 +63,8 @@
   --vendaai-error-text: #fecaca;
   --vendaai-warning-bg: #78350f;
   --vendaai-warning-text: #fde68a;
+
+  --vendaai-print-shadow: 0 4px 16px rgba(0, 0, 0, 0.45);
 }
 
 /* ============================================================
@@ -708,15 +715,16 @@ body {
   margin-left: auto;
   margin-right: auto;
   max-width: 100%;
-  border-radius: 8px;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08), 0 1px 2px rgba(0, 0, 0, 0.04);
+  border: 1px solid var(--vendaai-border);
+  border-radius: var(--vendaai-print-radius);
+  box-shadow: var(--vendaai-print-shadow);
   cursor: zoom-in;
 }
 
 /* Enquanto ampliada, a imagem não deve convidar a outro clique */
 .medium-zoom-image--opened {
   cursor: zoom-out;
-  border-radius: 8px;
+  border-radius: var(--vendaai-print-radius);
 }
 
 .medium-zoom-overlay {
@@ -727,9 +735,7 @@ body {
   z-index: 201;
 }
 
-[data-theme='dark'] .theme-doc-markdown img {
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4), 0 1px 2px rgba(0, 0, 0, 0.3);
-}
+/* A sombra já troca sozinha via --vendaai-print-shadow */
 
 /* ============================================================
  * FOOTER (custom, swizzle @theme/Footer) — 3 colunas, compacto
@@ -1923,13 +1929,9 @@ body {
 .tela-parametro__img {
   display: block;
   width: 100%;
-  border-radius: 10px;
   border: 1px solid var(--vendaai-border);
-  box-shadow: 0 4px 16px rgba(15, 23, 42, 0.08);
-}
-
-[data-theme='dark'] .tela-parametro__img {
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.45);
+  border-radius: var(--vendaai-print-radius);
+  box-shadow: var(--vendaai-print-shadow);
 }
 
 .tela-parametro__placeholder {
