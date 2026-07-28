@@ -75,8 +75,9 @@ module.exports = {
         // sitemap). Pela mesma razão, fora da busca pública.
         ignoreFiles: [/^\/manual-tecnico/],
         highlightSearchTermsOnTargetPage: true,
-        searchResultLimits: 8,
-        searchResultContextMaxLength: 60,
+        // Lista curta e trecho curto: sugestão, não página de resultados.
+        searchResultLimits: 6,
+        searchResultContextMaxLength: 35,
         searchBarShortcut: true,
         searchBarShortcutHint: true,
         searchBarPosition: 'right',
