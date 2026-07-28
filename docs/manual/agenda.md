@@ -26,7 +26,7 @@ A interface possibilita a visualização das **tarefas e compromissos**, com op�
 
 Esses modos facilitam a **organização da rotina** e o **acompanhamento das atividades comerciais**:
 
-![Acessando o VendaAI](https://i.imgur.com/ve49aOh.png)
+![Agenda em grade horária, com os compromissos distribuídos ao longo do dia](https://i.imgur.com/ve49aOh.png)
 
 Na parte superior da tela, no canto superior direito, encontra-se o botão azul **“+ Atividade”**, que permite a **adição de compromissos diretamente no sistema**.
 

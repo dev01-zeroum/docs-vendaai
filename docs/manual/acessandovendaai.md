@@ -16,13 +16,13 @@ Ao acessar o **link disponibilizado**, o usuário será direcionado para a plata
 
 A **tela inicial do sistema** será exibida conforme apresentado no **exemplo a seguir**:
 
-![Acessando o VendaAI](https://i.imgur.com/tYsZLCl.png)
+![Tela de login do VendaAI](https://i.imgur.com/tYsZLCl.png)
 
 Para acessar a plataforma, informe seu **usuário e senha** nos campos indicados. Caso ainda não possua **credenciais de acesso**, solicite-as ao **departamento de tecnologia da empresa**.
 
 Se houver algum **problema de acesso**, utilize a opção **“Esqueci minha senha”**, conforme ilustrado na **imagem a seguir**.
 
-![Acessando o VendaAI](https://i.imgur.com/KEqeQeR.png)
+![Opção “Esqueci minha senha” na tela de login](https://i.imgur.com/KEqeQeR.png)
 
 Após informar o **e-mail**, você receberá uma mensagem com **instruções para redefinir sua senha**.
 

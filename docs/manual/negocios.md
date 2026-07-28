@@ -22,7 +22,7 @@ O **Funil de Vendas** permite visualizar todas as **oportunidades comerciais em 
 
 Cada **coluna** representa uma **etapa do funil**, enquanto cada **cartão** corresponde a um **negócio em andamento**:
 
-![Acessando o VendaAI](https://i.imgur.com/u1AwgUF.png)
+![Funil de vendas do CRM: cada coluna é uma etapa e cada cartão, um negócio em andamento](https://i.imgur.com/u1AwgUF.png)
 
 ---
 
@@ -34,11 +34,11 @@ O **Funil de Vendas** define as **etapas do processo comercial** no **CRM**, per
 
 Acesse o **menu lateral** e clique em **“Negócios”**. Em seguida, selecione o botão **“Modelo”**, localizado no **topo da tela**. Depois clique em **“+ Criar Novo Funil”** :
 
-![Acessando o VendaAI](https://i.imgur.com/3GJxshc.png)
+![Botão “Modelo” e opção “+ Criar Novo Funil” no módulo Negócios](https://i.imgur.com/3GJxshc.png)
 
 Preencha as informações principais:
 
-![Acessando o VendaAI](https://i.imgur.com/zV44NGQ.png)
+![Formulário de criação do funil, com as informações principais](https://i.imgur.com/zV44NGQ.png)
 
 Preencha os seguintes **campos** para configurar o **Funil de Vendas**:
 
@@ -60,11 +60,11 @@ Clique em **“Adicionar Etapa”** e defina o **nome de cada fase**, de acordo 
 
 **Exemplo de sequência recomendada:**
 
-![Acessando o VendaAI](https://i.imgur.com/2PcQ1NC.png)
+![Exemplo de sequência recomendada de etapas do funil](https://i.imgur.com/2PcQ1NC.png)
 
 ---
 
-![Acessando o VendaAI](https://i.imgur.com/fSWcrmj.png)
+![Etapas do funil já cadastradas](https://i.imgur.com/fSWcrmj.png)
 
 <ListaCard>
 
@@ -81,7 +81,7 @@ Clique em **“Adicionar Etapa”** e defina o **nome de cada fase**, de acordo 
 
 Se desejar **restringir o uso do funil** a determinados **usuários ou filiais**, preencha os **campos disponíveis** conforme necessário:
 
-![Acessando o VendaAI](https://i.imgur.com/dvEwG0V.png)
+![Campos para restringir o funil a determinados usuários ou filiais](https://i.imgur.com/dvEwG0V.png)
 
 <ListaCard>
 
@@ -91,7 +91,7 @@ Se desejar **restringir o uso do funil** a determinados **usuários ou filiais**
 
 </ListaCard>
 
-![Acessando o VendaAI](https://i.imgur.com/ANlIe8G.png)
+![Configuração de acessos do funil por usuários, autorizações e unidades organizacionais](https://i.imgur.com/ANlIe8G.png)
 
 Se os **campos de acesso** forem deixados em branco, todos os **usuários com acesso ao CRM** poderão utilizar o **funil**. 
 
@@ -110,7 +110,7 @@ Após isso, o **novo funil** será exibido na **lista de funis** e poderá ser s
 
 </ListaCard>
 
-![Acessando o VendaAI](https://i.imgur.com/98l1WMu.png)
+![Seleção do funil recém-criado no menu da tela de Negócios](https://i.imgur.com/98l1WMu.png)
 
 ---
 
@@ -118,11 +118,11 @@ Após isso, o **novo funil** será exibido na **lista de funis** e poderá ser s
 
 Para realizar o **cadastro de novos negócios**, utilize o botão **“+ Negócio”**, localizado na **parte superior direita da tela**:
 
-![Acessando o VendaAI](https://i.imgur.com/s0xPs3m.png)
+![Botão “+ Negócio” na parte superior direita da tela](https://i.imgur.com/s0xPs3m.png)
 
 Ao selecionar essa opção, será possível **criar um novo negócio** no **CRM do VendaAI**:
 
-![Acessando o VendaAI](https://i.imgur.com/7ZPIiKB.png)
+![Formulário de criação de um novo negócio no CRM](https://i.imgur.com/7ZPIiKB.png)
 
 <ListaCard>
 

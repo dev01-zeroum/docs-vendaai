@@ -131,7 +131,7 @@ A tabela exibe informações importantes para o controle de estoque:
 
 Essa consulta auxilia na identificação e correção de possíveis falhas no processo de **estoque e expedição de produtos**.
 
-![Acessando o VendaAI](https://i.imgur.com/DyFRWE3.png)
+![Consulta de divergência de estoque](https://i.imgur.com/DyFRWE3.png)
 
 ---
 
@@ -162,7 +162,7 @@ A tabela de resultados apresenta as seguintes informações:
 
 Além disso, essa seção disponibiliza a opção de **exportação para Excel**, permitindo uma análise mais detalhada e a criação de **relatórios personalizados**.
 
-![Acessando o VendaAI](https://i.imgur.com/Vthumhs.png)
+![Consulta de pesquisa de satisfação, com opção de exportar para Excel](https://i.imgur.com/Vthumhs.png)
 
 ---
 

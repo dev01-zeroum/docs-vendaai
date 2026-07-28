@@ -24,7 +24,7 @@ Na parte superior direita da tela, há um botão de **filtros**, que permite a *
 
 A seguir, é apresentada uma **imagem de exemplo**:
 
-![Acessando o VendaAI](https://i.imgur.com/CNYgerp.png)
+![Listagem de pedidos, com filtros, exportação e criação de novo pedido](https://i.imgur.com/CNYgerp.png)
 
 Para incluir uma **nova venda**, é necessário clicar no botão **"+ Criar novo pedido"**, localizado no **canto superior direito**, e seguir o passo a passo abaixo:
 

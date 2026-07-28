@@ -15,7 +15,7 @@ O painel da aba **Análise de Pedidos** do sistema **VendaAI** exibe a **lista d
 
 A interface conta com um **campo de pesquisa no topo**, facilitando a localização de **pedidos específicos** por **código, cliente ou vendedor**:
 
-![Acessando o VendaAI](https://i.imgur.com/sercYks.png)
+![Lista de pedidos em análise, com campo de pesquisa e colunas de status, cliente e vendedor](https://i.imgur.com/sercYks.png)
 
 Os **pedidos** são organizados em uma **tabela estruturada**, com colunas que exibem dados como **ações**, **empresa**, **código web**, **status**, **motivo**, **cliente**, **preço total**, **vendedor**, **data de criação** e **criado por** (usuário responsável pelo cadastro).
 

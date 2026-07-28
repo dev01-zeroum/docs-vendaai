@@ -25,11 +25,11 @@ Para **criar um conteúdo na Página Inicial**, siga os passos abaixo:
 
 </ListaCard>
 
-![Acessando o VendaAI](https://i.imgur.com/YvXWuMQ.png)
+![Opção “Criar Conteúdo” dentro do menu de Configurações](https://i.imgur.com/YvXWuMQ.png)
 
 Após iniciar a criação, preencha os **campos disponíveis** para inserir o **conteúdo desejado**, conforme descrito nos **tópicos a seguir**:
 
-![Acessando o VendaAI](https://i.imgur.com/KVgC4pz.png)
+![Formulário de criação de conteúdo da Página Inicial](https://i.imgur.com/KVgC4pz.png)
 
 Preencha os seguintes **campos** para configurar o conteúdo:
 

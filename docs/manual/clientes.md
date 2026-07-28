@@ -24,7 +24,7 @@ Na lateral direita da tela, há um botão de **filtros**, que possibilita a **se
 
 Para criar um cliente, é necessário clicar no botão **“Criar novo cliente”**, como mostrado na **imagem a seguir**:
 
-![Acessando o VendaAI](https://i.imgur.com/otZBi6t.png)
+![Botão “Criar novo cliente” na listagem de clientes](https://i.imgur.com/otZBi6t.png)
 
 ## Passo a passo para criar um cliente
 

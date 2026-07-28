@@ -68,13 +68,13 @@ Após o cadastro, é possível pesquisar as empresas registradas, visualizando:
 
 Além disso, a interface disponibiliza opções para **editar** ou **excluir** registros existentes, facilitando a manutenção das informações.
 
-![Acessando o VendaAI](https://i.imgur.com/2Pp2z6Z.png)
+![Listagem de empresas, com as opções de editar e excluir registros](https://i.imgur.com/2Pp2z6Z.png)
 
 A pesquisa é intuitiva e facilita a localização das empresas cadastradas, proporcionando uma gestão mais organizada e ágil das informações.
 
 Para **registrar uma nova empresa**, clique no botão **“+ Criar nova empresa”**, localizado no canto superior direito da tela, conforme ilustrado na imagem abaixo:
 
-![Acessando o VendaAI](https://i.imgur.com/U4cmgPe.png)
+![Botão “+ Criar nova empresa” no canto superior direito](https://i.imgur.com/U4cmgPe.png)
 
 Após clicar no botão de criação, será exibido o pop-up **Criar Empresa**.
 
@@ -92,7 +92,7 @@ Após o preenchimento das informações, confirme o cadastro para concluir a cri
 
 Segue abaixo a imagem de instrução:
 
-![Acessando o VendaAI](https://i.imgur.com/OwRUBeQ.png)
+![Formulário de cadastro de empresa preenchido](https://i.imgur.com/OwRUBeQ.png)
 
 <ListaCard>
 
