@@ -1,5 +1,6 @@
 import React from 'react';
 import Link from '@docusaurus/Link';
+import Icon from '@site/src/components/shared/Icon';
 
 export default function LinksGrid({ eyebrow, titulo, lead, items }) {
   return (
@@ -16,11 +17,16 @@ export default function LinksGrid({ eyebrow, titulo, lead, items }) {
         {items.map((item) => (
           <Link key={item.href} to={item.href} className="link-card">
             {item.icon && (
-              <div className="link-card__icon" aria-hidden="true">{item.icon}</div>
+              <div className="link-card__icon">
+                <Icon name={item.icon} size={22} />
+              </div>
             )}
             <h3 className="link-card__titulo">{item.titulo}</h3>
             <p className="link-card__desc">{item.desc}</p>
-            <span className="link-card__arrow">Ver detalhes →</span>
+            <span className="link-card__arrow">
+              Ver detalhes
+              <Icon name="arrow" size={16} />
+            </span>
           </Link>
         ))}
       </div>

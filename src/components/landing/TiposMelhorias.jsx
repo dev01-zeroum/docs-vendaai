@@ -1,4 +1,5 @@
 import React from 'react';
+import Icon from '@site/src/components/shared/Icon';
 
 export default function TiposMelhorias() {
   return (
@@ -14,7 +15,9 @@ export default function TiposMelhorias() {
 
       <div className="landing-tipos">
         <article className="landing-tipo landing-tipo--padrao">
-          <div className="landing-tipo__icon" aria-hidden="true">✓</div>
+          <div className="landing-tipo__icon">
+            <Icon name="check" />
+          </div>
           <h3 className="landing-tipo__title">Melhoria de Produto Padrão</h3>
           <p className="landing-tipo__desc">
             Funcionalidades <strong>já prontas</strong> que qualquer cliente pode
@@ -28,7 +31,9 @@ export default function TiposMelhorias() {
         </article>
 
         <article className="landing-tipo landing-tipo--modulado">
-          <div className="landing-tipo__icon" aria-hidden="true">⚙</div>
+          <div className="landing-tipo__icon">
+            <Icon name="gear" />
+          </div>
           <h3 className="landing-tipo__title">Novo Recurso Modulado</h3>
           <p className="landing-tipo__desc">
             Recursos avançados que demandam <strong>desenvolvimento dedicado</strong>{' '}

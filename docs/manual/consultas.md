@@ -1,10 +1,18 @@
 ---
 title: 'Consultas'
+hide_title: true
 ---
 
+import ManualHeader from '@site/src/components/manual/ManualHeader';
 import ListaCard from '@site/src/components/shared/ListaCard';
 
+<ManualHeader
+  titulo="Consultas"
+  resumo="Informações financeiras e operacionais integradas ao Protheus.">
+
 A aba **Consultas** do **VendaAI** oferece diversas opções para consulta de informações importantes diretamente integradas ao sistema **Protheus**, como dados de **clientes**, **pedidos**, **comissões**, **divergências de estoque** e **pesquisas de satisfação**.
+
+</ManualHeader>
 
 ## 1 - Títulos em Aberto
 

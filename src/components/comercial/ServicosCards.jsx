@@ -1,18 +1,19 @@
 import React from 'react';
+import Icon from '@site/src/components/shared/Icon';
 
 const SERVICOS = [
   {
-    icon: '🚀',
+    icon: 'trending',
     titulo: 'Contratação de Recursos Modulados',
     desc: 'Habilitação dos novos recursos apresentadosnas Atualizações, com cronograma combinado e equipe dedicada.',
   },
   {
-    icon: '📦',
+    icon: 'box',
     titulo: 'Pacotes Personalizados',
     desc: 'Combinações de funcionalidades alinhadas ao seu cenário de operação, com proposta sob medida.',
   },
   {
-    icon: '💡',
+    icon: 'bulb',
     titulo: 'Consultoria de Funcionalidades',
     desc: 'Esclarecimento sobre o que cada recurso entrega e qual faz mais sentido pro seu momento.',
   },
@@ -33,8 +34,8 @@ export default function ServicosCards() {
       <div className="comercial-servicos">
         {SERVICOS.map((s) => (
           <article key={s.titulo} className="comercial-servico">
-            <div className="comercial-servico__icon" aria-hidden="true">
-              {s.icon}
+            <div className="comercial-servico__icon">
+              <Icon name={s.icon} size={24} />
             </div>
             <h3 className="comercial-servico__titulo">{s.titulo}</h3>
             <p className="comercial-servico__desc">{s.desc}</p>

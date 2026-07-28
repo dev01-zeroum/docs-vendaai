@@ -1,6 +1,7 @@
 import React from 'react';
 import Link from '@docusaurus/Link';
 import tabs from '@site/src/manualTecnicoTabs';
+import Icon from '@site/src/components/shared/Icon';
 
 // Seção "As abas de parâmetros" da Página Inicial: cabeçalho no estilo
 // da landing (.page-section) + grid compacto de cartões (ícone + título
@@ -20,7 +21,9 @@ export default function ManualIndex() {
       <div className="param-grid">
         {tabs.map((tab) => (
           <Link key={tab.slug} to={tab.slug} className="param-card">
-            <span className="param-card__icon" aria-hidden="true">{tab.icon}</span>
+            <span className="param-card__icon">
+              <Icon name={tab.icon} size={20} />
+            </span>
             <span className="param-card__body">
               <span className="param-card__titulo">{tab.titulo}</span>
               <span className="param-card__desc">{tab.desc}</span>

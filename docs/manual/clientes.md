@@ -1,10 +1,18 @@
 ---
 title: 'Clientes'
+hide_title: true
 ---
 
+import ManualHeader from '@site/src/components/manual/ManualHeader';
 import ListaCard from '@site/src/components/shared/ListaCard';
 
+<ManualHeader
+  titulo="Clientes"
+  resumo="Cadastro, consulta e gestão da carteira de clientes.">
+
 O painel da aba **Clientes** exibe a **lista de clientes cadastrados**, permitindo a visualização de **informações detalhadas**.
+
+</ManualHeader>
 
 A interface apresenta um **campo de pesquisa no topo**, facilitando a localização de **clientes específicos**.
 

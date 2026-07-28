@@ -1,10 +1,18 @@
 ---
 title: 'Registros'
+hide_title: true
 ---
 
+import ManualHeader from '@site/src/components/manual/ManualHeader';
 import ListaCard from '@site/src/components/shared/ListaCard';
 
+<ManualHeader
+  titulo="Registros"
+  resumo="Central de cadastros da operação, de produtos a metas.">
+
 A aba **Registros** disponibiliza acesso a diferentes áreas do sistema, permitindo consultar e gerenciar informações essenciais para a operação.
+
+</ManualHeader>
 
 Nela, estão disponíveis as seguintes categorias:
 

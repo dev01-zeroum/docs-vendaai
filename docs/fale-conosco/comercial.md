@@ -29,13 +29,13 @@ Se você se interessou pelas melhorias, novas funcionalidades ou atualizações 
   canais={[
     {
       to: '/fale-conosco/duvidas',
-      icon: '🛟',
+      icon: 'support',
       titulo: 'Suporte técnico',
       desc: 'Dúvidas de uso, configurações ou habilitação de melhorias padrão.',
     },
     {
       to: '/fale-conosco/sugestoes',
-      icon: '💬',
+      icon: 'chat',
       titulo: 'Sugestões',
       desc: 'Tem uma ideia pro VendaAI? A gente lê tudo e prioriza as mais pedidas.',
     },

@@ -1,8 +1,17 @@
 ---
 title: 'Análise de Pedidos'
+hide_title: true
 ---
 
+import ManualHeader from '@site/src/components/manual/ManualHeader';
+
+<ManualHeader
+  titulo="Análise de Pedidos"
+  resumo="Acompanhamento dos pedidos em análise e seus status.">
+
 O painel da aba **Análise de Pedidos** do sistema **VendaAI** exibe a **lista de pedidos em análise**, permitindo o **acompanhamento detalhado do status de cada pedido**.
+
+</ManualHeader>
 
 A interface conta com um **campo de pesquisa no topo**, facilitando a localização de **pedidos específicos** por **código, cliente ou vendedor**:
 

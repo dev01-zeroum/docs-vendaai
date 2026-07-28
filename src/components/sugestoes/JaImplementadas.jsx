@@ -1,4 +1,5 @@
 import React from 'react';
+import Icon from '@site/src/components/shared/Icon';
 
 const ITENS = [
   'Dark mode',
@@ -20,7 +21,9 @@ export default function JaImplementadas() {
       <ul className="ja-implementadas">
         {ITENS.map((item) => (
           <li key={item} className="ja-implementadas__item">
-            <span aria-hidden="true">✓</span>
+            <span className="ja-implementadas__check">
+              <Icon name="check" size={14} />
+            </span>
             <span>{item}</span>
           </li>
         ))}

@@ -1,5 +1,6 @@
 import React from 'react';
 import Link from '@docusaurus/Link';
+import Icon from '@site/src/components/shared/Icon';
 
 export default function CanaisGrid({ eyebrow, titulo, lead, canais }) {
   return (
@@ -13,7 +14,9 @@ export default function CanaisGrid({ eyebrow, titulo, lead, canais }) {
       <div className="canais-grid">
         {canais.map((c) => (
           <article key={c.titulo} className="canal-card">
-            <div className="canal-card__icon" aria-hidden="true">{c.icon}</div>
+            <div className="canal-card__icon">
+              <Icon name={c.icon} size={24} />
+            </div>
             <h3 className="canal-card__titulo">{c.titulo}</h3>
             <p className="canal-card__desc">{c.desc}</p>
             <Link

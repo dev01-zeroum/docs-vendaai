@@ -1,10 +1,20 @@
 ---
 title: 'Acessando o VendaAI'
+hide_title: true
 ---
 
+import ManualHeader from '@site/src/components/manual/ManualHeader';
 import ListaCard from '@site/src/components/shared/ListaCard';
 
-Ao acessar o **link disponibilizado**, o usuário será direcionado para a plataforma **VendaAI**. A **tela inicial do sistema** será exibida conforme apresentado no **exemplo a seguir**:
+<ManualHeader
+  titulo="Acessando o VendaAI"
+  resumo="Login, recuperação de senha e ambientes de acesso.">
+
+Ao acessar o **link disponibilizado**, o usuário será direcionado para a plataforma **VendaAI**.
+
+</ManualHeader>
+
+A **tela inicial do sistema** será exibida conforme apresentado no **exemplo a seguir**:
 
 ![Acessando o VendaAI](https://i.imgur.com/tYsZLCl.png)
 
@@ -18,7 +28,11 @@ Após informar o **e-mail**, você receberá uma mensagem com **instruções par
 
 Após concluir o **processo de redefinição da senha**, o usuário será direcionado para a **página inicial da plataforma**.
 
-> ⚠️ **Ponto de atenção:** o **VendaAI** disponibiliza dois **ambientes de acesso**:
+:::caution Ponto de atenção
+
+O **VendaAI** disponibiliza dois **ambientes de acesso**:
+
+:::
 
 <ListaCard>
 

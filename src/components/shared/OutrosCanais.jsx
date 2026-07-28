@@ -1,5 +1,6 @@
 import React from 'react';
 import Link from '@docusaurus/Link';
+import Icon from '@site/src/components/shared/Icon';
 
 export default function OutrosCanais({
   eyebrow = 'Outros canais',
@@ -16,12 +17,16 @@ export default function OutrosCanais({
       <div className="outros-canais">
         {canais.map((c) => (
           <Link key={c.to} to={c.to} className="outros-canal">
-            <span className="outros-canal__icon" aria-hidden="true">{c.icon}</span>
+            <span className="outros-canal__icon">
+              <Icon name={c.icon} size={22} />
+            </span>
             <div>
               <h3 className="outros-canal__titulo">{c.titulo}</h3>
               <p className="outros-canal__desc">{c.desc}</p>
             </div>
-            <span className="outros-canal__arrow" aria-hidden="true">→</span>
+            <span className="outros-canal__arrow">
+              <Icon name="arrow" size={18} />
+            </span>
           </Link>
         ))}
       </div>

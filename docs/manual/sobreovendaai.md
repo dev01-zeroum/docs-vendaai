@@ -1,13 +1,19 @@
 ---
 title: 'Sobre o VendaAI'
 description: 'Visão geral do VendaAI — plataforma B2C e B2B para representantes, distribuidores, vendedores e clientes.'
+hide_title: true
 ---
 
+import ManualHeader from '@site/src/components/manual/ManualHeader';
 import LinksGrid from '@site/src/components/shared/LinksGrid';
 
-# Sobre o VendaAI
+<ManualHeader
+  titulo="Sobre o VendaAI"
+  resumo="Visão geral da plataforma e do que cada área entrega.">
 
 **VendaAI** é um portal online **B2C (Business to Consumer)** e **B2B (Business to Business)**, desenvolvido para potencializar as vendas de **representantes, distribuidores, vendedores e clientes**.
+
+</ManualHeader>
 
 Com uma plataforma **intuitiva, eficiente e adaptada para dispositivos móveis**, o **VendaAI** conecta o time comercial aos clientes de forma estratégica, proporcionando mais **agilidade, organização e produtividade** no processo de vendas.
 
@@ -31,61 +37,61 @@ No canto superior direito, encontra-se o botão azul **"Configurações"**, que 
   lead="Clique em qualquer card abaixo para acessar a página detalhada da funcionalidade."
   items={[
     {
-      icon: '🏠',
+      icon: 'home',
       titulo: 'Página Inicial',
       desc: 'Divulgue campanhas, novos produtos, comunicados, vídeos e conteúdos institucionais — parametrizados por usuário.',
       href: '/manual/paginainicial',
     },
     {
-      icon: '📊',
+      icon: 'chart',
       titulo: 'Dashboard',
       desc: 'Visão geral do desempenho comercial em gráficos e indicadores: pedidos, orçamentos, vendas e CRM.',
       href: '/manual/dashboard',
     },
     {
-      icon: '🎯',
+      icon: 'kanban',
       titulo: 'Negócios (CRM)',
       desc: 'Gerencie oportunidades em funis de vendas, acompanhe negociações e identifique pendências.',
       href: '/manual/negocios',
     },
     {
-      icon: '📅',
+      icon: 'calendar',
       titulo: 'Agenda',
       desc: 'Organize tarefas diárias, semanais ou mensais e acompanhe as atividades da equipe comercial.',
       href: '/manual/agenda',
     },
     {
-      icon: '📚',
+      icon: 'book',
       titulo: 'Catálogo',
       desc: 'Apresente os produtos disponíveis com preços e estoque conforme o cliente atendido.',
       href: '/manual/catalogo',
     },
     {
-      icon: '👥',
+      icon: 'users',
       titulo: 'Clientes',
       desc: 'Consulte e gerencie clientes e prospects, com dados de contato e informações comerciais.',
       href: '/manual/clientes',
     },
     {
-      icon: '🛒',
+      icon: 'cart',
       titulo: 'Vendas',
       desc: 'Crie e acompanhe pedidos no fluxo completo de vendas do VendaAI.',
       href: '/manual/vendas',
     },
     {
-      icon: '📋',
+      icon: 'clipboard',
       titulo: 'Análise de Pedidos',
       desc: 'Acompanhe pedidos registrados, status, vendedor, cliente e valores em uma visão consolidada.',
       href: '/manual/analisepedidos',
     },
     {
-      icon: '🔍',
+      icon: 'search',
       titulo: 'Consultas',
       desc: 'Visualize títulos em aberto, pedidos integrados com Protheus e demais informações financeiras.',
       href: '/manual/consultas',
     },
     {
-      icon: '📁',
+      icon: 'folder',
       titulo: 'Registros',
       desc: 'Centralize cadastros: produtos, pagamentos, vendedores, clientes, fornecedores, campanhas e endereços.',
       href: '/manual/registros',

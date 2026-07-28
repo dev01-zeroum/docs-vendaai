@@ -1,10 +1,18 @@
 ---
 title: 'Agenda'
+hide_title: true
 ---
 
+import ManualHeader from '@site/src/components/manual/ManualHeader';
 import ListaCard from '@site/src/components/shared/ListaCard';
 
+<ManualHeader
+  titulo="Agenda"
+  resumo="Tarefas, compromissos e atividades da equipe comercial.">
+
 Na **Agenda**, os usuários podem acessar **relatórios específicos de vendedores**, permitindo uma visão detalhada do **desempenho** e das **atividades realizadas**.
+
+</ManualHeader>
 
 A interface possibilita a visualização das **tarefas e compromissos**, com opções para alternar entre os modos:
 

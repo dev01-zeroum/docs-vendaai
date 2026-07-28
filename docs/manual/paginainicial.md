@@ -1,10 +1,18 @@
 ---
 title: 'Página Inicial'
+hide_title: true
 ---
 
+import ManualHeader from '@site/src/components/manual/ManualHeader';
 import ListaCard from '@site/src/components/shared/ListaCard';
 
+<ManualHeader
+  titulo="Página Inicial"
+  resumo="Campanhas, comunicados e conteúdos institucionais do painel.">
+
 O **painel principal (Página Inicial)** do **VendaAI** é uma interface **intuitiva e organizada** para a **gestão de vendas, produtos e clientes**.
+
+</ManualHeader>
 
 ## Criando uma Página Inicial
 

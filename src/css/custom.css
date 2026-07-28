@@ -61,6 +61,82 @@
 }
 
 /* ============================================================
+ * TIPOGRAFIA — mantém a fonte do sistema, só suaviza o traço
+ * (Sem a suavização o texto fica "duro" no Windows.)
+ * ============================================================ */
+html,
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ============================================================
+ * ÍCONES — SVG inline (src/components/shared/Icon.jsx)
+ * Substituem os emojis em todo o site. Herdam a cor de quem os
+ * envolve (currentColor), então basta pintar o container.
+ * ------------------------------------------------------------
+ * Dois formatos:
+ *   1) "chip"  — quadrado arredondado com fundo tingido (cards);
+ *   2) "solto" — só o traço, na cor primária (listas, barras).
+ * ============================================================ */
+
+/* ----- 1) Chips ----- */
+.link-card__icon,
+.habilitar-card__icon,
+.landing-tipo__icon,
+.comercial-servico__icon,
+.canal-card__icon,
+.porque-card__icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 10px;
+  background-color: rgba(79, 195, 247, 0.12);
+  color: var(--ifm-color-primary-darker);
+  flex-shrink: 0;
+}
+
+[data-theme='dark'] .link-card__icon,
+[data-theme='dark'] .habilitar-card__icon,
+[data-theme='dark'] .landing-tipo__icon,
+[data-theme='dark'] .comercial-servico__icon,
+[data-theme='dark'] .canal-card__icon,
+[data-theme='dark'] .porque-card__icon {
+  background-color: rgba(129, 212, 250, 0.12);
+  color: var(--ifm-color-primary);
+}
+
+/* ----- 2) Ícones soltos ----- */
+.param-card__icon,
+.outros-canal__icon,
+.horario-bar__icon,
+.tela-parametro__placeholder-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--ifm-color-primary-darker);
+  flex-shrink: 0;
+}
+
+[data-theme='dark'] .param-card__icon,
+[data-theme='dark'] .outros-canal__icon,
+[data-theme='dark'] .horario-bar__icon,
+[data-theme='dark'] .tela-parametro__placeholder-icon {
+  color: var(--ifm-color-primary);
+}
+
+/* Links de ação com seta ao lado do texto */
+.link-card__arrow,
+.landing-edicao__link,
+.habilitar-card__alt {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+/* ============================================================
  * NAVBAR — refinamento visual do cabeçalho
  * ============================================================ */
 .navbar {
@@ -83,7 +159,7 @@
   text-decoration: none;
 }
 
-/* Link "Site Oficial" — minimalista, texto com seta sutil */
+/* Link "Site Oficial" — minimalista, só texto */
 .navbar-cta {
   display: inline-flex !important;
   align-items: center;
@@ -99,23 +175,9 @@
   text-decoration: none;
 }
 
-/* Esconde o ícone padrão de link externo do Docusaurus */
+/* Esconde o ícone padrão de link externo do Docusaurus — o link é só texto */
 .navbar-cta svg {
   display: none;
-}
-
-/* Seta customizada após o texto */
-.navbar-cta::after {
-  content: '↗';
-  font-size: 0.85rem;
-  font-weight: 700;
-  opacity: 0.55;
-  transition: transform 0.15s, opacity 0.15s;
-}
-
-.navbar-cta:hover::after {
-  transform: translate(2px, -2px);
-  opacity: 1;
 }
 
 /* ============================================================
@@ -134,58 +196,63 @@
   display: flex;
 }
 
+/* Sem caixa: só texto, chevron e uma transição de cor no hover */
 .pagination-nav__link {
   display: flex;
   flex-direction: column;
-  padding: 1rem 1.25rem;
-  border: 1px solid var(--vendaai-border);
-  border-radius: 10px;
-  background-color: var(--vendaai-surface);
+  gap: 0.25rem;
+  padding: 0.35rem 0;
+  border: 0;
+  border-radius: 0;
+  background: none;
   text-decoration: none !important;
-  transition: transform 0.18s, box-shadow 0.18s, border-color 0.18s;
   width: 100%;
   position: relative;
 }
 
 .pagination-nav__link:hover {
-  transform: translateY(-2px);
-  border-color: var(--ifm-color-primary);
-  box-shadow: 0 4px 12px rgba(15, 23, 42, 0.08);
+  background: none;
   text-decoration: none;
 }
 
-[data-theme='dark'] .pagination-nav__link:hover {
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
-}
-
 .pagination-nav__sublabel {
-  font-size: 0.72rem;
-  font-weight: 700;
-  letter-spacing: 0.14em;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
   color: var(--vendaai-text-muted);
-  margin-bottom: 0.4rem;
+  opacity: 0.8;
 }
 
 .pagination-nav__label {
-  font-size: 0.98rem;
-  font-weight: 600;
+  font-size: 0.95rem;
+  font-weight: 500;
   color: var(--vendaai-text);
   line-height: 1.4;
+  transition: color 0.15s ease;
 }
 
 [data-theme='dark'] .pagination-nav__label {
-  color: #f1f5f9;
+  color: #e2e8f0;
 }
 
-/* Seta antes do título do item Anterior */
-.pagination-nav__item:not(.pagination-nav__item--next) .pagination-nav__label::before {
-  content: '← ';
+.pagination-nav__link:hover .pagination-nav__label {
+  color: var(--ifm-color-primary-darker);
+}
+
+[data-theme='dark'] .pagination-nav__link:hover .pagination-nav__label {
   color: var(--ifm-color-primary);
-  font-weight: 700;
+}
+
+/* Chevron antes do título do item Anterior */
+.pagination-nav__item:not(.pagination-nav__item--next) .pagination-nav__label::before {
+  content: '‹';
+  color: var(--ifm-color-primary);
+  font-size: 1.15em;
+  line-height: 1;
   display: inline-block;
-  margin-right: 0.15rem;
-  transition: transform 0.18s;
+  margin-right: 0.4rem;
+  transition: transform 0.18s ease;
 }
 
 .pagination-nav__item:not(.pagination-nav__item--next)
@@ -194,18 +261,19 @@
   transform: translateX(-3px);
 }
 
-/* Item "Próximo" alinhado à direita, seta após o título */
+/* Item "Próximo" alinhado à direita, chevron após o título */
 .pagination-nav__item--next {
   text-align: right;
 }
 
 .pagination-nav__item--next .pagination-nav__label::after {
-  content: ' →';
+  content: '›';
   color: var(--ifm-color-primary);
-  font-weight: 700;
+  font-size: 1.15em;
+  line-height: 1;
   display: inline-block;
-  margin-left: 0.15rem;
-  transition: transform 0.18s;
+  margin-left: 0.4rem;
+  transition: transform 0.18s ease;
 }
 
 .pagination-nav__item--next .pagination-nav__link:hover .pagination-nav__label::after {
@@ -219,12 +287,193 @@
 }
 
 /* ============================================================
- * SIDEBAR — corta o "vazamento" de scroll entre sidebar e página
+ * SIDEBAR — menu lateral no estilo editorial
+ * ------------------------------------------------------------
+ * As categorias viram cabeçalhos de seção (caixa alta, na cor
+ * primária — mesmo padrão dos eyebrows do site) e os itens ficam
+ * leves e espaçados. O item ativo é marcado por uma barra à
+ * esquerda + fundo sutil, em vez do bloco sólido do padrão.
  * ============================================================ */
+
+/* Corta o "vazamento" de scroll entre sidebar e página */
 .theme-doc-sidebar-container,
 .theme-doc-sidebar-menu {
   overscroll-behavior: contain;
   scroll-behavior: smooth;
+}
+
+/* Respiro dos itens. Os fundos de hover/ativo não são zerados aqui de
+ * propósito: as regras abaixo são mais específicas e já sobrescrevem o
+ * Infima, e mexer nas variáveis afetaria também o menu mobile da navbar. */
+:root {
+  --ifm-menu-color: var(--vendaai-text-muted);
+  --ifm-menu-link-padding-vertical: 0.42rem;
+  --ifm-menu-link-padding-horizontal: 0.7rem;
+}
+
+.theme-doc-sidebar-container {
+  border-right: 1px solid var(--vendaai-border);
+}
+
+.theme-doc-sidebar-menu {
+  padding: 0.75rem 0.75rem 1.5rem;
+}
+
+/* ----- Itens (links de página) ----- */
+.theme-doc-sidebar-item-link > .menu__link {
+  position: relative;
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 1.45;
+  letter-spacing: -0.003em;
+  color: var(--vendaai-text-muted);
+  border-radius: 7px;
+  transition: color 0.15s ease, background-color 0.15s ease;
+}
+
+/* Hover e ativo usam a mesma escala de opacidade (o ativo ~2x o hover),
+ * assim a diferença entre os dois se mantém em qualquer fundo. */
+.theme-doc-sidebar-item-link > .menu__link:hover {
+  color: var(--vendaai-text);
+  background-color: rgba(31, 41, 55, 0.045);
+}
+
+[data-theme='dark'] .theme-doc-sidebar-item-link > .menu__link:hover {
+  color: #e2e8f0;
+  background-color: rgba(255, 255, 255, 0.04);
+}
+
+/* Links soltos de nível 1 (Início, Página Inicial) — mesmo peso dos
+ * títulos de seção, já que também são entradas de topo do menu.
+ * Ganham um divisor abaixo pra separar das seções. */
+.theme-doc-sidebar-item-link-level-1 > .menu__link {
+  font-size: 0.92rem;
+  font-weight: 700;
+  color: var(--vendaai-text);
+}
+
+[data-theme='dark'] .theme-doc-sidebar-item-link-level-1 > .menu__link {
+  color: #f1f5f9;
+}
+
+.theme-doc-sidebar-menu > .theme-doc-sidebar-item-link-level-1 {
+  padding-bottom: 0.7rem;
+  margin-bottom: 0.15rem;
+  border-bottom: 1px solid var(--vendaai-border);
+}
+
+/* ----- Item ativo: barra à esquerda + fundo neutro -----
+ * Sem cor de marca: o destaque vem do peso, do contraste do texto e
+ * da barra — fica sóbrio e não compete com os links do conteúdo. */
+.theme-doc-sidebar-item-link > .menu__link--active {
+  font-weight: 600;
+  color: var(--vendaai-text);
+  background-color: rgba(31, 41, 55, 0.085);
+}
+
+[data-theme='dark'] .theme-doc-sidebar-item-link > .menu__link--active {
+  color: #f8fafc;
+  background-color: rgba(255, 255, 255, 0.09);
+}
+
+.theme-doc-sidebar-item-link > .menu__link--active::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 3px;
+  height: 1.15rem;
+  border-radius: 0 3px 3px 0;
+  background-color: var(--vendaai-text);
+}
+
+[data-theme='dark'] .theme-doc-sidebar-item-link > .menu__link--active::before {
+  background-color: #cbd5e1;
+}
+
+/* O ativo genérico usa peso 600; no link de topo isso *reduziria* o peso.
+ * Precisa vir depois do bloco acima — mesma especificidade, ganha a ordem. */
+.theme-doc-sidebar-item-link-level-1 > .menu__link--active {
+  font-weight: 700;
+}
+
+/* ----- Categorias como cabeçalho de seção ----- */
+.theme-doc-sidebar-item-category-level-1 {
+  margin-top: 1.6rem;
+}
+
+.theme-doc-sidebar-menu > .theme-doc-sidebar-item-category-level-1:first-child {
+  margin-top: 0.35rem;
+}
+
+.theme-doc-sidebar-item-category-level-1 > .menu__list-item-collapsible,
+.theme-doc-sidebar-item-category-level-1 > .menu__list-item-collapsible:hover {
+  background: transparent;
+}
+
+.theme-doc-sidebar-item-category-level-1 > .menu__list-item-collapsible > .menu__link {
+  font-size: 0.875rem;
+  font-weight: 700;
+  letter-spacing: -0.005em;
+  text-transform: none;
+  color: var(--vendaai-text);
+  padding-top: 0.3rem;
+  padding-bottom: 0.3rem;
+  transition: opacity 0.15s ease;
+}
+
+[data-theme='dark']
+  .theme-doc-sidebar-item-category-level-1
+  > .menu__list-item-collapsible
+  > .menu__link {
+  color: #f1f5f9;
+}
+
+.theme-doc-sidebar-item-category-level-1
+  > .menu__list-item-collapsible
+  > .menu__link:hover {
+  opacity: 0.7;
+}
+
+/* Seta de recolher: discreta, só um apoio visual */
+.theme-doc-sidebar-item-category-level-1 .menu__link--sublist-caret::after {
+  opacity: 0.4;
+  transform: scale(0.7);
+  transition: opacity 0.15s ease, transform 0.2s ease;
+}
+
+.theme-doc-sidebar-item-category-level-1
+  .menu__list-item-collapsible:hover
+  .menu__link--sublist-caret::after {
+  opacity: 0.75;
+}
+
+.menu__list-item--collapsed .menu__link--sublist-caret::after {
+  transform: scale(0.7) rotate(90deg);
+}
+
+/* Filhos alinhados com o rótulo da seção (sem indentação dura) */
+.theme-doc-sidebar-item-category-level-1 > .menu__list {
+  padding-left: 0;
+  margin-top: 0.2rem;
+}
+
+/* ----- Barra de rolagem discreta ----- */
+.theme-doc-sidebar-menu::-webkit-scrollbar,
+.theme-doc-sidebar-container .menu::-webkit-scrollbar {
+  width: 6px;
+}
+
+.theme-doc-sidebar-menu::-webkit-scrollbar-thumb,
+.theme-doc-sidebar-container .menu::-webkit-scrollbar-thumb {
+  background-color: var(--vendaai-border);
+  border-radius: 999px;
+}
+
+.theme-doc-sidebar-menu::-webkit-scrollbar-thumb:hover,
+.theme-doc-sidebar-container .menu::-webkit-scrollbar-thumb:hover {
+  background-color: var(--vendaai-text-muted);
 }
 
 /* ============================================================
@@ -303,9 +552,22 @@
   color: var(--ifm-color-primary) !important;
 }
 
-/* Subníveis (h3 dentro de h2) — levemente menores */
+/* Tópicos de primeiro nível (h2) — mais firmes que os subníveis */
+.table-of-contents__left-border > li > .table-of-contents__link {
+  font-size: 0.885rem;
+  font-weight: 600;
+  color: var(--vendaai-text);
+}
+
+[data-theme='dark'] .table-of-contents__left-border > li > .table-of-contents__link {
+  color: #e2e8f0;
+}
+
+/* Subníveis (h3 dentro de h2) — levemente menores e mais leves */
 .table-of-contents .table-of-contents .table-of-contents__link {
   font-size: 0.82rem;
+  font-weight: 400;
+  color: var(--vendaai-text-muted);
 }
 
 /* Lista aninhada de subníveis */
@@ -347,12 +609,13 @@
 
 /* ============================================================
  * FOOTER (custom, swizzle @theme/Footer) — 3 colunas, compacto
- * Ícones SVG, botão único em destaque, divisória + copyright discreto.
+ * Colunas centralizadas, ícones SVG, links todos no mesmo peso,
+ * divisória + copyright discreto.
  * ============================================================ */
 .footer-x {
   border-top: 1px solid var(--vendaai-border);
   background-color: var(--vendaai-surface-elevated);
-  padding: 1.4rem 1.5rem 0.85rem;
+  padding: 1rem 1.5rem 0.7rem;
 }
 
 .footer-x__inner {
@@ -360,7 +623,15 @@
   margin: 0 auto;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 1.75rem;
+  gap: 1.5rem;
+}
+
+/* Cada coluna centralizada dentro da própria célula */
+.footer-x__col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
 }
 
 .footer-x__ico {
@@ -372,9 +643,10 @@
 .footer-x__col-title {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 0.5rem;
-  margin: 0 0 0.6rem;
-  font-size: 0.9rem;
+  margin: 0 0 0.5rem;
+  font-size: 0.88rem;
   font-weight: 700;
   color: var(--vendaai-text);
 }
@@ -391,7 +663,8 @@
   padding: 0;
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
+  align-items: center;
+  gap: 0.42rem;
 }
 
 .footer-x__link {
@@ -409,31 +682,11 @@
   color: var(--ifm-color-primary) !important;
 }
 
-/* Único item em destaque: Abrir chamado */
-.footer-x__cta {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.45rem;
-  padding: 0.5rem 1rem;
-  border-radius: 8px;
-  background-color: var(--ifm-color-primary);
-  color: #0a2540 !important;
-  font-size: 0.86rem;
-  font-weight: 600;
-  text-decoration: none !important;
-  transition: background-color 0.15s ease;
-}
-
-.footer-x__cta:hover {
-  background-color: var(--ifm-color-primary-dark);
-  color: #0a2540 !important;
-}
-
 /* Divisória sutil + copyright discreto */
 .footer-x__bottom {
   max-width: 1140px;
-  margin: 0.9rem auto 0;
-  padding-top: 0.8rem;
+  margin: 0.7rem auto 0;
+  padding-top: 0.6rem;
   border-top: 1px solid var(--vendaai-border);
   text-align: center;
 }
@@ -640,14 +893,6 @@
 }
 
 .landing-tipo__icon {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 2.5rem;
-  height: 2.5rem;
-  border-radius: 8px;
-  font-size: 1.25rem;
-  font-weight: 700;
   margin-bottom: 1rem;
 }
 
@@ -863,9 +1108,7 @@
 }
 
 .comercial-servico__icon {
-  font-size: 1.75rem;
-  margin-bottom: 0.75rem;
-  line-height: 1;
+  margin-bottom: 0.85rem;
 }
 
 .comercial-servico__titulo {
@@ -986,12 +1229,6 @@
   transform: translateX(2px);
 }
 
-.outros-canal__icon {
-  font-size: 1.5rem;
-  flex-shrink: 0;
-  line-height: 1;
-}
-
 .outros-canal__titulo {
   font-size: 0.98rem;
   font-weight: 700;
@@ -1011,7 +1248,7 @@
 }
 
 .outros-canal__arrow {
-  font-size: 1.1rem;
+  display: inline-flex;
   color: var(--ifm-color-primary);
   margin-left: auto;
   flex-shrink: 0;
@@ -1054,20 +1291,7 @@
 }
 
 .link-card__icon {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 2.5rem;
-  height: 2.5rem;
-  border-radius: 10px;
-  background-color: rgba(79, 195, 247, 0.12);
-  font-size: 1.35rem;
   margin-bottom: 0.85rem;
-  line-height: 1;
-}
-
-[data-theme='dark'] .link-card__icon {
-  background-color: rgba(129, 212, 250, 0.12);
 }
 
 .link-card__titulo {
@@ -1095,8 +1319,8 @@
   font-weight: 600;
   color: var(--ifm-color-primary-darker);
   margin-top: auto;
+  margin-right: auto;
   transition: transform 0.15s;
-  display: inline-block;
 }
 
 [data-theme='dark'] .link-card__arrow {
@@ -1145,14 +1369,6 @@
 }
 
 .habilitar-card__icon {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 2.5rem;
-  height: 2.5rem;
-  border-radius: 10px;
-  font-size: 1.25rem;
-  font-weight: 700;
   margin-bottom: 1rem;
 }
 
@@ -1213,14 +1429,15 @@
 }
 
 /* ============================================================
- * BOLETIM HEADER — título + objetivo no topo de cada edição
- * Magazine-style: título, subtítulo (deck), card de objetivo, divider editorial
+ * DOC HEADER — título + card de contexto no topo das páginas
+ * Magazine-style: título, subtítulo (deck) e card destacado.
+ * Padrão único usado pelo Boletim e pelo Manual (DocHeader.jsx).
  * ============================================================ */
-.boletim-header {
+.doc-header {
   margin: 0 0 1.5rem 0;
 }
 
-.boletim-header__title {
+.doc-header__title {
   font-size: clamp(2rem, 4.5vw, 2.85rem) !important;
   font-weight: 800;
   line-height: 1.1;
@@ -1229,11 +1446,11 @@
   letter-spacing: -0.025em;
 }
 
-[data-theme='dark'] .boletim-header__title {
+[data-theme='dark'] .doc-header__title {
   color: #f8fafc !important;
 }
 
-.boletim-header__subtitle {
+.doc-header__subtitle {
   font-size: 1.02rem;
   color: var(--vendaai-text-muted);
   font-style: italic;
@@ -1242,7 +1459,7 @@
 }
 
 /* Objetivo como card destacado com accent primário */
-.boletim-header__objetivo {
+.doc-header__objetivo {
   border: 1px solid var(--vendaai-border);
   border-left: 4px solid var(--ifm-color-primary);
   border-radius: 10px;
@@ -1251,7 +1468,7 @@
   position: relative;
 }
 
-.boletim-header__objetivo-label {
+.doc-header__objetivo-label {
   font-size: 0.72rem;
   font-weight: 700;
   letter-spacing: 0.12em;
@@ -1260,25 +1477,25 @@
   margin: 0 0 0.55rem 0;
 }
 
-[data-theme='dark'] .boletim-header__objetivo-label {
+[data-theme='dark'] .doc-header__objetivo-label {
   color: var(--ifm-color-primary);
 }
 
-.boletim-header__objetivo-text {
+.doc-header__objetivo-text {
   color: var(--vendaai-text);
   font-size: 1rem;
   line-height: 1.65;
 }
 
-[data-theme='dark'] .boletim-header__objetivo-text {
+[data-theme='dark'] .doc-header__objetivo-text {
   color: #e2e8f0;
 }
 
-.boletim-header__objetivo-text p {
+.doc-header__objetivo-text p {
   margin: 0 0 0.75rem 0;
 }
 
-.boletim-header__objetivo-text p:last-child {
+.doc-header__objetivo-text p:last-child {
   margin-bottom: 0;
 }
 
@@ -1510,9 +1727,7 @@
 }
 
 .param-card__icon {
-  font-size: 1.15rem;
-  line-height: 1.35;
-  flex-shrink: 0;
+  margin-top: 0.1rem;
 }
 
 .param-card__body {
@@ -1607,8 +1822,6 @@
 }
 
 .tela-parametro__placeholder-icon {
-  font-size: 1.75rem;
-  line-height: 1;
   opacity: 0.7;
 }
 
@@ -1716,9 +1929,7 @@ button[class*='collapseSidebarButton']::before {
 }
 
 .canal-card__icon {
-  font-size: 1.75rem;
-  margin-bottom: 0.75rem;
-  line-height: 1;
+  margin-bottom: 0.85rem;
 }
 
 .canal-card__titulo {
@@ -1763,11 +1974,6 @@ button[class*='collapseSidebarButton']::before {
   color: var(--vendaai-text);
 }
 
-.horario-bar__icon {
-  font-size: 1.25rem;
-  flex-shrink: 0;
-  line-height: 1;
-}
 
 /* ============================================================
  * SUGESTÕES — "Por que importam" + "Já implementadas"
@@ -1787,9 +1993,7 @@ button[class*='collapseSidebarButton']::before {
 }
 
 .porque-card__icon {
-  font-size: 1.75rem;
-  margin-bottom: 0.5rem;
-  line-height: 1;
+  margin: 0 auto 0.65rem;
 }
 
 .porque-card__titulo {
@@ -1833,7 +2037,7 @@ button[class*='collapseSidebarButton']::before {
   border-bottom: none;
 }
 
-.ja-implementadas__item > span:first-child {
+.ja-implementadas__check {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -1842,8 +2046,6 @@ button[class*='collapseSidebarButton']::before {
   border-radius: 50%;
   background-color: rgba(34, 197, 94, 0.15);
   color: #16a34a;
-  font-weight: 700;
-  font-size: 0.85rem;
   flex-shrink: 0;
 }
 

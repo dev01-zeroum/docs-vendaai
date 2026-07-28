@@ -21,11 +21,12 @@ module.exports = {
     {
       type: 'doc',
       id: 'index',
-      label: 'Início',
+      label: 'Página Inicial',
     },
     {
       type: 'category',
       label: 'Atualizações',
+      collapsed: false,
       items: [
         { type: 'doc', id: 'boletim/atualizacoes-01-2025', label: 'Atualizações - Jan/25' },
         { type: 'doc', id: 'boletim/atualizacoes-06-2025', label: 'Atualizações - Jun/25' },
@@ -37,6 +38,7 @@ module.exports = {
     {
       type: 'category',
       label: 'Fale Conosco',
+      collapsed: false,
       items: [
         { type: 'doc', id: 'fale-conosco/duvidas', label: 'Suporte e Dúvidas de Uso' },
         { type: 'doc', id: 'fale-conosco/sugestoes', label: 'Sugestões' },
@@ -46,6 +48,7 @@ module.exports = {
     {
       type: 'category',
       label: 'Manual',
+      collapsed: false,
       items: [
         { type: 'doc', id: 'manual/sobreovendaai', label: 'Sobre o VendaAI' },
         { type: 'doc', id: 'manual/acessandovendaai', label: 'Acessando o VendaAI' },

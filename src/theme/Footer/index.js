@@ -2,9 +2,9 @@ import React from 'react';
 import Link from '@docusaurus/Link';
 
 // Footer customizado (swizzle de @theme/Footer).
-// 3 colunas (Suporte · Comercial · Links), ícones SVG inline (estilo
-// Feather/Lucide, stroke — sem dependência externa), só o "Abrir chamado"
-// em destaque. Estilos: .footer-x*  ·  Conteúdo: array COLUNAS abaixo.
+// 3 colunas centralizadas (Suporte · Comercial · Links) com ícones SVG
+// inline (traço, sem dependência externa) e todos os links no mesmo peso.
+// Estilos: .footer-x*  ·  Conteúdo: array COLUNAS abaixo.
 
 // Ícones inline (traço, herdam a cor via currentColor).
 const PATHS = {
@@ -96,7 +96,7 @@ const COLUNAS = [
     icone: 'suporte',
     titulo: 'Suporte',
     itens: [
-      {icone: 'chamado', label: 'Abrir chamado', href: 'https://zeroum.zumdesk.com.br', destaque: true},
+      {icone: 'chamado', label: 'Abrir chamado', href: 'https://zeroum.zumdesk.com.br'},
       {icone: 'whatsapp', label: 'WhatsApp', href: 'https://wa.me/5511974384612'},
       {icone: 'email', label: 'E-mail', href: 'mailto:suporte@vendaai.com.br'},
     ],
@@ -121,10 +121,10 @@ const COLUNAS = [
 ];
 
 function Item({item}) {
-  const {to, href, label, icone, destaque} = item;
+  const {to, href, label, icone} = item;
   const linkProps = href ? {href} : {to};
   return (
-    <Link className={destaque ? 'footer-x__cta' : 'footer-x__link'} {...linkProps}>
+    <Link className="footer-x__link" {...linkProps}>
       <Icone nome={icone} />
       {label}
     </Link>
@@ -156,9 +156,7 @@ export default function Footer() {
 
       <div className="footer-x__bottom">
         <p className="footer-x__copyright">
-          © {ano} ZEROUM Software House
-          <br />
-          Todos os direitos reservados.
+          © {ano} ZEROUM Software House · Todos os direitos reservados.
         </p>
       </div>
     </footer>

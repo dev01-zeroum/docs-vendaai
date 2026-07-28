@@ -1,10 +1,18 @@
 ---
 title: 'Negócios (CRM)'
+hide_title: true
 ---
 
+import ManualHeader from '@site/src/components/manual/ManualHeader';
 import ListaCard from '@site/src/components/shared/ListaCard';
 
+<ManualHeader
+  titulo="Negócios (CRM)"
+  resumo="Funis de vendas, oportunidades e acompanhamento das negociações.">
+
 O **painel de Negócios (CRM)** do **VendaAI** permite **gerenciar clientes de forma estruturada e estratégica**. Para isso, a plataforma possibilita o **cadastro de funis de vendas**, que definem as **etapas do processo comercial**, como, por exemplo, **positivação**, **contatos recebidos** e **prospecção**.
+
+</ManualHeader>
 
 Nos tópicos a seguir, serão apresentados os **procedimentos para cadastro e utilização** dessa funcionalidade.
 

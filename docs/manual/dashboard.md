@@ -1,10 +1,18 @@
 ---
 title: 'Dashboard'
+hide_title: true
 ---
 
+import ManualHeader from '@site/src/components/manual/ManualHeader';
 import ListaCard from '@site/src/components/shared/ListaCard';
 
+<ManualHeader
+  titulo="Dashboard"
+  resumo="Indicadores e métricas do desempenho comercial.">
+
 O **Dashboard** é a área destinada à **visualização geral das informações** do usuário ou da empresa. Nessa seção, são apresentados **indicadores e métricas** que auxiliam no **acompanhamento do desempenho comercial**.
+
+</ManualHeader>
 
 <ListaCard
   titulo="Principais informações exibidas"

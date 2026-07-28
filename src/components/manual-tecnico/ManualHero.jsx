@@ -1,5 +1,6 @@
 import React from 'react';
 import Link from '@docusaurus/Link';
+import Icon from '@site/src/components/shared/Icon';
 
 // Hero da Página Inicial do Manual Técnico — mesmo estilo do Hero da
 // home do site (classes .landing-hero*). Traz o branding e o CTA
@@ -22,7 +23,8 @@ export default function ManualHero() {
           <Link
             to="/manual-tecnico/geral"
             className="landing-button landing-button--primary">
-            Começar pela aba Geral →
+            Começar pela aba Geral
+            <Icon name="arrow" size={18} />
           </Link>
         </div>
       </div>

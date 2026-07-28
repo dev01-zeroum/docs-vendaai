@@ -21,21 +21,21 @@ Está com dúvida sobre o **VendaAI** ou precisa de suporte técnico? Nossa equi
   lead="Cada canal atende um tipo de demanda. Use o que faz mais sentido pro seu caso."
   canais={[
     {
-      icon: '🎫',
+      icon: 'ticket',
       titulo: 'Abrir chamado',
       desc: 'Pra problemas técnicos, configurações ou habilitação de melhorias padrão. Acompanhamento via portal.',
       ctaLabel: 'Abrir chamado',
       href: 'https://zeroum.zumdesk.com.br',
     },
     {
-      icon: '✉️',
+      icon: 'mail',
       titulo: 'Enviar e-mail',
       desc: 'Pra dúvidas pontuais ou quando preferir um registro escrito da conversa.',
       ctaLabel: 'Enviar e-mail',
       href: 'mailto:suporte@vendaai.com.br',
     },
     {
-      icon: '💬',
+      icon: 'chat',
       titulo: 'WhatsApp',
       desc: 'Pra atendimento direto e mais imediato pelo nosso whatsapp oficial.',
       ctaLabel: 'Conversar no WhatsApp',
@@ -49,13 +49,13 @@ Está com dúvida sobre o **VendaAI** ou precisa de suporte técnico? Nossa equi
   canais={[
     {
       to: '/fale-conosco/comercial',
-      icon: '💼',
+      icon: 'briefcase',
       titulo: 'Comercial',
       desc: 'Pra contratar novos recursos modulados ou montar pacotes personalizados.',
     },
     {
       to: '/fale-conosco/sugestoes',
-      icon: '💬',
+      icon: 'chat',
       titulo: 'Sugestões',
       desc: 'Tem uma ideia pro VendaAI? A gente lê tudo e prioriza as mais pedidas.',
     },

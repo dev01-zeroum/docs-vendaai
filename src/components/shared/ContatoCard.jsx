@@ -1,5 +1,6 @@
 import React from 'react';
 import Link from '@docusaurus/Link';
+import Icon from '@site/src/components/shared/Icon';
 
 export default function ContatoCard({
   eyebrow = 'Fale com a gente',
@@ -35,7 +36,8 @@ export default function ContatoCard({
         </div>
         <div className="contato-card__actions">
           <Link to={mailto} className="landing-button landing-button--primary">
-            ✉️ {ctaLabel}
+            <Icon name="mail" size={18} />
+            {ctaLabel}
           </Link>
         </div>
       </article>

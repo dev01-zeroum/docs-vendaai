@@ -1,5 +1,6 @@
 import React from 'react';
 import Link from '@docusaurus/Link';
+import Icon from '@site/src/components/shared/Icon';
 
 const EDICOES = [
     {
@@ -53,7 +54,10 @@ export default function EdicoesGrid() {
             </div>
             <h3 className="landing-edicao__titulo">{ed.titulo}</h3>
             <p className="landing-edicao__destaque">{ed.destaque}</p>
-            <span className="landing-edicao__link">Ver edição →</span>
+            <span className="landing-edicao__link">
+              Ver edição
+              <Icon name="arrow" size={16} />
+            </span>
           </Link>
         ))}
       </div>

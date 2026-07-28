@@ -1,33 +1,33 @@
-# 📄 Docs Boletim — VendaAI / ZEROUM
+# Docs Boletim — VendaAI / ZEROUM
 
 Repositório oficial da **documentação pública do VendaAI** (boletins de atualização, manual de uso e canais de contato), construído em **[Docusaurus 2](https://docusaurus.io/)** e publicado em **https://docs.vendaai.com.br**.
 
-> Este README é o **guia único** do repositório: o que é o projeto, como rodar, onde mexer em cada arquivo e o passo a passo completo para contribuir. Se você é dev novo no time, leia da seção [Comece aqui](#-comece-aqui-setup) em diante.
+> Este README é o **guia único** do repositório: o que é o projeto, como rodar, onde mexer em cada arquivo e o passo a passo completo para contribuir. Se você é dev novo no time, leia da seção [Comece aqui](#comece-aqui-setup) em diante.
 
 ---
 
-## 📑 Índice
+## Índice
 
-1. [O que é este projeto](#-o-que-é-este-projeto)
-2. [Comece aqui (setup)](#-comece-aqui-setup)
-3. [Rodando em localhost](#-rodando-em-localhost)
-4. [Estrutura do repositório](#-estrutura-do-repositório)
-5. [Onde mexer em cada coisa](#-onde-mexer-em-cada-coisa)
-6. [Como criar/editar uma página](#-como-criareditar-uma-página)
-7. [Markdown essencial](#-markdown-essencial)
-8. [Imagens](#-imagens)
-9. [Componentes reutilizáveis](#-componentes-reutilizáveis)
-10. [Fluxo de trabalho em equipe (Git/PR)](#-fluxo-de-trabalho-em-equipe-gitpr)
-11. [Como publicar (deploy)](#-como-publicar-deploy)
-12. [Scripts disponíveis](#-scripts-disponíveis)
-13. [Comandos rápidos (cheat sheet)](#-comandos-rápidos-cheat-sheet)
-14. [Troubleshooting](#-troubleshooting)
-15. [Convenções do time](#-convenções-do-time)
-16. [Contato](#-contato)
+1. [O que é este projeto](#o-que-é-este-projeto)
+2. [Comece aqui (setup)](#comece-aqui-setup)
+3. [Rodando em localhost](#rodando-em-localhost)
+4. [Estrutura do repositório](#estrutura-do-repositório)
+5. [Onde mexer em cada coisa](#onde-mexer-em-cada-coisa)
+6. [Como criar/editar uma página](#como-criareditar-uma-página)
+7. [Markdown essencial](#markdown-essencial)
+8. [Imagens](#imagens)
+9. [Componentes reutilizáveis](#componentes-reutilizáveis)
+10. [Fluxo de trabalho em equipe (Git/PR)](#fluxo-de-trabalho-em-equipe-gitpr)
+11. [Como publicar (deploy)](#como-publicar-deploy)
+12. [Scripts disponíveis](#scripts-disponíveis)
+13. [Comandos rápidos (cheat sheet)](#comandos-rápidos-cheat-sheet)
+14. [Troubleshooting](#troubleshooting)
+15. [Convenções do time](#convenções-do-time)
+16. [Contato](#contato)
 
 ---
 
-## 🎯 O que é este projeto
+## O que é este projeto
 
 O **Boletim** é o site de documentação pública do **VendaAI** (plataforma de vendas da ZEROUM). Ele tem três conteúdos principais, todos escritos em Markdown:
 
@@ -45,7 +45,7 @@ Tecnicamente:
 
 ---
 
-## 🚀 Comece aqui (setup)
+## Comece aqui (setup)
 
 Pré-requisitos: **Node.js 18+** e **Git** instalados.
 
@@ -64,7 +64,7 @@ git config user.email "seu-email@vendaai.com.br"
 
 ---
 
-## 💻 Rodando em localhost
+## Rodando em localhost
 
 ```powershell
 npm start
@@ -83,22 +83,22 @@ npm run build   # gera a pasta build/ — falha se houver link quebrado
 npm run serve   # serve o build em http://localhost:3000
 ```
 
-> 💡 Regra de ouro antes de qualquer PR: rode `npm run build` e veja se passa **sem erros**.
+> Regra de ouro antes de qualquer PR: rode `npm run build` e veja se passa **sem erros**.
 
 ---
 
-## 🗂 Estrutura do repositório
+## Estrutura do repositório
 
 ```
 docs-boletim/
-├── docs/                       # 📝 TODO o conteúdo público (Markdown) — é aqui que você mais mexe
-│   ├── index.md                #    Página inicial (landing)
-│   ├── boletim/                #    Boletins de atualização por edição
+├── docs/                       # TODO o conteúdo público (Markdown) — é aqui que você mais mexe
+│   ├── index.md                # Página inicial (landing)
+│   ├── boletim/                # Boletins de atualização por edição
 │   │   ├── atualizacoes-01-2025.md
 │   │   ├── atualizacoes-06-2025.md
 │   │   ├── atualizacoes-01-2026.md
 │   │   └── atualizacoes-06-2026.md
-│   ├── manual/                 #    Manual de uso do VendaAI (1 arquivo por módulo)
+│   ├── manual/                 # Manual de uso do VendaAI (1 arquivo por módulo)
 │   │   ├── sobreovendaai.md
 │   │   ├── acessandovendaai.md
 │   │   ├── paginainicial.md
@@ -111,30 +111,30 @@ docs-boletim/
 │   │   ├── analisepedidos.md
 │   │   ├── consultas.md
 │   │   └── registros.md
-│   └── fale-conosco/           #    Canais de contato
+│   └── fale-conosco/           # Canais de contato
 │       ├── duvidas.md
 │       ├── sugestoes.md
 │       └── comercial.md
 │
 ├── src/
-│   ├── components/             # ⚛️ Componentes React (.jsx) usados dentro dos .md
+│   ├── components/             # Componentes React (.jsx) usados dentro dos .md
 │   │   ├── HabilitarMelhorias.jsx
-│   │   ├── boletim/            #    Componentes dos boletins (ex: BoletimHeader)
-│   │   ├── landing/            #    Componentes da home (Hero, EdicoesGrid, TiposMelhorias)
-│   │   ├── comercial/          #    Cards da página comercial
-│   │   ├── suporte/            #    Bloco de horário de atendimento
-│   │   ├── sugestoes/          #    Blocos da página de sugestões
-│   │   └── shared/             #    Reutilizáveis (CtaCard, ContatoCard, LinksGrid, ...)
+│   │   ├── boletim/            # Componentes dos boletins (ex: BoletimHeader)
+│   │   ├── landing/            # Componentes da home (Hero, EdicoesGrid, TiposMelhorias)
+│   │   ├── comercial/          # Cards da página comercial
+│   │   ├── suporte/            # Bloco de horário de atendimento
+│   │   ├── sugestoes/          # Blocos da página de sugestões
+│   │   └── shared/             # Reutilizáveis (CtaCard, ContatoCard, LinksGrid, ...)
 │   └── css/
-│       └── custom.css          # 🎨 Tema, cores e estilos globais
+│       └── custom.css          # Tema, cores e estilos globais
 │
 ├── static/
-│   └── img/                    # 🖼 Imagens, logos e favicons servidos como /img/...
-│       ├── logo.svg            #    Logo (tema claro)
-│       └── logo_branco.svg     #    Logo (tema dark)
+│   └── img/                    # Imagens, logos e favicons servidos como /img/...
+│       ├── logo.svg            # Logo (tema claro)
+│       └── logo_branco.svg     # Logo (tema dark)
 │
-├── docusaurus.config.js        # ⚙️ Config do site: título, URL, navbar, footer, deploy
-├── sidebars.js                 # 📚 Menu lateral (ordem e agrupamento das páginas)
+├── docusaurus.config.js        # Config do site: título, URL, navbar, footer, deploy
+├── sidebars.js                 # Menu lateral (ordem e agrupamento das páginas)
 ├── package.json                # Dependências e scripts npm
 └── README.md                   # Este arquivo
 ```
@@ -143,7 +143,7 @@ docs-boletim/
 
 ---
 
-## 🔧 Onde mexer em cada coisa
+## Onde mexer em cada coisa
 
 | Quero mudar... | Mexa em... |
 |---|---|
@@ -159,7 +159,7 @@ docs-boletim/
 
 ---
 
-## ✍️ Como criar/editar uma página
+## Como criar/editar uma página
 
 ### Editar uma página existente
 
@@ -187,13 +187,13 @@ Conteúdo em Markdown...
 { type: 'doc', id: 'manual/minha-pagina', label: 'Texto no menu' },
 ```
 
-> ⚠️ O `id` é o caminho relativo a `docs/` **sem** a extensão `.md`. Ex: `docs/manual/minha-pagina.md` → `id: 'manual/minha-pagina'`.
+> **Atenção:** o `id` é o caminho relativo a `docs/` **sem** a extensão `.md`. Ex: `docs/manual/minha-pagina.md` → `id: 'manual/minha-pagina'`.
 
 **3. Teste** com `npm start`, depois `npm run build` para garantir que não há link quebrado.
 
 ---
 
-## 📝 Markdown essencial
+## Markdown essencial
 
 ```markdown
 ## H2
@@ -237,7 +237,7 @@ Atenção
 
 ---
 
-## 🖼 Imagens
+## Imagens
 
 1. Coloque o arquivo em `static/img/` (ex: `static/img/boletim/jun26-painel.png`).
 2. Referencie em qualquer `.md` (o caminho começa em `img/`, sem `static/`):
@@ -250,7 +250,7 @@ Atenção
 
 ---
 
-## ⚛️ Componentes reutilizáveis
+## Componentes reutilizáveis
 
 Para usar um componente React dentro de um `.md`, importe no topo do arquivo e use como tag:
 
@@ -264,7 +264,7 @@ Os componentes ficam em `src/components/` organizados por contexto (`boletim/`, 
 
 ---
 
-## 🌿 Fluxo de trabalho em equipe (Git/PR)
+## Fluxo de trabalho em equipe (Git/PR)
 
 Modelo do time: **devs criam branches e abrem PR; o Tech Lead revisa, faz merge e o deploy.** Nunca commite direto na `main`.
 
@@ -280,7 +280,7 @@ Dev 1 & Dev 2              Tech Lead
     ├─ ajusta (se preciso) ───┤
     │                         ├─ merge na main
     │                         └─ deploy manual
-    ✅ online em 1-2 min
+    online em 1-2 min
 ```
 
 ### Passo a passo (para o dev que vai contribuir)
@@ -301,10 +301,10 @@ git checkout -b docs/boletim-janeiro
 Padrão de nomes:
 
 ```
-docs/descricao-curta     ✅ Bom
-bugfix/corrige-typo      ✅ Bom
-dev1-branch              ❌ Genérico
-feature                  ❌ Vago
+docs/descricao-curta     ok
+bugfix/corrige-typo      ok
+dev1-branch              evite — genérico
+feature                  evite — vago
 ```
 
 **3. Edite e teste localmente:**
@@ -391,9 +391,9 @@ git push origin docs/sua-branch
 
 ---
 
-## 🚢 Como publicar (deploy)
+## Como publicar (deploy)
 
-> 🔧 **O deploy é manual e feito pelo Tech Lead**, sempre **depois** do merge na `main`. Não há GitHub Actions configurado (é um TODO de melhoria futura).
+> **O deploy é manual e feito pelo Tech Lead**, sempre **depois** do merge na `main`. Não há GitHub Actions configurado (é um TODO de melhoria futura).
 
 ```powershell
 git checkout main
@@ -410,7 +410,7 @@ O site atualiza em **1-2 minutos** em https://docs.vendaai.com.br.
 
 ---
 
-## 📜 Scripts disponíveis
+## Scripts disponíveis
 
 ```powershell
 npm start              # Dev local com hot reload (http://localhost:3000)
@@ -419,11 +419,11 @@ npm run serve          # Serve o build local pra conferência final
 npm run deploy         # Deploy manual pro GitHub Pages (Tech Lead)
 ```
 
-> ⚠️ **Não use `npm run clear` no Windows** — o script usa `rm -rf` (Linux) e não funciona aqui. Para limpar cache, apague manualmente a pasta `node_modules\.cache`.
+> **Não use `npm run clear` no Windows** — o script usa `rm -rf` (Linux) e não funciona aqui. Para limpar cache, apague manualmente a pasta `node_modules\.cache`.
 
 ---
 
-## ⚡ Comandos rápidos (cheat sheet)
+## Comandos rápidos (cheat sheet)
 
 Cola com o que o time mais usa no dia a dia. Copie e cole conforme a necessidade.
 
@@ -461,7 +461,7 @@ git revert HASH-DO-COMMIT           # criar commit que desfaz outro já enviado
 git checkout -- .                   # descartar TODAS as mudanças locais (CUIDADO)
 ```
 
-> ⚠️ Nunca use `git push -f` (force push) neste repo.
+> Nunca use `git push -f` (force push) neste repo.
 
 ### PowerShell — navegação e arquivos
 
@@ -493,7 +493,7 @@ npm run deploy
 
 ---
 
-## 🩺 Troubleshooting
+## Troubleshooting
 
 | Problema | Solução |
 |---|---|
@@ -508,7 +508,7 @@ npm run deploy
 
 ---
 
-## 📐 Convenções do time
+## Convenções do time
 
 - **Branch:** `docs/descricao-curta`
 - **Commit:** `docs: descricao curta` (pt-br, minúsculo)
@@ -518,7 +518,7 @@ npm run deploy
 
 ---
 
-## 📞 Contato
+## Contato
 
 | Para | Contato |
 |---|---|

@@ -1,4 +1,5 @@
 import React from 'react';
+import Icon from '@site/src/components/shared/Icon';
 
 // Blocos conceituais da Página Inicial do Manual Técnico:
 //   1) "O que são os parâmetros" — 2 cards (estilo .landing-tipo);
@@ -6,22 +7,22 @@ import React from 'react';
 // Reaproveita as classes já existentes no custom.css.
 const TIPOS = [
   {
-    icon: '🔘',
+    icon: 'toggle',
     titulo: 'Liga / desliga',
     desc: 'Ativa ou desativa um recurso. Ex.: “Cálculo de impostos”.',
   },
   {
-    icon: '🔢',
+    icon: 'hash',
     titulo: 'Valor',
     desc: 'Um número ou texto livre. Ex.: prazo mínimo de entrega.',
   },
   {
-    icon: '📋',
+    icon: 'list',
     titulo: 'Lista',
     desc: 'Uma opção entre valores predefinidos. Ex.: tema padrão.',
   },
   {
-    icon: '☑️',
+    icon: 'checkbox',
     titulo: 'Múltipla escolha',
     desc: 'Vários itens ao mesmo tempo. Ex.: campos obrigatórios.',
   },
@@ -42,7 +43,9 @@ export default function ManualConceito() {
 
         <div className="landing-tipos">
           <article className="landing-tipo landing-tipo--modulado">
-            <div className="landing-tipo__icon" aria-hidden="true">🎛️</div>
+            <div className="landing-tipo__icon">
+              <Icon name="gauge" />
+            </div>
             <h3 className="landing-tipo__title">Controlam o comportamento</h3>
             <p className="landing-tipo__desc">
               Ligam, desligam ou ajustam recursos: calcular impostos, exigir campos,
@@ -56,7 +59,9 @@ export default function ManualConceito() {
           </article>
 
           <article className="landing-tipo landing-tipo--padrao">
-            <div className="landing-tipo__icon" aria-hidden="true">🗂️</div>
+            <div className="landing-tipo__icon">
+              <Icon name="layers" />
+            </div>
             <h3 className="landing-tipo__title">Organizados por abas</h3>
             <p className="landing-tipo__desc">
               Cada aba é uma área do sistema (Pedido, Cliente, Estoque…). Dentro dela,
@@ -83,7 +88,9 @@ export default function ManualConceito() {
         <div className="porque-grid">
           {TIPOS.map((t) => (
             <div key={t.titulo} className="porque-card">
-              <div className="porque-card__icon" aria-hidden="true">{t.icon}</div>
+              <div className="porque-card__icon">
+                <Icon name={t.icon} size={24} />
+              </div>
               <p className="porque-card__titulo">{t.titulo}</p>
               <p className="porque-card__desc">{t.desc}</p>
             </div>

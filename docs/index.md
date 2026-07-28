@@ -1,5 +1,5 @@
 ---
-title: 'Início'
+title: 'Página Inicial'
 slug: /
 hide_title: true
 hide_table_of_contents: true
@@ -20,6 +20,6 @@ import CtaCard from '@site/src/components/shared/CtaCard';
 <CtaCard
   titulo="Tem uma ideia para o VendaAI?"
   desc="Sua sugestão pode entrar nas próximas edições. A gente lê e prioriza as ideias mais pedidas."
-  ctaLabel="Enviar sugestão →"
+  ctaLabel="Enviar sugestão"
   ctaTo="/fale-conosco/sugestoes"
 />

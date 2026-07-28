@@ -49,7 +49,9 @@ module.exports = {
     },
     docs: {
       sidebar: {
-        autoCollapseCategories: true,
+        // As seções do menu ficam sempre à vista (visual editorial do
+        // custom.css). Recolher uma não fecha as outras.
+        autoCollapseCategories: false,
         hideable: true,
       },
     },

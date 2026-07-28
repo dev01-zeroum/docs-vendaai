@@ -1,5 +1,6 @@
 import React from 'react';
 import Link from '@docusaurus/Link';
+import Icon from '@site/src/components/shared/Icon';
 
 export default function Hero() {
   return (
@@ -18,7 +19,8 @@ export default function Hero() {
           <Link
             to="/boletim/atualizacoes-06-2026"
             className="landing-button landing-button--primary">
-            Ver última edição →
+            Ver última edição
+            <Icon name="arrow" size={18} />
           </Link>
         </div>
       </div>

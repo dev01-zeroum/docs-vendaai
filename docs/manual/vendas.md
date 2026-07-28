@@ -1,10 +1,18 @@
 ---
 title: 'Vendas'
+hide_title: true
 ---
 
+import ManualHeader from '@site/src/components/manual/ManualHeader';
 import ListaCard from '@site/src/components/shared/ListaCard';
 
+<ManualHeader
+  titulo="Vendas"
+  resumo="Criação e acompanhamento de pedidos no VendaAI.">
+
 O painel da aba **Pedidos** do sistema **VendaAI** exibe a **lista de pedidos cadastrados**, permitindo a visualização de **informações detalhadas**.
+
+</ManualHeader>
 
 A interface apresenta um **campo de pesquisa no topo**, facilitando a localização de **pedidos específicos** por **código**, **cliente** ou **vendedor**.
 

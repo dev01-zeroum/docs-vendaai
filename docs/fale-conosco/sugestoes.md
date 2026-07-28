@@ -19,7 +19,8 @@ Tem alguma ideia pro **VendaAI**? A gente quer ouvir. Suas sugestões ajudam a m
 <CtaCard
   titulo="Envie sua sugestão"
   desc="Descreva sua ideia em detalhes — quanto mais contexto, melhor pra entendermos e priorizarmos no roadmap."
-  ctaLabel="✉️ Enviar sugestão"
+  ctaLabel="Enviar sugestão"
+  ctaIcon="mail"
   ctaTo="mailto:contato@itzeroum.com.br?subject=Sugestão para o VendaAI"
 />
 
@@ -30,13 +31,13 @@ Tem alguma ideia pro **VendaAI**? A gente quer ouvir. Suas sugestões ajudam a m
   canais={[
     {
       to: '/fale-conosco/duvidas',
-      icon: '🛟',
+      icon: 'support',
       titulo: 'Suporte técnico',
       desc: 'Dúvidas de uso, configurações ou problemas com o sistema.',
     },
     {
       to: '/fale-conosco/comercial',
-      icon: '💼',
+      icon: 'briefcase',
       titulo: 'Comercial',
       desc: 'Pra contratar novos recursos ou montar pacotes personalizados.',
     },

@@ -1,8 +1,17 @@
 ---
 title: 'Catálogo'
+hide_title: true
 ---
 
+import ManualHeader from '@site/src/components/manual/ManualHeader';
+
+<ManualHeader
+  titulo="Catálogo"
+  resumo="Produtos, preços por cliente e filtros de estoque.">
+
 O painel da aba **Catálogo** exibe uma **janela modal de seleção de clientes**, permitindo a visualização de **preços personalizados** de acordo com cada cliente.
+
+</ManualHeader>
 
 A interface conta com um **campo de pesquisa na parte superior**, que facilita a localização de **clientes específicos** de forma rápida e eficiente:
 

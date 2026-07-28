@@ -24,6 +24,6 @@ import CtaCard from '@site/src/components/shared/CtaCard';
 <CtaCard
   titulo="Precisa de ajuda com uma configuração?"
   desc="A equipe de suporte ajuda a habilitar e ajustar os parâmetros da sua operação."
-  ctaLabel="Falar com o suporte →"
+  ctaLabel="Falar com o suporte"
   ctaTo="/fale-conosco/duvidas"
 />

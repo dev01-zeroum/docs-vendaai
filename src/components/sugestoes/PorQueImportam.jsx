@@ -1,18 +1,19 @@
 import React from 'react';
+import Icon from '@site/src/components/shared/Icon';
 
 const RAZOES = [
   {
-    icon: '💡',
+    icon: 'bulb',
     titulo: 'Inovação',
     desc: 'Suas ideias se transformam em novas funcionalidades.',
   },
   {
-    icon: '🚀',
+    icon: 'trending',
     titulo: 'Melhoria contínua',
     desc: 'Evoluímos o VendaAI com base no feedback real de quem usa.',
   },
   {
-    icon: '🎯',
+    icon: 'target',
     titulo: 'Priorização',
     desc: 'As sugestões mais pedidas ganham prioridade no roadmap.',
   },
@@ -29,7 +30,9 @@ export default function PorQueImportam() {
       <div className="porque-grid">
         {RAZOES.map((r) => (
           <article key={r.titulo} className="porque-card">
-            <div className="porque-card__icon" aria-hidden="true">{r.icon}</div>
+            <div className="porque-card__icon">
+              <Icon name={r.icon} size={24} />
+            </div>
             <h3 className="porque-card__titulo">{r.titulo}</h3>
             <p className="porque-card__desc">{r.desc}</p>
           </article>

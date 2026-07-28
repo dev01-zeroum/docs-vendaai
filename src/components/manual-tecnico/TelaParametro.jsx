@@ -1,4 +1,5 @@
 import React from 'react';
+import Icon from '@site/src/components/shared/Icon';
 
 // Figura emoldurada com o print de uma aba da tela "Parâmetros do sistema".
 // Enquanto o `src` não é informado, mostra um placeholder elegante — assim
@@ -17,7 +18,9 @@ export default function TelaParametro({src, alt, legenda}) {
         />
       ) : (
         <div className="tela-parametro__placeholder">
-          <span className="tela-parametro__placeholder-icon" aria-hidden="true">🖼️</span>
+          <span className="tela-parametro__placeholder-icon">
+            <Icon name="image" size={30} />
+          </span>
           <span className="tela-parametro__placeholder-text">Print da aba em breve</span>
         </div>
       )}
