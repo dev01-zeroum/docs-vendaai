@@ -5,7 +5,9 @@ module.exports = {
   favicon: '/favicon.ico',
 
   organizationName: 'dev01-zeroum',
-  projectName: 'docs-boletim',
+  // Precisa bater com o nome atual do repositório: é daqui que o
+  // `docusaurus deploy` monta a URL de push do gh-pages.
+  projectName: 'docs-vendaai',
   url: 'https://docs.vendaai.com.br',
   baseUrl: '/',
 
