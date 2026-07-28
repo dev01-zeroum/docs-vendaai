@@ -601,6 +601,21 @@ body {
   max-width: 100%;
   border-radius: 8px;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08), 0 1px 2px rgba(0, 0, 0, 0.04);
+  cursor: zoom-in;
+}
+
+/* Enquanto ampliada, a imagem não deve convidar a outro clique */
+.medium-zoom-image--opened {
+  cursor: zoom-out;
+  border-radius: 8px;
+}
+
+.medium-zoom-overlay {
+  z-index: 200;
+}
+
+.medium-zoom-image--opened {
+  z-index: 201;
 }
 
 [data-theme='dark'] .theme-doc-markdown img {

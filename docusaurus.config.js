@@ -52,6 +52,8 @@ module.exports = {
     ],
   ],
 
+  clientModules: [require.resolve('./src/clientModules/imageZoom.js')],
+
   // Busca local: indexa em tempo de build e roda no navegador, sem
   // depender de serviço externo (Algolia e afins).
   themes: [
