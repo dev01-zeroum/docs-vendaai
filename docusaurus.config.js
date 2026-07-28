@@ -46,7 +46,12 @@ module.exports = {
         sitemap: {
           // Manual técnico é acessível apenas por link: fora do sitemap
           // (os próprios arquivos também enviam <meta robots noindex>).
-          ignorePatterns: ['/manual-tecnico', '/manual-tecnico/', '/manual-tecnico/**'],
+          ignorePatterns: [
+            '/manual-tecnico',
+            '/manual-tecnico/',
+            '/manual-tecnico/**',
+            '/search', // página de resultados da busca: não indexar
+          ],
         },
       },
     ],
