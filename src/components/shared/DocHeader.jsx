@@ -1,4 +1,5 @@
 import React from 'react';
+import BotaoImprimir from '@site/src/components/shared/BotaoImprimir';
 
 // ============================================================
 // DocHeader — cabeçalho editorial padrão das páginas de conteúdo
@@ -15,7 +16,10 @@ import React from 'react';
 export default function DocHeader({titulo, subtitulo, label, children}) {
   return (
     <header className="doc-header">
-      <h1 className="doc-header__title">{titulo}</h1>
+      <div className="doc-header__topo">
+        <h1 className="doc-header__title">{titulo}</h1>
+        <BotaoImprimir />
+      </div>
 
       {subtitulo && <p className="doc-header__subtitle">{subtitulo}</p>}
 

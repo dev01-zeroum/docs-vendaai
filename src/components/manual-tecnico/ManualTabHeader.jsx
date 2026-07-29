@@ -1,6 +1,7 @@
 import React from 'react';
 import {useLocation} from '@docusaurus/router';
 import tabs from '@site/src/manualTecnicoTabs';
+import BotaoImprimir from '@site/src/components/shared/BotaoImprimir';
 
 function normalizar(path) {
   return path.replace(/\/+$/, '') || '/';
@@ -19,7 +20,10 @@ export default function ManualTabHeader() {
   return (
     <header className="manual-tab-header">
       <p className="manual-tab-header__eyebrow">Parâmetros do sistema</p>
-      <h1 className="manual-tab-header__title">{tab.titulo}</h1>
+      <div className="doc-header__topo">
+        <h1 className="manual-tab-header__title">{tab.titulo}</h1>
+        <BotaoImprimir />
+      </div>
     </header>
   );
 }

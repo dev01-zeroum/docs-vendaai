@@ -297,6 +297,13 @@ const ICONS = {
       <path d="M13.5 6.5 20 12l-6.5 5.5" />
     </>
   ),
+  printer: (
+    <>
+      <path d="M7 9V4h10v5" />
+      <path d="M7 18H5.5A1.5 1.5 0 0 1 4 16.5v-5A1.5 1.5 0 0 1 5.5 10h13a1.5 1.5 0 0 1 1.5 1.5v5a1.5 1.5 0 0 1-1.5 1.5H17" />
+      <rect x="7" y="14.5" width="10" height="6" rx="0.8" />
+    </>
+  ),
 };
 
 export default function Icon({name, size = 22, className, style}) {

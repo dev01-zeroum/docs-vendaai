@@ -1703,6 +1703,53 @@ p > .selo:only-child {
   margin: 0 0 1.5rem 0;
 }
 
+/* Título + botão de imprimir na mesma linha, o botão colado à direita. */
+.doc-header__topo {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1.25rem;
+}
+
+.botao-imprimir {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.42rem;
+  flex-shrink: 0;
+  /* desce o botão até a altura de x do título, em vez do topo da caixa */
+  margin-top: 0.6rem;
+  padding: 0.42rem 0.72rem;
+  border: 1px solid var(--vendaai-border);
+  border-radius: 8px;
+  background: transparent;
+  color: var(--vendaai-text-muted);
+  font-family: inherit;
+  font-size: 0.82rem;
+  font-weight: 500;
+  line-height: 1;
+  cursor: pointer;
+  transition:
+    color 0.15s ease,
+    border-color 0.15s ease;
+}
+
+.botao-imprimir:hover {
+  color: var(--vendaai-accent);
+  border-color: var(--vendaai-accent);
+}
+
+/* No celular fica só o ícone: o rótulo roubaria largura do título. */
+@media (max-width: 640px) {
+  .botao-imprimir__rotulo {
+    display: none;
+  }
+}
+
+/* Cabeçalho de impressão: existe só no papel (regras no fim do arquivo). */
+.print-cabecalho {
+  display: none;
+}
+
 .doc-header__title {
   font-size: clamp(2rem, 4.5vw, 2.85rem) !important;
   font-weight: 800;
@@ -2329,4 +2376,251 @@ button[class*='collapseSidebarButton']::before {
     align-self: stretch;
     justify-content: center;
   }
+}
+
+/* ============================================================
+ * IMPRESSÃO — o que sai no papel e no "Salvar como PDF"
+ * ------------------------------------------------------------
+ * O botão de imprimir (BotaoImprimir.jsx) só chama window.print();
+ * é esta folha que faz o resultado ser apresentável. Sem ela sairia
+ * a tela como está: menu, sumário, rodapé e fundo escuro.
+ * ============================================================ */
+@media print {
+  /* ----- Fora tudo que é navegação: no papel não se clica ----- */
+  .navbar,
+  .theme-doc-sidebar-container,
+  .theme-doc-toc-desktop,
+  .theme-doc-toc-mobile,
+  .theme-doc-breadcrumbs,
+  nav.pagination-nav,
+  .footer-x,
+  .botao-imprimir,
+  button[class*='collapseSidebarButton'],
+  [class*='expandButton'] {
+    display: none !important;
+  }
+
+  /* ----- Rede de segurança -----
+   * O tema já chega em 'light' aqui: o clientModules/impressaoClara.js
+   * troca o data-theme antes de imprimir. Estes tokens só cobrem o caso
+   * de o JS não rodar — sem eles, o texto sairia quase branco no papel. */
+  [data-theme='dark'] {
+    --ifm-background-color: #ffffff;
+    --ifm-background-surface-color: #ffffff;
+    --ifm-font-color-base: #1f2937;
+    --vendaai-surface: #ffffff;
+    --vendaai-surface-elevated: #ffffff;
+    --vendaai-border: #d4d4d8;
+    --vendaai-text-strong: #111827;
+    --vendaai-text: #1f2937;
+    --vendaai-text-muted: #52525b;
+    --vendaai-accent: #1c5f7d;
+    --vendaai-green-strong: #15803d;
+    --vendaai-print-shadow: none;
+  }
+
+  html,
+  body {
+    background: #ffffff !important;
+  }
+
+  /* Desfaz o rebaixamento de brilho que existe só para a tela. */
+  [data-theme='dark'] .theme-doc-markdown img {
+    filter: none;
+  }
+
+  /* ----- A folha inteira para o conteúdo (a margem vem do @page) ----- */
+  main,
+  .container,
+  .theme-doc-markdown {
+    max-width: 100% !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  /* ----- Tipografia de papel -----
+   * Tamanho de tela sai grande demais impresso: o título sozinho comeria
+   * um terço da primeira folha. Aqui vai em pontos, como em gráfica. */
+  .theme-doc-markdown {
+    font-size: 10.5pt;
+    line-height: 1.5;
+  }
+
+  .doc-header__title,
+  .manual-tab-header__title {
+    font-size: 20pt !important;
+    letter-spacing: -0.02em;
+  }
+
+  .doc-header__subtitle {
+    font-size: 10pt;
+    margin-bottom: 1rem;
+  }
+
+  .theme-doc-markdown h2 {
+    font-size: 14pt;
+  }
+
+  .theme-doc-markdown h3 {
+    font-size: 11.5pt;
+  }
+
+  /* ----- Cabeçalho da folha: marca à esquerda, origem à direita ----- */
+  .doc-header__topo {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .print-cabecalho {
+    /* sobe para antes do título, que no HTML vem primeiro */
+    order: -1;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 1.5rem;
+    margin: 0 0 0.9rem;
+    padding-bottom: 0.45rem;
+    border-bottom: 1px solid var(--vendaai-border);
+    font-size: 8pt;
+    color: var(--vendaai-text-muted);
+  }
+
+  .print-cabecalho__marca {
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    white-space: nowrap;
+  }
+
+  .print-cabecalho__url {
+    text-align: right;
+    word-break: break-all;
+  }
+
+  /* ----- Caixas em contorno, não em chapada -----
+   * O navegador não imprime fundo por padrão: um card que dependesse só
+   * do background viraria texto solto. Com contorno cada bloco continua
+   * lendo como bloco — e sem gastar tinta. */
+  .doc-header__objetivo,
+  .lista-card,
+  .link-card,
+  .habilitar-card,
+  .canal-card,
+  .porque-card,
+  .ja-implementadas,
+  .horario-bar {
+    background: transparent !important;
+    border: 1px solid var(--vendaai-border);
+  }
+
+  /* A barra de destaque destes dois é o que os identifica: preservar. */
+  .doc-header__objetivo,
+  .horario-bar {
+    border-left: 3px solid var(--vendaai-accent);
+  }
+
+  .selo {
+    border: 1px solid currentColor;
+  }
+
+  /* ----- Imagens ----- */
+  .theme-doc-markdown img,
+  .tela-parametro__img {
+    box-shadow: none !important;
+    border: 1px solid var(--vendaai-border);
+  }
+
+  .figura-conteudo__legenda,
+  .tela-parametro__legenda {
+    font-size: 8.5pt;
+  }
+
+  /* ----- Marcas pequenas que o navegador não imprimiria -----
+   * Bullet, número do passo e a trilha do stepper são desenhados com
+   * `background`, e imprimir fundo é opção desligada por padrão em todos
+   * os navegadores: a lista sairia sem marcador nenhum e o stepper sem a
+   * linha que o define. São elementos minúsculos — forçar a impressão
+   * deles não gasta tinta perceptível, ao contrário de um card chapado. */
+  .lista-card__raw ul li::before,
+  .lista-card__raw ol li::before,
+  .lista-card__raw > ol > li::after,
+  .lista-card__marker,
+  .ja-implementadas__check {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  /* ----- Quebras de página ----- */
+  figure,
+  .tela-parametro,
+  .lista-card,
+  .link-card,
+  .habilitar-card,
+  .canal-card,
+  .porque-card,
+  .doc-header__objetivo,
+  .horario-bar {
+    break-inside: avoid;
+  }
+
+  h1,
+  h2,
+  h3 {
+    break-after: avoid;
+  }
+
+  p,
+  li {
+    orphans: 3;
+    widows: 3;
+  }
+
+  /* Margem zero no @page e margem por dentro do body: sem espaço na
+   * borda do papel, o navegador não tem onde desenhar o cabeçalho
+   * automático (data, título, URL, número da página) — que é o que
+   * aparecia no canto superior esquerdo. */
+  @page {
+    margin: 0;
+  }
+
+  body {
+    padding: 16mm 14mm;
+  }
+}
+
+/* ============================================================
+ * PÁGINA 404 (swizzle em src/theme/NotFound/Content)
+ * Cabeçalho centralizado; os atalhos vêm do LinksGrid, então
+ * herdam o visual dos cards do resto do site.
+ * ============================================================ */
+.pagina-404 {
+  max-width: 620px;
+  margin: 1rem auto 0;
+  text-align: center;
+}
+
+.pagina-404__codigo {
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--vendaai-accent);
+  margin: 0 0 0.75rem 0;
+}
+
+.pagina-404__titulo {
+  font-size: clamp(2rem, 4.5vw, 2.75rem);
+  font-weight: 800;
+  line-height: 1.1;
+  letter-spacing: -0.025em;
+  color: var(--vendaai-text-strong);
+  margin: 0 0 0.9rem 0;
+}
+
+.pagina-404__lead {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--vendaai-text-muted);
+  margin: 0;
 }
