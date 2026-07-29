@@ -1,0 +1,10 @@
+node_modules
+build
+.docusaurus
+package-lock.json
+
+# O conteúdo fica com o markdownlint. O Prettier reformata o JSX embutido
+# no MDX (os <ManualHeader>, <ListaCard> e afins), e um "conserto" de
+# indentação ali pode mudar o que a página renderiza. Não vale o risco.
+docs
+i18n

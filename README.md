@@ -70,7 +70,7 @@ git config user.email "seu-email@vendaai.com.br"
 npm start
 ```
 
-Abre em **http://localhost:3000** com *hot reload* — salvou o arquivo, a página recarrega sozinha.
+Abre em **http://localhost:3000** com _hot reload_ — salvou o arquivo, a página recarrega sozinha.
 
 ```powershell
 npm start -- --port 3001   # se a porta 3000 estiver ocupada
@@ -89,7 +89,7 @@ npm run serve   # serve o build em http://localhost:3000
 
 ## Estrutura do repositório
 
-```
+```text
 docs-boletim/
 ├── docs/                       # TODO o conteúdo público (Markdown) — é aqui que você mais mexe
 │   ├── index.md                # Página inicial (landing)
@@ -145,17 +145,17 @@ docs-boletim/
 
 ## Onde mexer em cada coisa
 
-| Quero mudar... | Mexa em... |
-|---|---|
-| Texto/conteúdo de uma página | `docs/...` (o `.md` correspondente) |
-| Ordem ou agrupamento do menu lateral | `sidebars.js` |
-| Cores e tema | `src/css/custom.css` |
-| Logo do site | `static/img/logo.svg` e `static/img/logo_branco.svg` |
-| Título do site, URL, navbar, footer | `docusaurus.config.js` |
-| Bloco "habilitar melhorias" dos boletins | `src/components/HabilitarMelhorias.jsx` |
-| Cabeçalho de um boletim | `src/components/boletim/BoletimHeader.jsx` |
-| Blocos da página inicial | `src/components/landing/` |
-| Imagens | `static/img/` |
+| Quero mudar...                           | Mexa em...                                           |
+| ---------------------------------------- | ---------------------------------------------------- |
+| Texto/conteúdo de uma página             | `docs/...` (o `.md` correspondente)                  |
+| Ordem ou agrupamento do menu lateral     | `sidebars.js`                                        |
+| Cores e tema                             | `src/css/custom.css`                                 |
+| Logo do site                             | `static/img/logo.svg` e `static/img/logo_branco.svg` |
+| Título do site, URL, navbar, footer      | `docusaurus.config.js`                               |
+| Bloco "habilitar melhorias" dos boletins | `src/components/HabilitarMelhorias.jsx`              |
+| Cabeçalho de um boletim                  | `src/components/boletim/BoletimHeader.jsx`           |
+| Blocos da página inicial                 | `src/components/landing/`                            |
+| Imagens                                  | `static/img/`                                        |
 
 ---
 
@@ -167,7 +167,7 @@ Abra o `.md` em `docs/...`, edite o conteúdo, salve. Com `npm start` rodando, a
 
 ### Criar uma página nova
 
-**1. Crie o arquivo** em `docs/` (na subpasta certa) com este cabeçalho (*frontmatter*):
+**1. Crie o arquivo** em `docs/` (na subpasta certa) com este cabeçalho (_frontmatter_):
 
 ```markdown
 ---
@@ -197,6 +197,7 @@ Conteúdo em Markdown...
 
 ```markdown
 ## H2
+
 ### H3
 
 **negrito** _itálico_ ~~tachado~~
@@ -209,7 +210,7 @@ Conteúdo em Markdown...
 ![Alt da imagem](img/screenshot.png)
 
 | Coluna | Valor |
-|--------|-------|
+| ------ | ----- |
 | Linha  | Dado  |
 ```
 
@@ -268,7 +269,7 @@ Os componentes ficam em `src/components/` organizados por contexto (`boletim/`, 
 
 Modelo do time: **devs criam branches e abrem PR; o Tech Lead revisa, faz merge e o deploy.** Nunca commite direto na `main`.
 
-```
+```text
 Dev 1 & Dev 2              Tech Lead
     |                          |
     ├─ atualiza main ─────────┤
@@ -279,7 +280,7 @@ Dev 1 & Dev 2              Tech Lead
     │                         ├─ aprova ou sugere
     ├─ ajusta (se preciso) ───┤
     │                         ├─ merge na main
-    │                         └─ deploy manual
+    │                         └─ GitHub Actions publica
     online em 1-2 min
 ```
 
@@ -300,7 +301,7 @@ git checkout -b docs/boletim-janeiro
 
 Padrão de nomes:
 
-```
+```text
 docs/descricao-curta     ok
 bugfix/corrige-typo      ok
 dev1-branch              evite — genérico
@@ -325,7 +326,7 @@ git commit -m "docs: adiciona boletim janeiro 2026"
 
 Formato da mensagem:
 
-```
+```text
 docs: descrição curta do que fez
 
 (opcional) parágrafo explicando o porquê da mudança.
@@ -340,7 +341,7 @@ git push origin docs/boletim-janeiro
 
 No GitHub, clique em **"Compare & pull request"** e preencha:
 
-```
+```text
 Título: docs: adiciona boletim janeiro 2026
 
 ## O que mudou?
@@ -393,7 +394,14 @@ git push origin docs/sua-branch
 
 ## Como publicar (deploy)
 
-> **O deploy é manual e feito pelo Tech Lead**, sempre **depois** do merge na `main`. Não há GitHub Actions configurado (é um TODO de melhoria futura).
+> **O deploy é automático.** Todo merge na `main` dispara o workflow `.github/workflows/deploy.yml`, que faz o build e publica na branch `gh-pages`. Ninguém precisa rodar nada na mão — acompanhe pela aba **Actions** do repositório.
+
+O site atualiza em **1-2 minutos** em https://docs.vendaai.com.br.
+
+Além dele, todo Pull Request dispara `.github/workflows/build.yml`, que só roda o build. Como o `docusaurus.config.js` usa `onBrokenLinks: 'throw'`, **link quebrado reprova o PR** — o erro aparece pra quem escreveu, antes de chegar na `main`.
+
+<details>
+<summary>Deploy manual (só se o Actions estiver fora do ar)</summary>
 
 ```powershell
 git checkout main
@@ -404,7 +412,7 @@ npm run build
 npm run deploy
 ```
 
-O site atualiza em **1-2 minutos** em https://docs.vendaai.com.br.
+</details>
 
 > O arquivo `static/CNAME` preserva o domínio customizado a cada deploy — **não apague**.
 
@@ -417,16 +425,21 @@ npm start              # Dev local com hot reload (http://localhost:3000)
 npm run build          # Build de produção (falha se houver link quebrado)
 npm run serve          # Serve o build local pra conferência final
 npm run preview        # build + serve num comando só (use pra testar a busca)
-npm run deploy         # Deploy manual pro GitHub Pages (Tech Lead)
+npm run lint           # Confere formatação (Prettier) e estrutura do Markdown
+npm run fix            # Corrige sozinho o que o lint apontar
+npm run clear          # Limpa o cache do Docusaurus (.docusaurus, build)
+npm run deploy         # Deploy manual (fallback — o normal é o GitHub Actions)
 ```
 
+> O `npm run lint` roda em todo PR pelo GitHub Actions. Antes de abrir o seu,
+> rode `npm run fix` — ele resolve espaçamento, linha em branco sobrando e
+> formatação sem você precisar caçar cada um.
+>
 > **A busca não funciona com `npm start`.** O índice é gerado no `postBuild`,
 > um passo que só roda no `docusaurus build` — em modo dev o arquivo
 > `search-index.json` não existe e o campo dá erro ao digitar. Para testar a
 > busca use `npm run preview`. Não é bug de configuração: é como o
 > `@easyops-cn/docusaurus-search-local` funciona.
-
-> **Não use `npm run clear` no Windows** — o script usa `rm -rf` (Linux) e não funciona aqui. Para limpar cache, apague manualmente a pasta `node_modules\.cache`.
 
 ---
 
@@ -493,7 +506,8 @@ npm start -- --port 3001            # rodar em outra porta
 npm run build                       # build de produção (falha se houver link quebrado)
 npm run serve                       # servir o build pra conferência
 
-# Deploy (Tech Lead, após o merge na main):
+# Deploy: automático a cada merge na main (GitHub Actions).
+# Use o comando abaixo só se o Actions estiver indisponível:
 $env:GIT_USER = "ThiagoOthero"      # define a variável só nesta sessão
 npm run deploy
 ```
@@ -502,16 +516,16 @@ npm run deploy
 
 ## Troubleshooting
 
-| Problema | Solução |
-|---|---|
-| Porta 3000 ocupada | `npm start -- --port 3001` |
-| Build falha por link quebrado | A mensagem mostra o caminho do link — corrija o link |
-| Mudança não aparece no navegador | `Ctrl+Shift+R`; se persistir, apague `node_modules\.cache` |
-| Build falha por sintaxe MDX | Procure `<` ou `{` soltos no Markdown (precisam de escape) |
-| "Não consigo fazer push" | Primeira vez na branch: `git push -u origin sua-branch` |
-| Tenho um conflito | `git fetch origin` + `git merge origin/main`, resolva e comite |
-| Desfazer último commit (sem push ainda) | `git reset --soft HEAD~1` |
-| Desfazer commit já enviado | `git revert HASH-DO-COMMIT` + push |
+| Problema                                | Solução                                                        |
+| --------------------------------------- | -------------------------------------------------------------- |
+| Porta 3000 ocupada                      | `npm start -- --port 3001`                                     |
+| Build falha por link quebrado           | A mensagem mostra o caminho do link — corrija o link           |
+| Mudança não aparece no navegador        | `Ctrl+Shift+R`; se persistir, apague `node_modules\.cache`     |
+| Build falha por sintaxe MDX             | Procure `<` ou `{` soltos no Markdown (precisam de escape)     |
+| "Não consigo fazer push"                | Primeira vez na branch: `git push -u origin sua-branch`        |
+| Tenho um conflito                       | `git fetch origin` + `git merge origin/main`, resolva e comite |
+| Desfazer último commit (sem push ainda) | `git reset --soft HEAD~1`                                      |
+| Desfazer commit já enviado              | `git revert HASH-DO-COMMIT` + push                             |
 
 ---
 
@@ -520,19 +534,18 @@ npm run deploy
 - **Branch:** `docs/descricao-curta`
 - **Commit:** `docs: descricao curta` (pt-br, minúsculo)
 - **PR:** 1 PR por mudança lógica; sempre marcar o Tech Lead pra review
-- **Deploy:** manual, executado pelo Tech Lead após o merge
+- **Deploy:** automático pelo GitHub Actions a cada merge na `main`
 - **Conteúdo público** vai em `docs/`. **Documentação do repositório** (esta) fica neste README.
 
 ---
 
 ## Contato
 
-| Para | Contato |
-|---|---|
-| Tech Lead | Thiago Teixeira |
-| Suporte VendaAI | suporte@vendaai.com.br |
-| Comercial | contato@itzeroum.com.br |
-| Site oficial | https://vendaai.com.br |
-| Docs publicadas | https://docs.vendaai.com.br |
-| Abrir chamado | https://zeroum.zumdesk.com.br |
-```
+| Para            | Contato                       |
+| --------------- | ----------------------------- |
+| Tech Lead       | Thiago Teixeira               |
+| Suporte VendaAI | suporte@vendaai.com.br        |
+| Comercial       | contato@itzeroum.com.br       |
+| Site oficial    | https://vendaai.com.br        |
+| Docs publicadas | https://docs.vendaai.com.br   |
+| Abrir chamado   | https://zeroum.zumdesk.com.br |

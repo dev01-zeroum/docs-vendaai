@@ -1,0 +1,34 @@
+{
+  // Regras de estrutura para o conteúdo em docs/. O alvo é o que quebra a
+  // página ou o sumário — não estilo de escrita.
+  "config": {
+    "default": true,
+
+    // --- Desligadas porque brigam com MDX ou com o estilo do conteúdo ---
+    // Componentes React no meio do Markdown são o padrão aqui.
+    "MD033": false,
+    // Frontmatter + imports antes do conteúdo; o <h1> vem do DocHeader.
+    "MD041": false,
+    // O texto é escrito em parágrafos longos, sem quebra manual.
+    "MD013": false,
+    // O conteúdo usa **Termo** – descrição como rótulo de item, de propósito.
+    "MD036": false,
+    // Exemplos de URL com placeholder (www.{NomeDaEmpresa}...).
+    "MD034": false,
+
+    // --- Ligadas de propósito: pegam defeito de verdade ---
+    // Toda imagem precisa de alt (acessibilidade e SEO).
+    "MD045": true,
+    // Pular nível de heading quebra o sumário e a leitura por leitor de tela.
+    "MD001": true,
+    // Um <h1> por página. O `front_matter_title` vazio desliga a comparação
+    // com o `title:` do frontmatter: no Docusaurus, quando o markdown traz
+    // seu próprio "# Título", o tema deixa de renderizar o dele — conferido
+    // no HTML gerado, sai um <h1> só. Sem isso a regra acusa falso positivo.
+    "MD025": {"front_matter_title": ""},
+    // Títulos repetidos só valem se estiverem em seções diferentes.
+    "MD024": {"siblings_only": true},
+  },
+  "globs": ["docs/**/*.md", "README.md"],
+  "ignores": ["node_modules", "build", ".docusaurus"],
+}

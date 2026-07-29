@@ -6,11 +6,15 @@
     "start": "docusaurus start",
     "build": "docusaurus build",
     "deploy": "docusaurus deploy",
-    "clear": "npm cache clean --force && rm -rf node_modules/.cache",
+    "clear": "docusaurus clear",
     "serve": "docusaurus serve",
     "preview": "docusaurus build && docusaurus serve",
     "swizzle": "docusaurus swizzle",
-    "upgrade": "npm install @docusaurus/core@latest @docusaurus/preset-classic@latest"
+    "upgrade": "npm install @docusaurus/core@latest @docusaurus/preset-classic@latest",
+    "lint": "npm run lint:format && npm run lint:md",
+    "lint:format": "prettier --check .",
+    "lint:md": "markdownlint-cli2",
+    "fix": "prettier --write . && markdownlint-cli2 --fix"
   },
   "dependencies": {
     "@docusaurus/core": "^3.10.2",
@@ -35,5 +39,9 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "markdownlint-cli2": "^0.22.1",
+    "prettier": "^3.9.6"
   }
 }

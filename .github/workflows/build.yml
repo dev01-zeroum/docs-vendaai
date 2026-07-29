@@ -1,0 +1,39 @@
+# Build de verificação em todo Pull Request.
+#
+# O `docusaurus build` está configurado com onBrokenLinks / onBrokenAnchors
+# em 'throw' (docusaurus.config.js): link quebrado derruba o build. Rodando
+# aqui, o erro aparece no próprio PR, para quem escreveu — e não na hora do
+# deploy, na máquina de quem publica.
+name: Build
+
+on:
+  pull_request:
+    branches: [main]
+  # Permite disparar na mão pela aba Actions, se precisar conferir a main.
+  workflow_dispatch:
+
+jobs:
+  build:
+    name: Compila o site
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      # `npm ci` (e não `install`) para instalar exatamente o que está no
+      # package-lock.json — o build do CI reflete o do time.
+      - name: Instala as dependências
+        run: npm ci
+
+      # Roda antes do build: erro de formatação/estrutura aparece em
+      # segundos, sem esperar a compilação inteira.
+      - name: Formatação e estrutura do Markdown
+        run: npm run lint
+
+      - name: Build
+        run: npm run build
