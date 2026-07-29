@@ -11,19 +11,18 @@ export default function HabilitarMelhorias() {
         </div>
         <h3 className="habilitar-card__title">Melhoria de Produto Padrão</h3>
         <p className="habilitar-card__desc">
-          Habilitação <strong>gratuita</strong>. Abra um chamado com a equipe
-          de suporte pelo portal ou entre em contato pelo WhatsApp.
+          Habilitação <strong>gratuita</strong>. Abra um chamado com a equipe de suporte
+          pelo portal ou entre em contato pelo WhatsApp.
         </p>
         <div className="habilitar-card__actions">
           <Link
             to="https://zeroum.zumdesk.com.br"
-            className="landing-button landing-button--primary">
+            className="landing-button landing-button--primary"
+          >
             <Icon name="ticket" size={18} />
             Abrir chamado
           </Link>
-          <Link
-            to="https://wa.me/5511974384612"
-            className="habilitar-card__alt">
+          <Link to="https://wa.me/5511974384612" className="habilitar-card__alt">
             <Icon name="chat" size={16} />
             WhatsApp +55 11 97438-4612
           </Link>
@@ -36,13 +35,14 @@ export default function HabilitarMelhorias() {
         </div>
         <h3 className="habilitar-card__title">Novo Recurso Modulado</h3>
         <p className="habilitar-card__desc">
-          Demanda <strong>desenvolvimento dedicado</strong>. Fale com o time
-          comercial pra contratar e combinar o cronograma.
+          Demanda <strong>desenvolvimento dedicado</strong>. Fale com o time comercial pra
+          contratar e combinar o cronograma.
         </p>
         <div className="habilitar-card__actions">
           <Link
             to="mailto:contato@itzeroum.com.br"
-            className="landing-button landing-button--primary">
+            className="landing-button landing-button--primary"
+          >
             <Icon name="mail" size={18} />
             Entrar em contato!
           </Link>

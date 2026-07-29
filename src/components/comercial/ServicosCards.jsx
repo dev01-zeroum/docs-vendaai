@@ -5,7 +5,7 @@ const SERVICOS = [
   {
     icon: 'trending',
     titulo: 'Contratação de Recursos Modulados',
-    desc: 'Habilitação dos novos recursos apresentadosnas Atualizações, com cronograma combinado e equipe dedicada.',
+    desc: 'Habilitação dos novos recursos apresentados nas Atualizações, com cronograma combinado e equipe dedicada.',
   },
   {
     icon: 'box',

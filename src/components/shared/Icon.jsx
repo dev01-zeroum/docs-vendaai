@@ -81,7 +81,9 @@ const ICONS = {
       <line x1="15.8" y1="15.8" x2="20.5" y2="20.5" />
     </>
   ),
-  folder: <path d="M3.5 7a1.5 1.5 0 0 1 1.5-1.5h3.8l2 2.5H19a1.5 1.5 0 0 1 1.5 1.5v9A1.5 1.5 0 0 1 19 20H5a1.5 1.5 0 0 1-1.5-1.5z" />,
+  folder: (
+    <path d="M3.5 7a1.5 1.5 0 0 1 1.5-1.5h3.8l2 2.5H19a1.5 1.5 0 0 1 1.5 1.5v9A1.5 1.5 0 0 1 19 20H5a1.5 1.5 0 0 1-1.5-1.5z" />
+  ),
 
   // ----- Manual técnico / parâmetros -----
   sliders: (
@@ -314,7 +316,8 @@ export default function Icon({name, size = 22, className, style}) {
       strokeLinecap="round"
       strokeLinejoin="round"
       aria-hidden="true"
-      focusable="false">
+      focusable="false"
+    >
       {glyph}
     </svg>
   );

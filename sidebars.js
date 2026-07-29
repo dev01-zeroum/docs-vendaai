@@ -4,7 +4,7 @@ module.exports = {
   // Menu lateral próprio do Manual Técnico — aparece apenas dentro do
   // manual (acesso por link) e não interfere no menu principal do site.
   manualTecnico: [
-    { type: 'doc', id: 'manual-tecnico/00inicio', label: 'Página Inicial' },
+    {type: 'doc', id: 'manual-tecnico/00inicio', label: 'Página Inicial'},
     {
       type: 'category',
       label: 'Parâmetros',
@@ -31,11 +31,19 @@ module.exports = {
       label: 'Atualizações',
       collapsed: false,
       items: [
-        { type: 'doc', id: 'boletim/atualizacoes-01-2025', label: 'Atualizações - Jan/25' },
-        { type: 'doc', id: 'boletim/atualizacoes-06-2025', label: 'Atualizações - Jun/25' },
-        { type: 'doc', id: 'boletim/atualizacoes-01-2026', label: 'Atualizações - Jan/26' },
-        { type: 'doc', id: 'boletim/atualizacoes-06-2026', label: 'Atualizações - Jun/26' },
-        { type: 'doc', id: 'boletim/atualizacoes-07-2026', label: 'Atualizações - Jul/26' },
+        // A edição vigente leva a etiqueta "atual" no menu (estilo em
+        // custom.css). Ao publicar uma edição nova, mova a className para
+        // ela — é o mesmo cuidado que o `novo: true` do EdicoesGrid.jsx.
+        {type: 'doc', id: 'boletim/atualizacoes-01-2025', label: 'Atualizações - Jan/25'},
+        {type: 'doc', id: 'boletim/atualizacoes-06-2025', label: 'Atualizações - Jun/25'},
+        {type: 'doc', id: 'boletim/atualizacoes-01-2026', label: 'Atualizações - Jan/26'},
+        {type: 'doc', id: 'boletim/atualizacoes-06-2026', label: 'Atualizações - Jun/26'},
+        {
+          type: 'doc',
+          id: 'boletim/atualizacoes-07-2026',
+          label: 'Atualizações - Jul/26',
+          className: 'sidebar-edicao-atual',
+        },
       ],
     },
     {
@@ -43,9 +51,9 @@ module.exports = {
       label: 'Fale Conosco',
       collapsed: false,
       items: [
-        { type: 'doc', id: 'fale-conosco/duvidas', label: 'Suporte e Dúvidas de Uso' },
-        { type: 'doc', id: 'fale-conosco/sugestoes', label: 'Sugestões' },
-        { type: 'doc', id: 'fale-conosco/comercial', label: 'Comercial' },
+        {type: 'doc', id: 'fale-conosco/duvidas', label: 'Suporte e Dúvidas de Uso'},
+        {type: 'doc', id: 'fale-conosco/sugestoes', label: 'Sugestões'},
+        {type: 'doc', id: 'fale-conosco/comercial', label: 'Comercial'},
       ],
     },
     {
@@ -53,20 +61,24 @@ module.exports = {
       label: 'Manual',
       collapsed: false,
       items: [
-        { type: 'doc', id: 'manual/sobreovendaai', label: 'Sobre o VendaAI' },
-        { type: 'doc', id: 'manual/acessandovendaai', label: 'Acessando o VendaAI' },
-        { type: 'doc', id: 'manual/paginainicial', label: 'Página Inicial', key: 'home-manual' },
-        { type: 'doc', id: 'manual/dashboard', label: 'Dashboard' },
-        { type: 'doc', id: 'manual/negocios', label: 'Negócios (CRM)' },
-        { type: 'doc', id: 'manual/agenda', label: 'Agenda' },
-        { type: 'doc', id: 'manual/catalogo', label: 'Catálogo' },
-        { type: 'doc', id: 'manual/clientes', label: 'Clientes' },
-        { type: 'doc', id: 'manual/vendas', label: 'Vendas' },
-        { type: 'doc', id: 'manual/analisepedidos', label: 'Análise de Pedidos' },
-        { type: 'doc', id: 'manual/consultas', label: 'Consultas' },
-        { type: 'doc', id: 'manual/registros', label: 'Registros' }
+        {type: 'doc', id: 'manual/sobreovendaai', label: 'Sobre o VendaAI'},
+        {type: 'doc', id: 'manual/acessandovendaai', label: 'Acessando o VendaAI'},
+        {
+          type: 'doc',
+          id: 'manual/paginainicial',
+          label: 'Página Inicial',
+          key: 'home-manual',
+        },
+        {type: 'doc', id: 'manual/dashboard', label: 'Dashboard'},
+        {type: 'doc', id: 'manual/negocios', label: 'Negócios (CRM)'},
+        {type: 'doc', id: 'manual/agenda', label: 'Agenda'},
+        {type: 'doc', id: 'manual/catalogo', label: 'Catálogo'},
+        {type: 'doc', id: 'manual/clientes', label: 'Clientes'},
+        {type: 'doc', id: 'manual/vendas', label: 'Vendas'},
+        {type: 'doc', id: 'manual/analisepedidos', label: 'Análise de Pedidos'},
+        {type: 'doc', id: 'manual/consultas', label: 'Consultas'},
+        {type: 'doc', id: 'manual/registros', label: 'Registros'},
       ],
     },
   ],
 };
-

@@ -18,7 +18,8 @@ export default function Hero() {
         <div className="landing-hero__cta">
           <Link
             to="/boletim/atualizacoes-06-2026"
-            className="landing-button landing-button--primary">
+            className="landing-button landing-button--primary"
+          >
             Ver última edição
             <Icon name="arrow" size={18} />
           </Link>

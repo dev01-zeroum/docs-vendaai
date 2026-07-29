@@ -16,13 +16,14 @@ export default function ManualHero() {
         </p>
         <p className="landing-hero__lead">
           É aqui que cada empresa define como a plataforma se comporta — impostos,
-          bloqueios, integrações e muito mais. Este manual documenta todas as abas,
-          seção por seção.
+          bloqueios, integrações e muito mais. Este manual documenta todas as abas, seção
+          por seção.
         </p>
         <div className="landing-hero__cta">
           <Link
             to="/manual-tecnico/geral"
-            className="landing-button landing-button--primary">
+            className="landing-button landing-button--primary"
+          >
             Começar pela aba Geral
             <Icon name="arrow" size={18} />
           </Link>

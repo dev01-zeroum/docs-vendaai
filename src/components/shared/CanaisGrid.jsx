@@ -2,7 +2,7 @@ import React from 'react';
 import Link from '@docusaurus/Link';
 import Icon from '@site/src/components/shared/Icon';
 
-export default function CanaisGrid({ eyebrow, titulo, lead, canais }) {
+export default function CanaisGrid({eyebrow, titulo, lead, canais}) {
   return (
     <section className="page-section">
       <header className="page-section__header">
@@ -21,7 +21,8 @@ export default function CanaisGrid({ eyebrow, titulo, lead, canais }) {
             <p className="canal-card__desc">{c.desc}</p>
             <Link
               to={c.href}
-              className="landing-button landing-button--primary canal-card__cta">
+              className="landing-button landing-button--primary canal-card__cta"
+            >
               {c.ctaLabel}
             </Link>
           </article>

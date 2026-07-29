@@ -36,8 +36,8 @@ export default function ManualConceito() {
           <p className="page-section__eyebrow">Sobre</p>
           <h2 className="page-section__title">O que são os parâmetros</h2>
           <p className="page-section__lead">
-            Configurações que definem o comportamento do VendaAI para cada empresa —
-            sem depender de alterações no código.
+            Configurações que definem o comportamento do VendaAI para cada empresa — sem
+            depender de alterações no código.
           </p>
         </header>
 
@@ -52,7 +52,9 @@ export default function ManualConceito() {
               bloquear pedidos acima do limite de crédito, conectar serviços externos…
             </p>
             <ul className="landing-tipo__list">
-              <li>Valem <strong>por empresa</strong></li>
+              <li>
+                Valem <strong>por empresa</strong>
+              </li>
               <li>Entram em vigor ao salvar</li>
               <li>Sem nova versão do sistema</li>
             </ul>
@@ -68,7 +70,9 @@ export default function ManualConceito() {
               seções agrupam os parâmetros por contexto.
             </p>
             <ul className="landing-tipo__list">
-              <li><strong>16 abas</strong> de parâmetros</li>
+              <li>
+                <strong>16 abas</strong> de parâmetros
+              </li>
               <li>Divididas em seções</li>
               <li>Uma página por aba</li>
             </ul>

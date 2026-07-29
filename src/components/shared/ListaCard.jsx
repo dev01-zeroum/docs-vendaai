@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default function ListaCard({ titulo, items, children }) {
+export default function ListaCard({titulo, items, children}) {
   return (
     <div className="lista-card">
       {titulo && <p className="lista-card__titulo">{titulo}</p>}

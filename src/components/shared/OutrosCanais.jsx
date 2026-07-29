@@ -2,11 +2,7 @@ import React from 'react';
 import Link from '@docusaurus/Link';
 import Icon from '@site/src/components/shared/Icon';
 
-export default function OutrosCanais({
-  eyebrow = 'Outros canais',
-  titulo,
-  canais,
-}) {
+export default function OutrosCanais({eyebrow = 'Outros canais', titulo, canais}) {
   return (
     <section className="page-section">
       <header className="page-section__header">

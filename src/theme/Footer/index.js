@@ -46,9 +46,7 @@ const PATHS = {
       <path d="m22 7-10 5L2 7" />
     </>
   ),
-  chat: (
-    <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
-  ),
+  chat: <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />,
   site: (
     <>
       <circle cx="12" cy="12" r="10" />
@@ -85,7 +83,8 @@ function Icone({nome}) {
       strokeWidth="2"
       strokeLinecap="round"
       strokeLinejoin="round"
-      aria-hidden="true">
+      aria-hidden="true"
+    >
       {PATHS[nome]}
     </svg>
   );
@@ -106,7 +105,11 @@ const COLUNAS = [
     titulo: 'Comercial',
     itens: [
       {icone: 'chat', label: 'Falar com o Comercial', to: '/fale-conosco/comercial'},
-      {icone: 'email', label: 'contato@itzeroum.com.br', href: 'mailto:contato@itzeroum.com.br'},
+      {
+        icone: 'email',
+        label: 'contato@itzeroum.com.br',
+        href: 'mailto:contato@itzeroum.com.br',
+      },
     ],
   },
   {
@@ -114,7 +117,11 @@ const COLUNAS = [
     titulo: 'Links',
     itens: [
       {icone: 'site', label: 'Site oficial', href: 'https://vendaai.com.br'},
-      {icone: 'changelog', label: 'Última Atualização', to: '/boletim/atualizacoes-07-2026'},
+      {
+        icone: 'changelog',
+        label: 'Última Atualização',
+        to: '/boletim/atualizacoes-07-2026',
+      },
       {icone: 'sugestoes', label: 'Sugestões', to: '/fale-conosco/sugestoes'},
     ],
   },

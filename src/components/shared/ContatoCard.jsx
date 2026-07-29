@@ -26,7 +26,9 @@ export default function ContatoCard({
       <article className="contato-card">
         <div className="contato-card__info">
           {avatar && (
-            <div className="contato-card__avatar" aria-hidden="true">{avatar}</div>
+            <div className="contato-card__avatar" aria-hidden="true">
+              {avatar}
+            </div>
           )}
           <div>
             {role && <p className="contato-card__role">{role}</p>}

@@ -2,7 +2,7 @@ import React from 'react';
 import Link from '@docusaurus/Link';
 import Icon from '@site/src/components/shared/Icon';
 
-export default function LinksGrid({ eyebrow, titulo, lead, items }) {
+export default function LinksGrid({eyebrow, titulo, lead, items}) {
   return (
     <section className="page-section">
       {(eyebrow || titulo || lead) && (

@@ -8,7 +8,8 @@ export default function BoletimHeader({dataPublicacao, children}) {
     <DocHeader
       titulo="Atualizações ZEROUM"
       subtitulo={dataPublicacao && `Publicado em ${dataPublicacao}`}
-      label="Objetivo desta edição">
+      label="Objetivo desta edição"
+    >
       {children}
     </DocHeader>
   );

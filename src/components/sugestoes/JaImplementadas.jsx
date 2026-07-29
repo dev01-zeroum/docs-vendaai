@@ -1,11 +1,7 @@
 import React from 'react';
 import Icon from '@site/src/components/shared/Icon';
 
-const ITENS = [
-  'Dark mode',
-  'Busca avançada',
-  'Integrações e relatórios personalizados',
-];
+const ITENS = ['Dark mode', 'Busca avançada', 'Integrações e relatórios personalizados'];
 
 export default function JaImplementadas() {
   return (

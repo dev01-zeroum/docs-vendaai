@@ -1,0 +1,8 @@
+# O Manual Técnico é acesso por link: as páginas já enviam
+# <meta robots="noindex, nofollow"> e ficam fora do sitemap.
+# Esta regra fecha a porta também para quem lê só o robots.
+User-agent: *
+Disallow: /manual-tecnico/
+Disallow: /search
+
+Sitemap: https://docs.vendaai.com.br/sitemap.xml

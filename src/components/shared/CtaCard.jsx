@@ -4,7 +4,7 @@ import Icon from '@site/src/components/shared/Icon';
 
 // `ctaIcon` (opcional) é o nome de um ícone do set — quando informado,
 // aparece antes do texto no lugar da seta padrão do botão.
-export default function CtaCard({ titulo, desc, ctaLabel, ctaTo, ctaIcon }) {
+export default function CtaCard({titulo, desc, ctaLabel, ctaTo, ctaIcon}) {
   return (
     <section className="cta-card">
       <div className="cta-card__inner">

@@ -24,7 +24,38 @@
   --vendaai-border: #e5e7eb;
   --vendaai-border-focus: var(--ifm-color-primary);
   --vendaai-text: #1f2937;
+  /* Títulos. No claro é o mesmo tom do texto; no escuro é um degrau
+   * acima, e é por isso que existe como token separado. */
+  --vendaai-text-strong: #1f2937;
   --vendaai-text-muted: #6b7280;
+
+  /* Cor de destaque e seus tingimentos. É aqui que os dois temas
+   * divergem: no claro o azul precisa ser mais fechado para ter
+   * contraste no branco; no escuro, mais leve e menos saturado.
+   *
+   * O accent é o azul QUANDO ELE É TEXTO (títulos, rótulos, links,
+   * ícones colados a texto). A identidade #4fc3f7 sobre branco dá
+   * 2,00:1 — abaixo do mínimo de 3:1 até para texto grande, e
+   * ilegível em tela de celular sob sol. Este tom mantém o mesmo
+   * matiz (199°) e baixa a saturação de 91% para 62%: fica 4,99:1
+   * sobre branco e 4,56:1 sobre o fundo tingido dos chips e selos —
+   * mais calmo que o original em vez de mais forte.
+   *
+   * Nos elementos gráficos — botões, bordas, bullets, marcadores —
+   * a identidade continua sendo o --ifm-color-primary. */
+  --vendaai-accent: #25779d;
+
+  /* Links do corpo do texto herdam o mesmo raciocínio: no padrão do
+   * Infima eles saem em --ifm-color-primary, ou seja, os mesmos 2:1. */
+  --ifm-link-color: var(--vendaai-accent);
+  --vendaai-tint: rgba(79, 195, 247, 0.13);
+  --vendaai-tint-strong: rgba(79, 195, 247, 0.2);
+
+  /* Verde de apoio (o que marca as melhorias "padrão") */
+  --vendaai-green: #22c55e;
+  --vendaai-green-strong: #15803d;
+  --vendaai-green-soft: rgba(34, 197, 94, 0.13);
+
   --vendaai-info-bg: #e0f2fe;
   --vendaai-info-text: #075985;
   --vendaai-success-bg: #dcfce7;
@@ -40,31 +71,54 @@
   --vendaai-print-shadow: 0 4px 16px rgba(15, 23, 42, 0.08);
 }
 
-/* ===== PALETA — TEMA DARK ===== */
+/* ===== PALETA — TEMA DARK =====
+ * A regra da cor no escuro: superfície e texto em cinza neutro (nada de
+ * slate azulado) e um só azul de destaque, leve e dessaturado. Azul forte
+ * ocupando área grande é o que cansa a vista — aqui ele fica reservado ao
+ * detalhe: rótulo, ícone, link, item ativo.
+ * Pelo mesmo motivo não há branco puro: texto quase branco sobre fundo
+ * quase preto "vibra". Os tons abaixo param um degrau antes. */
 [data-theme='dark'] {
-  --ifm-color-primary: #81d4fa;
-  --ifm-color-primary-dark: #4fc3f7;
-  --ifm-color-primary-darker: #29b6f6;
-  --ifm-color-primary-darkest: #03a9f4;
-  --ifm-color-primary-light: #b3e5fc;
-  --ifm-color-primary-lighter: #e1f5fe;
-  --ifm-color-primary-lightest: #f5fbff;
+  --ifm-color-primary: #8ec3dd;
+  --ifm-color-primary-dark: #7ab5d3;
+  --ifm-color-primary-darker: #6faed0;
+  --ifm-color-primary-darkest: #4f97bf;
+  --ifm-color-primary-light: #a3cfe3;
+  --ifm-color-primary-lighter: #b8dbeb;
+  --ifm-color-primary-lightest: #d6e9f2;
 
-  --vendaai-surface: #1e293b;
-  --vendaai-surface-elevated: #273449;
-  --vendaai-border: #334155;
-  --vendaai-text: #f1f5f9;
-  --vendaai-text-muted: #94a3b8;
-  --vendaai-info-bg: #0c4a6e;
-  --vendaai-info-text: #bae6fd;
-  --vendaai-success-bg: #14532d;
-  --vendaai-success-text: #bbf7d0;
-  --vendaai-error-bg: #7f1d1d;
-  --vendaai-error-text: #fecaca;
-  --vendaai-warning-bg: #78350f;
-  --vendaai-warning-text: #fde68a;
+  /* Escada de fundos, toda neutra: página → navbar/cards → destacado */
+  --ifm-background-color: #1b1b1d;
+  --ifm-background-surface-color: #202124;
+  --vendaai-surface: #202124;
+  --vendaai-surface-elevated: #26272b;
+  --vendaai-border: #33343a;
 
-  --vendaai-print-shadow: 0 4px 16px rgba(0, 0, 0, 0.45);
+  --vendaai-text-strong: #ebebed;
+  --vendaai-text: #d8d8db;
+  --vendaai-text-muted: #9a9aa1;
+  /* O corpo do texto acompanha o --vendaai-text (o padrão do Infima,
+   * #e3e3e3, é um degrau mais claro do que o resto da página). */
+  --ifm-font-color-base: var(--vendaai-text);
+
+  --vendaai-accent: var(--ifm-color-primary);
+  --vendaai-tint: rgba(142, 195, 221, 0.13);
+  --vendaai-tint-strong: rgba(142, 195, 221, 0.2);
+
+  --vendaai-green: #6faf8a;
+  --vendaai-green-strong: #8ecfa8;
+  --vendaai-green-soft: rgba(114, 182, 142, 0.14);
+
+  --vendaai-info-bg: #1d2a31;
+  --vendaai-info-text: #b7d6e5;
+  --vendaai-success-bg: #1f2b25;
+  --vendaai-success-text: #a5d5b8;
+  --vendaai-error-bg: #2f2222;
+  --vendaai-error-text: #e2b6b6;
+  --vendaai-warning-bg: #2f2719;
+  --vendaai-warning-text: #ddc48d;
+
+  --vendaai-print-shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
 }
 
 /* ============================================================
@@ -84,7 +138,7 @@ body {
  * ------------------------------------------------------------
  * Dois formatos:
  *   1) "chip"  — quadrado arredondado com fundo tingido (cards);
- *   2) "solto" — só o traço, na cor primária (listas, barras).
+ *   2) "solto" — só o traço, na cor de destaque (listas, barras).
  * ============================================================ */
 
 /* ----- 1) Chips ----- */
@@ -100,19 +154,9 @@ body {
   width: 2.5rem;
   height: 2.5rem;
   border-radius: 10px;
-  background-color: rgba(79, 195, 247, 0.12);
-  color: var(--ifm-color-primary-darker);
+  background-color: var(--vendaai-tint);
+  color: var(--vendaai-accent);
   flex-shrink: 0;
-}
-
-[data-theme='dark'] .link-card__icon,
-[data-theme='dark'] .habilitar-card__icon,
-[data-theme='dark'] .landing-tipo__icon,
-[data-theme='dark'] .comercial-servico__icon,
-[data-theme='dark'] .canal-card__icon,
-[data-theme='dark'] .porque-card__icon {
-  background-color: rgba(129, 212, 250, 0.12);
-  color: var(--ifm-color-primary);
 }
 
 /* ----- 2) Ícones soltos ----- */
@@ -123,15 +167,8 @@ body {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  color: var(--ifm-color-primary-darker);
+  color: var(--vendaai-accent);
   flex-shrink: 0;
-}
-
-[data-theme='dark'] .param-card__icon,
-[data-theme='dark'] .outros-canal__icon,
-[data-theme='dark'] .horario-bar__icon,
-[data-theme='dark'] .tela-parametro__placeholder-icon {
-  color: var(--ifm-color-primary);
 }
 
 /* Links de ação com seta ao lado do texto */
@@ -168,7 +205,6 @@ body {
 
 /* Link "Site Oficial" — minimalista, só texto */
 .navbar-cta {
-  display: inline-flex !important;
   align-items: center;
   gap: 0.3rem;
   color: var(--vendaai-text-muted) !important;
@@ -177,8 +213,19 @@ body {
   transition: color 0.15s;
 }
 
+/* O `display` fica restrito ao desktop de propósito: abaixo de 997px o
+ * Infima esconde os .navbar__item (o Docusaurus os remonta dentro do menu
+ * do hambúrguer). Com o `!important` fora do media, esta regra derrubava a
+ * do Infima e o link continuava na navbar do celular — sobrepondo a caixa
+ * de busca, que fica transparente e deixava o texto aparecer por baixo. */
+@media (min-width: 997px) {
+  .navbar-cta {
+    display: inline-flex !important;
+  }
+}
+
 .navbar-cta:hover {
-  color: var(--ifm-color-primary) !important;
+  color: var(--vendaai-accent) !important;
   text-decoration: none;
 }
 
@@ -205,21 +252,18 @@ body {
   --search-local-spacing: 6px;
   --search-local-muted-color: var(--vendaai-text-muted);
   --search-local-hit-color: var(--vendaai-text);
-  --search-local-highlight-color: var(--ifm-color-primary-darker);
+  --search-local-highlight-color: var(--vendaai-accent);
   --search-local-input-active-border-color: var(--vendaai-text-muted);
   /* Linhas baixas, no espírito das sugestões do Google (padrão: 56px) */
   --search-local-hit-height: 40px;
   --search-local-hit-background: transparent;
   --search-local-hit-shadow: none;
-  --search-local-hit-active-color: var(--vendaai-text);
+  --search-local-hit-active-color: var(--vendaai-text-strong);
 }
 
 [data-theme='dark'] {
   --search-local-modal-background: var(--vendaai-surface);
   --search-local-modal-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-  --search-local-hit-color: #e2e8f0;
-  --search-local-highlight-color: var(--ifm-color-primary);
-  --search-local-hit-active-color: #f8fafc;
 }
 
 /* ----- Centraliza a caixa no eixo da navbar (desktop) -----
@@ -265,7 +309,9 @@ body {
   height: 2.25rem;
   font-size: 0.9rem;
   color: var(--vendaai-text);
-  transition: border-color 0.15s ease, background-color 0.15s ease;
+  transition:
+    border-color 0.15s ease,
+    background-color 0.15s ease;
 }
 
 .navbar__inner .navbar__search-input:hover {
@@ -289,7 +335,7 @@ body {
 }
 
 [data-theme='dark'] .navbar__search .navbar__search-input {
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2394a3b8' stroke-width='2' stroke-linecap='round'%3E%3Ccircle cx='11' cy='11' r='7'/%3E%3Cline x1='16.5' y1='16.5' x2='21' y2='21'/%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%239a9aa1' stroke-width='2' stroke-linecap='round'%3E%3Ccircle cx='11' cy='11' r='7'/%3E%3Cline x1='16.5' y1='16.5' x2='21' y2='21'/%3E%3C/svg%3E");
 }
 
 /* Foco em tom neutro, como o item ativo do sidebar — sem cor de marca.
@@ -385,18 +431,25 @@ body {
 
 /* ============================================================
  * PAGINATION (Anterior/Próximo no rodapé dos docs)
+ * ------------------------------------------------------------
+ * Seletores com o elemento junto da classe (nav.pagination-nav,
+ * a.pagination-nav__link--prev) não são preciosismo: o Infima declara
+ * as mesmas classes e o CSS dele entra depois do nosso, então em
+ * especificidade igual ele ganha. Com o elemento, ganhamos sem
+ * !important. (Era o que fazia a paginação continuar em 2 colunas no
+ * celular mesmo com a media query certa.)
+ *
+ * O v3 também não gera mais `.pagination-nav__item`: os dois <a> são
+ * filhos diretos do <nav>. Regras miradas naquele wrapper não pegavam
+ * em nada — os chevrons abaixo agora vão no próprio link.
  * ============================================================ */
-.pagination-nav {
+nav.pagination-nav {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 1rem;
   margin-top: 3rem !important;
   padding-top: 1.75rem;
   border-top: 1px solid var(--vendaai-border);
-}
-
-.pagination-nav__item {
-  display: flex;
 }
 
 /* Sem caixa: só texto, chevron e uma transição de cor no hover */
@@ -435,22 +488,15 @@ body {
   transition: color 0.15s ease;
 }
 
-[data-theme='dark'] .pagination-nav__label {
-  color: #e2e8f0;
-}
-
 .pagination-nav__link:hover .pagination-nav__label {
-  color: var(--ifm-color-primary-darker);
+  color: var(--vendaai-accent);
 }
 
-[data-theme='dark'] .pagination-nav__link:hover .pagination-nav__label {
-  color: var(--ifm-color-primary);
-}
-
-/* Chevron antes do título do item Anterior */
-.pagination-nav__item:not(.pagination-nav__item--next) .pagination-nav__label::before {
+/* Chevron antes do título do item Anterior. O `content` também substitui
+ * o «  » que o Infima injeta nesses mesmos pseudo-elementos. */
+a.pagination-nav__link--prev .pagination-nav__label::before {
   content: '‹';
-  color: var(--ifm-color-primary);
+  color: var(--vendaai-accent);
   font-size: 1.15em;
   line-height: 1;
   display: inline-block;
@@ -458,20 +504,18 @@ body {
   transition: transform 0.18s ease;
 }
 
-.pagination-nav__item:not(.pagination-nav__item--next)
-  .pagination-nav__link:hover
-  .pagination-nav__label::before {
+a.pagination-nav__link--prev:hover .pagination-nav__label::before {
   transform: translateX(-3px);
 }
 
 /* Item "Próximo" alinhado à direita, chevron após o título */
-.pagination-nav__item--next {
+a.pagination-nav__link--next {
   text-align: right;
 }
 
-.pagination-nav__item--next .pagination-nav__label::after {
+a.pagination-nav__link--next .pagination-nav__label::after {
   content: '›';
-  color: var(--ifm-color-primary);
+  color: var(--vendaai-accent);
   font-size: 1.15em;
   line-height: 1;
   display: inline-block;
@@ -479,13 +523,24 @@ body {
   transition: transform 0.18s ease;
 }
 
-.pagination-nav__item--next .pagination-nav__link:hover .pagination-nav__label::after {
+a.pagination-nav__link--next:hover .pagination-nav__label::after {
   transform: translateX(3px);
 }
 
+/* No celular os dois links empilham: lado a lado, os títulos quebram em
+ * três linhas cada e a régua de leitura fica horrível.
+ *
+ * Só uma coluna não basta: o Infima crava `grid-column: 2/3` no link
+ * "Próxima", o que gera uma coluna implícita e mantém os dois lado a lado
+ * por mais que o template diga 1fr. Soltar a posição é o que empilha. */
 @media (max-width: 640px) {
-  .pagination-nav {
+  nav.pagination-nav {
     grid-template-columns: 1fr;
+  }
+
+  a.pagination-nav__link--next {
+    grid-column: 1;
+    text-align: left;
   }
 }
 
@@ -531,7 +586,9 @@ body {
   letter-spacing: -0.003em;
   color: var(--vendaai-text-muted);
   border-radius: 7px;
-  transition: color 0.15s ease, background-color 0.15s ease;
+  transition:
+    color 0.15s ease,
+    background-color 0.15s ease;
 }
 
 /* Hover e ativo usam a mesma escala de opacidade (o ativo ~2x o hover),
@@ -542,8 +599,7 @@ body {
 }
 
 [data-theme='dark'] .theme-doc-sidebar-item-link > .menu__link:hover {
-  color: #e2e8f0;
-  background-color: rgba(255, 255, 255, 0.04);
+  background-color: rgba(255, 255, 255, 0.05);
 }
 
 /* Links soltos de nível 1 (Início, Página Inicial) — mesmo peso dos
@@ -552,11 +608,7 @@ body {
 .theme-doc-sidebar-item-link-level-1 > .menu__link {
   font-size: 0.92rem;
   font-weight: 700;
-  color: var(--vendaai-text);
-}
-
-[data-theme='dark'] .theme-doc-sidebar-item-link-level-1 > .menu__link {
-  color: #f1f5f9;
+  color: var(--vendaai-text-strong);
 }
 
 .theme-doc-sidebar-menu > .theme-doc-sidebar-item-link-level-1 {
@@ -570,13 +622,12 @@ body {
  * da barra — fica sóbrio e não compete com os links do conteúdo. */
 .theme-doc-sidebar-item-link > .menu__link--active {
   font-weight: 600;
-  color: var(--vendaai-text);
+  color: var(--vendaai-text-strong);
   background-color: rgba(31, 41, 55, 0.085);
 }
 
 [data-theme='dark'] .theme-doc-sidebar-item-link > .menu__link--active {
-  color: #f8fafc;
-  background-color: rgba(255, 255, 255, 0.09);
+  background-color: rgba(255, 255, 255, 0.08);
 }
 
 .theme-doc-sidebar-item-link > .menu__link--active::before {
@@ -591,14 +642,28 @@ body {
   background-color: var(--vendaai-text);
 }
 
-[data-theme='dark'] .theme-doc-sidebar-item-link > .menu__link--active::before {
-  background-color: #cbd5e1;
-}
-
 /* O ativo genérico usa peso 600; no link de topo isso *reduziria* o peso.
  * Precisa vir depois do bloco acima — mesma especificidade, ganha a ordem. */
 .theme-doc-sidebar-item-link-level-1 > .menu__link--active {
   font-weight: 700;
+}
+
+/* ----- Etiqueta da edição vigente do Boletim -----
+ * Responde a "qual é a edição mais recente?" sem exibir data: a data já
+ * está no cabeçalho da própria edição ("Publicado em..."), e o que falta
+ * no menu é saber onde é o topo da pilha. A className vem do sidebars.js
+ * e migra para a edição nova a cada publicação. */
+.sidebar-edicao-atual > .menu__link::after {
+  content: 'atual';
+  margin-left: 0.45rem;
+  padding: 0.06rem 0.4rem 0.1rem;
+  border-radius: 999px;
+  font-size: 0.6rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--vendaai-accent);
+  background-color: var(--vendaai-tint);
 }
 
 /* ----- Categorias como cabeçalho de seção ----- */
@@ -620,17 +685,10 @@ body {
   font-weight: 700;
   letter-spacing: -0.005em;
   text-transform: none;
-  color: var(--vendaai-text);
+  color: var(--vendaai-text-strong);
   padding-top: 0.3rem;
   padding-bottom: 0.3rem;
   transition: opacity 0.15s ease;
-}
-
-[data-theme='dark']
-  .theme-doc-sidebar-item-category-level-1
-  > .menu__list-item-collapsible
-  > .menu__link {
-  color: #f1f5f9;
 }
 
 .theme-doc-sidebar-item-category-level-1
@@ -643,7 +701,9 @@ body {
 .theme-doc-sidebar-item-category-level-1 .menu__link--sublist-caret::after {
   opacity: 0.4;
   transform: scale(0.7);
-  transition: opacity 0.15s ease, transform 0.2s ease;
+  transition:
+    opacity 0.15s ease,
+    transform 0.2s ease;
 }
 
 .theme-doc-sidebar-item-category-level-1
@@ -694,14 +754,10 @@ body {
   font-weight: 700;
   letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: var(--ifm-color-primary-darker);
+  color: var(--vendaai-accent);
   margin-bottom: 0.7rem;
   padding-bottom: 0.65rem;
   border-bottom: 1px solid var(--vendaai-border);
-}
-
-[data-theme='dark'] .theme-doc-toc-desktop::before {
-  color: var(--ifm-color-primary);
 }
 
 /* Borda esquerda da lista mais sutil */
@@ -719,7 +775,10 @@ body {
   margin: 0.08rem 0;
   border-radius: 6px;
   color: var(--vendaai-text-muted);
-  transition: background-color 0.15s, color 0.15s, padding-left 0.15s;
+  transition:
+    background-color 0.15s,
+    color 0.15s,
+    padding-left 0.15s;
   line-height: 1.45;
 }
 
@@ -729,30 +788,16 @@ body {
   text-decoration: none;
 }
 
-[data-theme='dark'] .table-of-contents__link:hover {
-  color: #e2e8f0;
-}
-
 /* Item ativo destacado */
 .table-of-contents__link--active {
-  background-color: rgba(79, 195, 247, 0.12);
-  color: var(--ifm-color-primary-darker) !important;
+  background-color: var(--vendaai-tint);
+  color: var(--vendaai-accent) !important;
   font-weight: 600;
 }
 
-[data-theme='dark'] .table-of-contents__link--active {
-  background-color: rgba(129, 212, 250, 0.14);
-  color: var(--ifm-color-primary) !important;
-}
-
 .table-of-contents__link--active:hover {
-  background-color: rgba(79, 195, 247, 0.2);
-  color: var(--ifm-color-primary-darker) !important;
-}
-
-[data-theme='dark'] .table-of-contents__link--active:hover {
-  background-color: rgba(129, 212, 250, 0.22);
-  color: var(--ifm-color-primary) !important;
+  background-color: var(--vendaai-tint-strong);
+  color: var(--vendaai-accent) !important;
 }
 
 /* Tópicos de primeiro nível (h2) — mais firmes que os subníveis */
@@ -760,10 +805,6 @@ body {
   font-size: 0.885rem;
   font-weight: 600;
   color: var(--vendaai-text);
-}
-
-[data-theme='dark'] .table-of-contents__left-border > li > .table-of-contents__link {
-  color: #e2e8f0;
 }
 
 /* Subníveis (h3 dentro de h2) — levemente menores e mais leves */
@@ -780,18 +821,21 @@ body {
 }
 
 /* ============================================================
- * HEADINGS — primária só em h1-h3 do conteúdo (sem !important)
+ * HEADINGS — h1-h3 do conteúdo (sem !important): primária no claro,
+ * texto neutro no escuro
  * ============================================================ */
 .theme-doc-markdown h1,
 .theme-doc-markdown h2,
 .theme-doc-markdown h3 {
-  color: var(--ifm-color-primary);
+  color: var(--vendaai-accent);
 }
 
+/* No escuro os títulos saem do azul: repetidos e em corpo grande, eram o
+ * que mais pesava na tela. A hierarquia fica por conta do tamanho. */
 [data-theme='dark'] .theme-doc-markdown h1,
 [data-theme='dark'] .theme-doc-markdown h2,
 [data-theme='dark'] .theme-doc-markdown h3 {
-  color: var(--ifm-color-primary-lighter);
+  color: var(--vendaai-text-strong);
 }
 
 /* ============================================================
@@ -806,6 +850,25 @@ body {
   border-radius: var(--vendaai-print-radius);
   box-shadow: var(--vendaai-print-shadow);
   cursor: zoom-in;
+}
+
+/* A imagem do markdown vem embrulhada numa <figure> (swizzle em
+ * src/theme/MDXComponents/Img.js). O navegador dá 40px de margem lateral
+ * ao <figure> por padrão — sem o reset, os prints ficariam indentados. */
+.figura-conteudo {
+  margin: 1.75rem 0;
+}
+
+/* Os prints são telas claras: em cheio, no escuro, são a coisa mais forte
+ * da página. Um leve rebaixamento tira o "flash" da leitura; ao ampliar,
+ * a imagem volta ao brilho original. */
+[data-theme='dark'] .theme-doc-markdown img {
+  filter: brightness(0.9);
+  transition: filter 0.2s ease;
+}
+
+[data-theme='dark'] .theme-doc-markdown img.medium-zoom-image--opened {
+  filter: none;
 }
 
 /* Enquanto ampliada, a imagem não deve convidar a outro clique */
@@ -871,7 +934,7 @@ body {
 .footer-x__col-title .footer-x__ico {
   width: 17px;
   height: 17px;
-  color: var(--ifm-color-primary);
+  color: var(--vendaai-accent);
 }
 
 .footer-x__list {
@@ -896,7 +959,7 @@ body {
 }
 
 .footer-x__link:hover {
-  color: var(--ifm-color-primary) !important;
+  color: var(--vendaai-accent) !important;
 }
 
 /* Divisória sutil + copyright discreto */
@@ -939,8 +1002,8 @@ body {
 }
 
 [data-theme='dark'] .landing-hero {
-  background: linear-gradient(135deg, #1a1a1c 0%, #0e2236 100%);
-  border-color: rgba(129, 212, 250, 0.12);
+  background: linear-gradient(135deg, #212225 0%, #1c1d20 100%);
+  border-color: rgba(255, 255, 255, 0.07);
 }
 
 .landing-hero__inner {
@@ -953,12 +1016,8 @@ body {
   font-weight: 600;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: var(--ifm-color-primary-darker);
+  color: var(--vendaai-accent);
   margin: 0 0 0.75rem 0;
-}
-
-[data-theme='dark'] .landing-hero__eyebrow {
-  color: var(--ifm-color-primary);
 }
 
 .landing-hero__title {
@@ -966,12 +1025,8 @@ body {
   font-weight: 800;
   line-height: 1.1;
   margin: 0 0 0.75rem 0;
-  color: var(--vendaai-text) !important;
+  color: var(--vendaai-text-strong) !important;
   letter-spacing: -0.02em;
-}
-
-[data-theme='dark'] .landing-hero__title {
-  color: #f8fafc !important;
 }
 
 .landing-hero__subtitle {
@@ -979,10 +1034,6 @@ body {
   color: var(--vendaai-text);
   margin: 0 0 1.25rem 0;
   font-weight: 500;
-}
-
-[data-theme='dark'] .landing-hero__subtitle {
-  color: #cbd5e1;
 }
 
 .landing-hero__lead {
@@ -1010,7 +1061,10 @@ body {
   font-size: 0.95rem;
   font-weight: 600;
   text-decoration: none !important;
-  transition: transform 0.15s, box-shadow 0.15s, background-color 0.15s;
+  transition:
+    transform 0.15s,
+    box-shadow 0.15s,
+    background-color 0.15s;
   border: 1px solid transparent;
   white-space: nowrap;
 }
@@ -1018,17 +1072,26 @@ body {
 .landing-button--primary {
   background-color: var(--ifm-color-primary);
   color: #0a2540 !important;
-  box-shadow: 0 1px 2px rgba(15, 23, 42, 0.1), 0 4px 12px rgba(79, 195, 247, 0.2);
+  box-shadow:
+    0 1px 2px rgba(15, 23, 42, 0.1),
+    0 4px 12px rgba(79, 195, 247, 0.2);
 }
 
 .landing-button--primary:hover {
   background-color: var(--ifm-color-primary-dark);
   transform: translateY(-1px);
-  box-shadow: 0 2px 4px rgba(15, 23, 42, 0.12), 0 8px 18px rgba(79, 195, 247, 0.3);
+  box-shadow:
+    0 2px 4px rgba(15, 23, 42, 0.12),
+    0 8px 18px rgba(79, 195, 247, 0.3);
 }
 
+/* No escuro o halo azul do botão vira brilho na tela — sombra neutra. */
 [data-theme='dark'] .landing-button--primary {
-  color: #0a2540 !important;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.35);
+}
+
+[data-theme='dark'] .landing-button--primary:hover {
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.45);
 }
 
 /* ===== SECTION (genérico) ===== */
@@ -1049,24 +1112,16 @@ body {
   font-weight: 600;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: var(--ifm-color-primary-darker);
+  color: var(--vendaai-accent);
   margin: 0 0 0.5rem 0;
-}
-
-[data-theme='dark'] .page-section__eyebrow {
-  color: var(--ifm-color-primary);
 }
 
 .page-section__title {
   font-size: clamp(1.5rem, 3vw, 2rem);
   font-weight: 700;
-  color: var(--vendaai-text) !important;
+  color: var(--vendaai-text-strong) !important;
   margin: 0 0 0.75rem 0;
   letter-spacing: -0.01em;
-}
-
-[data-theme='dark'] .page-section__title {
-  color: #f1f5f9 !important;
 }
 
 .page-section__lead {
@@ -1089,7 +1144,9 @@ body {
   padding: 1.75rem;
   background-color: var(--vendaai-surface);
   position: relative;
-  transition: transform 0.2s, box-shadow 0.2s;
+  transition:
+    transform 0.2s,
+    box-shadow 0.2s;
 }
 
 .landing-tipo:hover {
@@ -1102,7 +1159,7 @@ body {
 }
 
 .landing-tipo--padrao {
-  border-top: 4px solid #22c55e;
+  border-top: 4px solid var(--vendaai-green);
 }
 
 .landing-tipo--modulado {
@@ -1114,28 +1171,20 @@ body {
 }
 
 .landing-tipo--padrao .landing-tipo__icon {
-  background-color: rgba(34, 197, 94, 0.12);
-  color: #16a34a;
+  background-color: var(--vendaai-green-soft);
+  color: var(--vendaai-green-strong);
 }
 
 .landing-tipo--modulado .landing-tipo__icon {
-  background-color: rgba(79, 195, 247, 0.15);
-  color: var(--ifm-color-primary-darker);
-}
-
-[data-theme='dark'] .landing-tipo--modulado .landing-tipo__icon {
-  color: var(--ifm-color-primary);
+  background-color: var(--vendaai-tint);
+  color: var(--vendaai-accent);
 }
 
 .landing-tipo__title {
   font-size: 1.15rem;
   font-weight: 700;
   margin: 0 0 0.5rem 0;
-  color: var(--vendaai-text) !important;
-}
-
-[data-theme='dark'] .landing-tipo__title {
-  color: #f1f5f9 !important;
+  color: var(--vendaai-text-strong) !important;
 }
 
 .landing-tipo__desc {
@@ -1168,7 +1217,7 @@ body {
 }
 
 .landing-tipo--padrao .landing-tipo__list li::before {
-  color: #22c55e;
+  color: var(--vendaai-green);
 }
 
 /* ===== GRID DE EDIÇÕES ===== */
@@ -1187,7 +1236,10 @@ body {
   background-color: var(--vendaai-surface);
   text-decoration: none !important;
   color: inherit !important;
-  transition: transform 0.18s, box-shadow 0.18s, border-color 0.18s;
+  transition:
+    transform 0.18s,
+    box-shadow 0.18s,
+    border-color 0.18s;
 }
 
 .landing-edicao:hover {
@@ -1212,11 +1264,7 @@ body {
   font-weight: 700;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: var(--ifm-color-primary-darker);
-}
-
-[data-theme='dark'] .landing-edicao__periodo {
-  color: var(--ifm-color-primary);
+  color: var(--vendaai-accent);
 }
 
 .landing-edicao__badge {
@@ -1234,12 +1282,8 @@ body {
   font-size: 1.02rem;
   font-weight: 700;
   margin: 0 0 0.5rem 0;
-  color: var(--vendaai-text) !important;
+  color: var(--vendaai-text-strong) !important;
   line-height: 1.3;
-}
-
-[data-theme='dark'] .landing-edicao__titulo {
-  color: #f1f5f9 !important;
 }
 
 .landing-edicao__destaque {
@@ -1253,12 +1297,8 @@ body {
 .landing-edicao__link {
   font-size: 0.85rem;
   font-weight: 600;
-  color: var(--ifm-color-primary-darker);
+  color: var(--vendaai-accent);
   margin-top: auto;
-}
-
-[data-theme='dark'] .landing-edicao__link {
-  color: var(--ifm-color-primary);
 }
 
 /* ===== CTA FINAL ===== */
@@ -1280,11 +1320,7 @@ body {
   font-size: clamp(1.35rem, 2.5vw, 1.75rem);
   font-weight: 700;
   margin: 0 0 0.75rem 0;
-  color: var(--vendaai-text) !important;
-}
-
-[data-theme='dark'] .cta-card__title {
-  color: #f1f5f9 !important;
+  color: var(--vendaai-text-strong) !important;
 }
 
 .cta-card__desc {
@@ -1311,7 +1347,10 @@ body {
   border-radius: 12px;
   padding: 1.5rem;
   background-color: var(--vendaai-surface);
-  transition: transform 0.18s, box-shadow 0.18s, border-color 0.18s;
+  transition:
+    transform 0.18s,
+    box-shadow 0.18s,
+    border-color 0.18s;
 }
 
 .comercial-servico:hover {
@@ -1332,12 +1371,8 @@ body {
   font-size: 1.02rem;
   font-weight: 700;
   margin: 0 0 0.5rem 0;
-  color: var(--vendaai-text) !important;
+  color: var(--vendaai-text-strong) !important;
   line-height: 1.3;
-}
-
-[data-theme='dark'] .comercial-servico__titulo {
-  color: #f1f5f9 !important;
 }
 
 .comercial-servico__desc {
@@ -1357,11 +1392,11 @@ body {
   padding: 1.75rem 2rem;
   border: 1px solid var(--vendaai-border);
   border-radius: 16px;
-  background: linear-gradient(135deg, var(--vendaai-surface-elevated) 0%, var(--vendaai-surface) 100%);
-}
-
-[data-theme='dark'] .contato-card {
-  background: linear-gradient(135deg, #1f2c40 0%, #1a1f2e 100%);
+  background: linear-gradient(
+    135deg,
+    var(--vendaai-surface-elevated) 0%,
+    var(--vendaai-surface) 100%
+  );
 }
 
 .contato-card__info {
@@ -1390,23 +1425,15 @@ body {
   font-weight: 600;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: var(--ifm-color-primary-darker);
+  color: var(--vendaai-accent);
   margin: 0 0 0.15rem 0;
-}
-
-[data-theme='dark'] .contato-card__role {
-  color: var(--ifm-color-primary);
 }
 
 .contato-card__nome {
   font-size: 1.25rem;
   font-weight: 700;
   margin: 0 0 0.2rem 0;
-  color: var(--vendaai-text) !important;
-}
-
-[data-theme='dark'] .contato-card__nome {
-  color: #f1f5f9 !important;
+  color: var(--vendaai-text-strong) !important;
 }
 
 .contato-card__email-text {
@@ -1437,7 +1464,10 @@ body {
   background-color: var(--vendaai-surface);
   text-decoration: none !important;
   color: inherit !important;
-  transition: transform 0.15s, border-color 0.15s, background-color 0.15s;
+  transition:
+    transform 0.15s,
+    border-color 0.15s,
+    background-color 0.15s;
 }
 
 .outros-canal:hover {
@@ -1450,11 +1480,7 @@ body {
   font-size: 0.98rem;
   font-weight: 700;
   margin: 0 0 0.2rem 0;
-  color: var(--vendaai-text) !important;
-}
-
-[data-theme='dark'] .outros-canal__titulo {
-  color: #f1f5f9 !important;
+  color: var(--vendaai-text-strong) !important;
 }
 
 .outros-canal__desc {
@@ -1466,7 +1492,7 @@ body {
 
 .outros-canal__arrow {
   display: inline-flex;
-  color: var(--ifm-color-primary);
+  color: var(--vendaai-accent);
   margin-left: auto;
   flex-shrink: 0;
   transition: transform 0.15s;
@@ -1494,7 +1520,10 @@ body {
   background-color: var(--vendaai-surface);
   text-decoration: none !important;
   color: inherit !important;
-  transition: transform 0.18s, box-shadow 0.18s, border-color 0.18s;
+  transition:
+    transform 0.18s,
+    box-shadow 0.18s,
+    border-color 0.18s;
 }
 
 .link-card:hover {
@@ -1515,12 +1544,8 @@ body {
   font-size: 1.02rem;
   font-weight: 700;
   margin: 0 0 0.4rem 0;
-  color: var(--vendaai-text) !important;
+  color: var(--vendaai-text-strong) !important;
   line-height: 1.3;
-}
-
-[data-theme='dark'] .link-card__titulo {
-  color: #f1f5f9 !important;
 }
 
 .link-card__desc {
@@ -1534,18 +1559,48 @@ body {
 .link-card__arrow {
   font-size: 0.85rem;
   font-weight: 600;
-  color: var(--ifm-color-primary-darker);
+  color: var(--vendaai-accent);
   margin-top: auto;
   margin-right: auto;
   transition: transform 0.15s;
 }
 
-[data-theme='dark'] .link-card__arrow {
-  color: var(--ifm-color-primary);
-}
-
 .link-card:hover .link-card__arrow {
   transform: translateX(3px);
+}
+
+/* ============================================================
+ * SELO — etiqueta inline de classificação (src/components/shared/Selo.jsx)
+ * Reaproveita os tokens dos cards "padrão" (verde) e "modulado" (azul),
+ * então a cor de um item solto bate com a do card correspondente.
+ * ============================================================ */
+.selo {
+  display: inline-block;
+  padding: 0.14rem 0.55rem 0.18rem;
+  border-radius: 999px;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  line-height: 1.3;
+  vertical-align: middle;
+  white-space: nowrap;
+}
+
+.selo--padrao {
+  color: var(--vendaai-green-strong);
+  background-color: var(--vendaai-green-soft);
+}
+
+.selo--modulado {
+  color: var(--vendaai-accent);
+  background-color: var(--vendaai-tint);
+}
+
+/* Logo abaixo de um título, o selo precisa respirar do parágrafo. */
+.selo + p,
+p > .selo:only-child {
+  margin-top: 0.4rem;
 }
 
 /* ============================================================
@@ -1565,7 +1620,9 @@ body {
   padding: 1.75rem;
   background-color: var(--vendaai-surface);
   position: relative;
-  transition: transform 0.2s, box-shadow 0.2s;
+  transition:
+    transform 0.2s,
+    box-shadow 0.2s;
 }
 
 .habilitar-card:hover {
@@ -1578,7 +1635,7 @@ body {
 }
 
 .habilitar-card--padrao {
-  border-top: 4px solid #22c55e;
+  border-top: 4px solid var(--vendaai-green);
 }
 
 .habilitar-card--modulado {
@@ -1590,29 +1647,21 @@ body {
 }
 
 .habilitar-card--padrao .habilitar-card__icon {
-  background-color: rgba(34, 197, 94, 0.12);
-  color: #16a34a;
+  background-color: var(--vendaai-green-soft);
+  color: var(--vendaai-green-strong);
 }
 
 .habilitar-card--modulado .habilitar-card__icon {
-  background-color: rgba(79, 195, 247, 0.15);
-  color: var(--ifm-color-primary-darker);
-}
-
-[data-theme='dark'] .habilitar-card--modulado .habilitar-card__icon {
-  color: var(--ifm-color-primary);
+  background-color: var(--vendaai-tint);
+  color: var(--vendaai-accent);
 }
 
 .habilitar-card__title {
   font-size: 1.1rem !important;
   font-weight: 700;
   margin: 0 0 0.5rem 0 !important;
-  color: var(--vendaai-text) !important;
+  color: var(--vendaai-text-strong) !important;
   line-height: 1.3;
-}
-
-[data-theme='dark'] .habilitar-card__title {
-  color: #f1f5f9 !important;
 }
 
 .habilitar-card__desc {
@@ -1637,7 +1686,7 @@ body {
 }
 
 .habilitar-card__alt:not(.habilitar-card__alt--static):hover {
-  color: var(--ifm-color-primary);
+  color: var(--vendaai-accent);
 }
 
 .habilitar-card__alt--static {
@@ -1659,12 +1708,8 @@ body {
   font-weight: 800;
   line-height: 1.1;
   margin: 0 0 0.4rem 0 !important;
-  color: var(--vendaai-text) !important;
+  color: var(--vendaai-text-strong) !important;
   letter-spacing: -0.025em;
-}
-
-[data-theme='dark'] .doc-header__title {
-  color: #f8fafc !important;
 }
 
 .doc-header__subtitle {
@@ -1690,22 +1735,14 @@ body {
   font-weight: 700;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: var(--ifm-color-primary-darker);
+  color: var(--vendaai-accent);
   margin: 0 0 0.55rem 0;
-}
-
-[data-theme='dark'] .doc-header__objetivo-label {
-  color: var(--ifm-color-primary);
 }
 
 .doc-header__objetivo-text {
   color: var(--vendaai-text);
   font-size: 1rem;
   line-height: 1.65;
-}
-
-[data-theme='dark'] .doc-header__objetivo-text {
-  color: #e2e8f0;
 }
 
 .doc-header__objetivo-text p {
@@ -1733,12 +1770,8 @@ body {
   font-weight: 700;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: var(--ifm-color-primary-darker);
+  color: var(--vendaai-accent);
   margin: 0 0 0.85rem 0;
-}
-
-[data-theme='dark'] .lista-card__titulo {
-  color: var(--ifm-color-primary);
 }
 
 .lista-card__items {
@@ -1771,11 +1804,7 @@ body {
   border-radius: 50%;
   background-color: var(--ifm-color-primary);
   margin-top: 0.6rem;
-  box-shadow: 0 0 0 3px rgba(79, 195, 247, 0.18);
-}
-
-[data-theme='dark'] .lista-card__marker {
-  box-shadow: 0 0 0 3px rgba(129, 212, 250, 0.15);
+  box-shadow: 0 0 0 3px var(--vendaai-tint);
 }
 
 .lista-card__content {
@@ -1784,14 +1813,10 @@ body {
 }
 
 .lista-card__content strong {
-  color: var(--vendaai-text);
+  color: var(--vendaai-text-strong);
   font-weight: 700;
   font-size: 0.98rem;
   line-height: 1.4;
-}
-
-[data-theme='dark'] .lista-card__content strong {
-  color: #f1f5f9;
 }
 
 .lista-card__desc {
@@ -1816,10 +1841,6 @@ body {
   line-height: 1.55;
   color: var(--vendaai-text);
   font-size: 0.95rem;
-}
-
-[data-theme='dark'] .lista-card__raw li {
-  color: #e2e8f0;
 }
 
 .lista-card__raw li:last-child {
@@ -1851,11 +1872,7 @@ body {
   height: 0.4rem;
   border-radius: 50%;
   background-color: var(--ifm-color-primary);
-  box-shadow: 0 0 0 3px rgba(79, 195, 247, 0.18);
-}
-
-[data-theme='dark'] .lista-card__raw ul li::before {
-  box-shadow: 0 0 0 3px rgba(129, 212, 250, 0.15);
+  box-shadow: 0 0 0 3px var(--vendaai-tint);
 }
 
 .lista-card__raw ul li:first-child::before {
@@ -1881,13 +1898,47 @@ body {
   height: 1.4rem;
   border-radius: 50%;
   background-color: var(--ifm-color-primary);
-  color: #ffffff;
+  color: #0a2540;
   font-size: 0.72rem;
   font-weight: 700;
   display: flex;
   align-items: center;
   justify-content: center;
   line-height: 1;
+}
+
+/* ----- Trilha do stepper -----
+ * A linha ligando um número ao outro transforma a lista numerada num
+ * fluxo: os passos passam a ler como "um depois do outro" em vez de
+ * itens soltos. Só nos itens de primeiro nível (`>`), senão sub-listas
+ * ganhariam uma trilha própria, sem número para ancorar.
+ *
+ * left: o centro do círculo (1.4rem de diâmetro) menos metade da linha.
+ * top: a base do círculo (0.65rem do topo + 1.4rem de altura). */
+.lista-card__raw > ol > li::after {
+  content: '';
+  position: absolute;
+  left: calc(0.7rem - 1px);
+  top: 2.05rem;
+  bottom: -0.05rem;
+  width: 2px;
+  background-color: var(--vendaai-border);
+}
+
+/* O primeiro item não tem padding-top, então o círculo sobe junto. */
+.lista-card__raw > ol > li:first-child::after {
+  top: 1.5rem;
+}
+
+/* Fluxo terminou: sem linha saindo do último número. */
+.lista-card__raw > ol > li:last-child::after {
+  content: none;
+}
+
+/* Com a trilha, o divisor entre itens vira ruído — são duas linhas
+ * dizendo a mesma separação. Fica só nas listas com bullet (<ul>). */
+.lista-card__raw > ol > li {
+  border-bottom: none;
 }
 
 .lista-card__raw ol li:first-child::before {
@@ -1930,7 +1981,10 @@ body {
   background-color: var(--vendaai-surface);
   text-decoration: none !important;
   color: inherit !important;
-  transition: border-color 0.15s, transform 0.15s, box-shadow 0.15s;
+  transition:
+    border-color 0.15s,
+    transform 0.15s,
+    box-shadow 0.15s;
 }
 
 .param-card:hover {
@@ -1956,12 +2010,8 @@ body {
 .param-card__titulo {
   font-weight: 700;
   font-size: 0.9rem;
-  color: var(--vendaai-text);
+  color: var(--vendaai-text-strong);
   line-height: 1.3;
-}
-
-[data-theme='dark'] .param-card__titulo {
-  color: #f1f5f9;
 }
 
 .param-card__desc {
@@ -1987,12 +2037,8 @@ body {
   font-weight: 700;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: var(--ifm-color-primary-darker);
+  color: var(--vendaai-accent);
   margin: 0 0 0.15rem;
-}
-
-[data-theme='dark'] .manual-tab-header__eyebrow {
-  color: var(--ifm-color-primary);
 }
 
 .manual-tab-header__title {
@@ -2001,11 +2047,7 @@ body {
   line-height: 1.1;
   margin: 0 !important;
   letter-spacing: -0.02em;
-  color: var(--vendaai-text) !important;
-}
-
-[data-theme='dark'] .manual-tab-header__title {
-  color: #f8fafc !important;
+  color: var(--vendaai-text-strong) !important;
 }
 
 /* ----- Figura com o print da aba ----- */
@@ -2044,12 +2086,17 @@ body {
   letter-spacing: 0.02em;
 }
 
-.tela-parametro__legenda {
+/* Legenda única para as duas origens de imagem: o <TelaParametro> do
+ * Manual Técnico e as imagens de markdown (swizzle em
+ * src/theme/MDXComponents/Img.js). */
+.tela-parametro__legenda,
+.figura-conteudo__legenda {
   margin-top: 0.6rem;
   text-align: center;
   font-size: 0.82rem;
   color: var(--vendaai-text-muted);
   font-style: italic;
+  line-height: 1.45;
 }
 
 /* ============================================================
@@ -2073,7 +2120,7 @@ button[class*='collapseSidebarButton'] {
 
 button[class*='collapseSidebarButton']:hover {
   background: transparent !important;
-  color: var(--ifm-color-primary) !important;
+  color: var(--vendaai-accent) !important;
 }
 
 /* esconde a seta padrão e usa um chevron */
@@ -2099,7 +2146,7 @@ button[class*='collapseSidebarButton']::before {
 
 [class*='expandButton']:hover {
   background: transparent !important;
-  color: var(--ifm-color-primary) !important;
+  color: var(--vendaai-accent) !important;
 }
 
 [class*='expandButton'] svg {
@@ -2128,7 +2175,10 @@ button[class*='collapseSidebarButton']::before {
   border: 1px solid var(--vendaai-border);
   border-radius: 12px;
   background-color: var(--vendaai-surface);
-  transition: transform 0.18s, box-shadow 0.18s, border-color 0.18s;
+  transition:
+    transform 0.18s,
+    box-shadow 0.18s,
+    border-color 0.18s;
 }
 
 .canal-card:hover {
@@ -2149,12 +2199,8 @@ button[class*='collapseSidebarButton']::before {
   font-size: 1.05rem;
   font-weight: 700;
   margin: 0 0 0.5rem 0;
-  color: var(--vendaai-text) !important;
+  color: var(--vendaai-text-strong) !important;
   line-height: 1.3;
-}
-
-[data-theme='dark'] .canal-card__titulo {
-  color: #f1f5f9 !important;
 }
 
 .canal-card__desc {
@@ -2187,7 +2233,6 @@ button[class*='collapseSidebarButton']::before {
   color: var(--vendaai-text);
 }
 
-
 /* ============================================================
  * SUGESTÕES — "Por que importam" + "Já implementadas"
  * ============================================================ */
@@ -2213,11 +2258,7 @@ button[class*='collapseSidebarButton']::before {
   font-size: 1rem;
   font-weight: 700;
   margin: 0 0 0.35rem 0;
-  color: var(--vendaai-text) !important;
-}
-
-[data-theme='dark'] .porque-card__titulo {
-  color: #f1f5f9 !important;
+  color: var(--vendaai-text-strong) !important;
 }
 
 .porque-card__desc {
@@ -2257,8 +2298,8 @@ button[class*='collapseSidebarButton']::before {
   width: 1.4rem;
   height: 1.4rem;
   border-radius: 50%;
-  background-color: rgba(34, 197, 94, 0.15);
-  color: #16a34a;
+  background-color: var(--vendaai-green-soft);
+  color: var(--vendaai-green-strong);
   flex-shrink: 0;
 }
 
