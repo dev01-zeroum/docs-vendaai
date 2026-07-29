@@ -15,6 +15,8 @@ import LinksGrid from '@site/src/components/shared/LinksGrid';
 
 </ManualHeader>
 
+## Visão geral
+
 Com uma plataforma **intuitiva, eficiente e adaptada para dispositivos móveis**, o **VendaAI** conecta o time comercial aos clientes de forma estratégica, proporcionando mais **agilidade, organização e produtividade** no processo de vendas.
 
 Enquanto você foca no crescimento do seu negócio, o **VendaAI** oferece uma solução completa para **otimizar processos**, **melhorar a experiência de compra** e **fortalecer o relacionamento com seus clientes**. Com isso, sua equipe de vendas ganha mais **autonomia**, **insights valiosos** e ferramentas para alcançar **resultados ainda melhores**.

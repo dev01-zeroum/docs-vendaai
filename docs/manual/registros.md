@@ -1,5 +1,6 @@
 ---
 title: 'Registros'
+description: 'A aba Registros do VendaAI: central de cadastros da operação, de produtos a metas.'
 hide_title: true
 ---
 
@@ -13,6 +14,8 @@ import ListaCard from '@site/src/components/shared/ListaCard';
 A aba **Registros** disponibiliza acesso a diferentes áreas do sistema, permitindo consultar e gerenciar informações essenciais para a operação.
 
 </ManualHeader>
+
+## Categorias disponíveis
 
 Nela, estão disponíveis as seguintes categorias:
 
@@ -72,6 +75,8 @@ Além disso, a interface disponibiliza opções para **editar** ou **excluir** r
 
 A pesquisa é intuitiva e facilita a localização das empresas cadastradas, proporcionando uma gestão mais organizada e ágil das informações.
 
+### Criar uma nova empresa
+
 Para **registrar uma nova empresa**, clique no botão **“+ Criar nova empresa”**, localizado no canto superior direito da tela, conforme ilustrado na imagem abaixo:
 
 ![Botão “+ Criar nova empresa” no canto superior direito](https://i.imgur.com/U4cmgPe.png)
@@ -104,4 +109,3 @@ Segue abaixo a imagem de instrução:
 </ListaCard>
 
 Pronto! A empresa será criada no **VendaAI**.
-

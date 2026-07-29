@@ -28,4 +28,3 @@ A seção **Visualização** permite personalizar os campos exibidos na tela de 
 - **Campos obrigatórios** – Define quais informações deverão ser obrigatoriamente preenchidas durante o cadastro ou atualização de um produto.
 
 </ListaCard>
-

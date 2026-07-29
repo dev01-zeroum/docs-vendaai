@@ -71,4 +71,3 @@ A seção **Rede** permite configurar a integração com a adquirente Rede, incl
 - **Habilitar Pix no pagamento de título** – Permite realizar o pagamento de títulos utilizando Pix.
 
 </ListaCard>
-

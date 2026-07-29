@@ -95,4 +95,3 @@ A seção **Contatos (Visualização)** permite configurar as regras aplicadas a
 - **Campos obrigatórios no contato** – Permite definir quais informações deverão ser obrigatoriamente preenchidas durante o cadastro de um contato.
 
 </ListaCard>
-

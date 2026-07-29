@@ -51,4 +51,3 @@ A seção **Visualização** permite personalizar as informações exibidas na c
 - **Ordenação da listagem de estoque** – Define a ordem padrão de exibição dos registros de estoque.
 
 </ListaCard>
-

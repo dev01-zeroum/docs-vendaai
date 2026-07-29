@@ -1,5 +1,6 @@
 ---
 title: 'Vendas'
+description: 'Vendas no VendaAI: como criar um pedido passo a passo e acompanhar a lista de pedidos cadastrados.'
 hide_title: true
 ---
 
@@ -14,6 +15,8 @@ O painel da aba **Pedidos** do sistema **VendaAI** exibe a **lista de pedidos ca
 
 </ManualHeader>
 
+## Lista de pedidos
+
 A interface apresenta um **campo de pesquisa no topo**, facilitando a localização de **pedidos específicos** por **código**, **cliente** ou **vendedor**.
 
 Os pedidos são organizados em uma **tabela estruturada**, com colunas que exibem dados como **ações**, **empresa**, **código web**, **status**, **cliente**, **tipo**, **condição de pagamento**, **preço total** e **vendedor**.
@@ -25,6 +28,8 @@ Na parte superior direita da tela, há um botão de **filtros**, que permite a *
 A seguir, é apresentada uma **imagem de exemplo**:
 
 ![Listagem de pedidos, com filtros, exportação e criação de novo pedido](https://i.imgur.com/CNYgerp.png)
+
+## Criar um novo pedido
 
 Para incluir uma **nova venda**, é necessário clicar no botão **"+ Criar novo pedido"**, localizado no **canto superior direito**, e seguir o passo a passo abaixo:
 
@@ -45,6 +50,8 @@ Para incluir uma **nova venda**, é necessário clicar no botão **"+ Criar novo
 </ListaCard>
 
 ![Tela de cadastro do pedido](https://i.imgur.com/Nuc9Lw4.png)
+
+## Produtos e finalização
 
 Depois siga com:
 

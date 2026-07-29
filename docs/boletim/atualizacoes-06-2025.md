@@ -1,6 +1,5 @@
 ---
 title: 'Atualizações - Jun/25'
-sidebar_position: 2
 description: 'Atualizações ZEROUM de Junho/2025 — melhorias de produto padrão e novos recursos modulados do VendaAI.'
 hide_title: true
 ---
@@ -21,6 +20,8 @@ As melhorias abaixo já estão prontas e podem ser habilitadas gratuitamente sob
 
 ### 1. Produtos Encomenda (Reserva de Estoque)
 
+<Selo tipo="padrao" />
+
 Permite reservar produtos no estoque para um orçamento específico antes da finalização do pedido.  
 > **Menu:** Vendas → Ações (no orçamento) → Reservar Estoque
 
@@ -31,6 +32,8 @@ O produto fica marcado com status **ENCOMENDA**, impedindo que seja vendido para
 ---
 
 ### 2. Habilitar Manutenção de Integrações
+
+<Selo tipo="padrao" />
 
 Quando há manutenção no ERP, essa opção exibe automaticamente um aviso para os usuários, bloqueando integrações temporariamente.
 
@@ -47,6 +50,8 @@ A mensagem pode ser personalizada conforme o estilo de comunicação da empresa.
 Os recursos abaixo são ativados mediante contratação e acompanhamento, garantindo suporte dedicado e customizações conforme necessidade.
 
 ### 1. Painel de Produtos
+
+<Selo tipo="modulado" />
 
 Nova aba para **cadastro e gestão completa do catálogo** diretamente no VendaAI — com filtros avançados, edição simplificada e a possibilidade de cadastrar produtos sem depender do ERP.
 
@@ -76,8 +81,6 @@ No painel de edição é possível configurar informações como **categoria, ma
 - **Configuração de Catálogo**: personalize nome, código e links utilizados no catálogo do produto.
 - **Controle de Venda**: habilite ou desabilite a disponibilidade do item para comercialização.
 
-
-
 ---
 
 #### Precificação e Gestão Comercial
@@ -106,6 +109,8 @@ Os registros exibem informações de execução, status do processamento e tenta
 
 ### 2. Expedição no VendaAI
 
+<Selo tipo="modulado" />
+
 Controle completo do processo de entrega, com atualização automática das fases:  
 
 **Aguardando → Separação → Conferência → Faturamento → Pronto para Envio → Trânsito → Finalizados**
@@ -119,17 +124,22 @@ Controle completo do processo de entrega, com atualização automática das fase
 
 ### 3. Integração FRETERAPIDO
 
+<Selo tipo="modulado" />
+
 Sincronização automática dos pedidos do e-commerce com a plataforma Frete Rápido, facilitando o gerenciamento logístico.
 
 ---
 
 ### 4. Integração WAKE - Ecommerce
 
+<Selo tipo="modulado" />
+
 Pedidos realizados via plataforma WAKE são integrados diretamente no VendaAI, centralizando vendas e estoque.
 
 ---
 
 import HabilitarMelhorias from '@site/src/components/HabilitarMelhorias';
+import Selo from '@site/src/components/shared/Selo';
 
 ## Habilitar Melhorias
 

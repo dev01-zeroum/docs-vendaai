@@ -46,4 +46,3 @@ A seção **Frete Rápido** permite configurar a integração com a plataforma *
 - **CEP de origem do expedidor** – CEP utilizado como origem para o cálculo das cotações de frete.
 
 </ListaCard>
-

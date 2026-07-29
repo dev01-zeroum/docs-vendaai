@@ -27,4 +27,3 @@ A seção **Prospects (Visualização)** permite configurar os campos obrigatór
 - **Campos obrigatórios** – Permite selecionar quais informações deverão ser obrigatoriamente preenchidas durante o cadastro de um prospect.
 
 </ListaCard>
-

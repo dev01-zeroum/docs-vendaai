@@ -1,5 +1,6 @@
 ---
 title: 'Negócios (CRM)'
+description: 'Negócios (CRM) no VendaAI: funis de vendas, oportunidades e acompanhamento das negociações.'
 hide_title: true
 ---
 
@@ -93,15 +94,15 @@ Se desejar **restringir o uso do funil** a determinados **usuários ou filiais**
 
 ![Configuração de acessos do funil por usuários, autorizações e unidades organizacionais](https://i.imgur.com/ANlIe8G.png)
 
-Se os **campos de acesso** forem deixados em branco, todos os **usuários com acesso ao CRM** poderão utilizar o **funil**. 
+Se os **campos de acesso** forem deixados em branco, todos os **usuários com acesso ao CRM** poderão utilizar o **funil**.
 
-Clique em **“Salvar”**. 
+Clique em **“Salvar”**.
 
 Após isso, o **novo funil** será exibido na **lista de funis** e poderá ser selecionado no **CRM** ao criar novos **negócios**.
 
 ---
 
-## 3 - Teste o Funil 
+## 3 - Teste o Funil
 
 <ListaCard>
 
@@ -167,4 +168,3 @@ As colunas podem incluir etapas como:
 Cada coluna reúne os **negócios em andamento** e seus respectivos **valores**, facilitando o acompanhamento das oportunidades comerciais.
 
 O **VendaAI** oferece um ambiente **intuitivo e estratégico** para o gerenciamento de negócios, permitindo o **acompanhamento detalhado de cada etapa do funil de vendas** e contribuindo para uma melhor **organização comercial** e **tomada de decisões estratégicas**.
-

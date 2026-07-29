@@ -143,4 +143,3 @@ A seção **ZEROUM Reporting** permite configurar a integração com o serviço 
 - **URL para geração de relatórios** – Endereço utilizado pelo sistema para emissão e geração de relatórios.
 
 </ListaCard>
-

@@ -1,6 +1,5 @@
 ---
 title: 'Atualizações - Jan/25'
-sidebar_position: 1
 description: 'Atualizações ZEROUM de Janeiro/2025 — melhorias de produto padrão e novos recursos modulados do VendaAI.'
 hide_title: true
 ---
@@ -21,6 +20,8 @@ As melhorias abaixo já estão prontas e podem ser habilitadas gratuitamente sob
 
 ### 1. Combos e Kits
 
+<Selo tipo="padrao" />
+
 Agrupe produtos em pacotes com preços promocionais para incentivar vendas combinadas.  
 > **Menu:** Registros → Produtos → Produtos Kits
 
@@ -33,6 +34,8 @@ Ideal para aumentar o ticket médio e destacar conjuntos de produtos.
 
 ### 2. Produtos Relacionados e Complementares
 
+<Selo tipo="padrao" />
+
 Permite criar vínculos entre produtos semelhantes ou que se complementam.  
 > **Menu:** Painel de Produtos → Aba Produtos Relacionados
 
@@ -43,6 +46,8 @@ Facilita sugestões automáticas, melhora a navegação e pode aumentar o volume
 ---
 
 ### 3. Avise Quando Chegar
+
+<Selo tipo="padrao" />
 
 Permite que o cliente receba um e-mail quando o produto, anteriormente sem estoque, estiver novamente disponível.
 
@@ -64,6 +69,8 @@ Os recursos abaixo são ativados mediante contratação e acompanhamento, garant
 
 ### 1. Pesquisa de Satisfação
 
+<Selo tipo="modulado" />
+
 Enviada automaticamente após a entrega, essa pesquisa avalia a experiência do cliente e gera relatórios para melhoria contínua.
 
 - Pode ser desabilitada para clientes específicos.  
@@ -74,6 +81,8 @@ Enviada automaticamente após a entrega, essa pesquisa avalia a experiência do 
 ---
 
 ### 2. Consultas de Comissões
+
+<Selo tipo="modulado" />
 
 Consulta detalhada do valor de comissões baseado nas vendas realizadas.
 
@@ -86,6 +95,8 @@ Consulta detalhada do valor de comissões baseado nas vendas realizadas.
 
 ### 3. Alíquota por Estado
 
+<Selo tipo="modulado" />
+
 Configuração de alíquotas específicas para vendas interestaduais, aplicando percentuais ao preço final conforme o estado de destino.
 
 > Regra não aplicada para retiradas ou entregas no estado de São Paulo.
@@ -95,6 +106,7 @@ Configuração de alíquotas específicas para vendas interestaduais, aplicando 
 ---
 
 import HabilitarMelhorias from '@site/src/components/HabilitarMelhorias';
+import Selo from '@site/src/components/shared/Selo';
 
 ## Habilitar Melhorias
 

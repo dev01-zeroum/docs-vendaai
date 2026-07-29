@@ -1,5 +1,6 @@
 ---
 title: 'Consultas'
+description: 'Consultas do VendaAI: dados de clientes, pedidos, comissões, estoque e pesquisas integrados ao Protheus.'
 hide_title: true
 ---
 
@@ -185,6 +186,3 @@ Por meio das consultas disponíveis, é possível acompanhar informações relac
 Os recursos de filtragem permitem localizar informações com maior precisão, utilizando diferentes critérios de busca e períodos específicos.
 
 Além disso, a exibição dos dados em tabelas estruturadas facilita o acompanhamento operacional, o controle dos processos e a tomada de decisões estratégicas.
-
-
-

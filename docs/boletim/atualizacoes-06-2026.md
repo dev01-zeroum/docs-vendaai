@@ -1,12 +1,12 @@
 ---
 title: 'Atualizações - Jun/26'
-sidebar_position: 4
 description: 'Atualizações ZEROUM de Junho/2026 — melhorias de produto padrão e novos recursos modulados do VendaAI.'
 hide_title: true
 ---
 
 import BoletimHeader from '@site/src/components/boletim/BoletimHeader';
 import HabilitarMelhorias from '@site/src/components/HabilitarMelhorias';
+import Selo from '@site/src/components/shared/Selo';
 
 <BoletimHeader dataPublicacao="junho de 2026">
 
@@ -21,6 +21,8 @@ Este documento apresenta melhorias padrão e novos recursos modulados disponibil
 As melhorias abaixo já estão prontas e podem ser habilitadas gratuitamente sob demanda. Todas passam por validação junto ao time de suporte e testes antes da ativação definitiva.
 
 ### 1. Bloqueio de Edição de Campos (Somente Visualização)
+
+<Selo tipo="padrao" />
 
 Permite bloquear a edição de campos específicos, tornando-os disponíveis apenas para visualização durante os processos do sistema.
 
@@ -38,6 +40,8 @@ Os recursos abaixo são ativados mediante contratação e acompanhamento, garant
 
 ### 1. Pedidos em Dólar
 
+<Selo tipo="modulado" />
+
 Agora, o VendaAI permite a criação de pedidos em dólar, ampliando as possibilidades comerciais para empresas que atuam com operações internacionais ou possuem negociações atreladas à moeda estrangeira.
 
 ![Pedidos em Dólar](https://imgur.com/r0Fz67M.png)
@@ -46,11 +50,15 @@ Agora, o VendaAI permite a criação de pedidos em dólar, ampliando as possibil
 
 ### 2. Integração com PIX Rede
 
+<Selo tipo="modulado" />
+
 O VendaAI passa a contar com integrações com diversos meios de pagamento, como **Itaú, Rede, Cielo, PagSeguro, Mercado Pago, Banco do Brasil, PIX e cartões**. Com isso, o processo de cobrança se torna mais flexível, oferecendo mais opções de pagamento aos clientes.
 
 ---
 
 ### 3. Integração com Frete Rápido e Intelipost
+
+<Selo tipo="modulado" />
 
 Com a integração com plataformas como **Frete Rápido** e **Intelipost**, o VendaAI possibilita a cotação de fretes em tempo real, trazendo mais agilidade na definição de valores e maior precisão nas entregas.
 
@@ -65,6 +73,8 @@ Conforme demonstrado, são apresentadas diferentes opções de transportadoras, 
 ---
 
 ### 4. Desmembramento de pedidos
+
+<Selo tipo="modulado" />
 
 Foi disponibilizada a funcionalidade de **desmembramento de pedidos** conforme regras definidas pelo cliente, permitindo a separação dos itens de acordo com a necessidade e trazendo mais organização ao processo.
 

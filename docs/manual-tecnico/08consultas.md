@@ -55,4 +55,3 @@ A seção **Pedidos de Compras de um Produto** permite configurar as informaçõ
 - **Colunas exibidas na listagem** – Permite selecionar as colunas que serão apresentadas na consulta de pedidos de compra dos produtos.
 
 </ListaCard>
-

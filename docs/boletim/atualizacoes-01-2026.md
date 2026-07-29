@@ -1,6 +1,5 @@
 ---
 title: 'Atualizações - Jan/26'
-sidebar_position: 3
 description: 'Atualizações ZEROUM de Janeiro/2026 — melhorias de produto padrão e novos recursos modulados do VendaAI.'
 hide_title: true
 ---
@@ -19,9 +18,11 @@ Este documento apresenta melhorias padrão e novos recursos modulados disponibil
 
 As melhorias abaixo já estão prontas e podem ser habilitadas gratuitamente sob demanda. Todas passam por validação junto ao time de suporte e testes antes da ativação definitiva.
 
-### 1. Atualização automática de preços ao copiar vendas 
+### 1. Atualização automática de preços ao copiar vendas
 
-Ao copiar uma venda, o sistema passa a considerar automaticamente o preço da tabela vigente no momento da nova operação. 
+<Selo tipo="padrao" />
+
+Ao copiar uma venda, o sistema passa a considerar automaticamente o preço da tabela vigente no momento da nova operação.
 
 Com isso, copiando a venda, o preço irá atualizar para o atual conforme o produto/tabela copiado.
 
@@ -37,7 +38,9 @@ Os recursos abaixo são ativados mediante contratação e acompanhamento, garant
 
 ### 1. Configurador de produtos
 
-Através do configurador de produtos, é possível montar novos produtos a partir da combinação de itens já cadastrados no sistema. 
+<Selo tipo="modulado" />
+
+Através do configurador de produtos, é possível montar novos produtos a partir da combinação de itens já cadastrados no sistema.
 
 ![Configurador de Produtos](https://imgur.com/hyda1ab.png)
 
@@ -49,11 +52,13 @@ Durante a criação de um produto configurado, é possível selecionar e combina
 
 ![Configurador de Produtos 3](https://imgur.com/qfCb5x1.png)
 
-Depois de criar, é possível organizá-los e agrupá-los dentro de um projeto, e após isso, o produto poderá ser cadastrado no ERP como um produto novo, durante a criação do pedido. 
+Depois de criar, é possível organizá-los e agrupá-los dentro de um projeto, e após isso, o produto poderá ser cadastrado no ERP como um produto novo, durante a criação do pedido.
 
 ---
 
 ### 2. Painel de cobrança
+
+<Selo tipo="modulado" />
 
 Centralize e gerencie cobranças em um único painel
 
@@ -63,11 +68,12 @@ O painel de cobrança permite visualizar e gerenciar títulos de dívida de form
 
 Para acessar, vá em Negócios → Painel de Cobrança.
 
-Através do painel de cobrança, você tem acesso às principais informações dos títulos, como status (vencido ou em aberto), valor, juros, saldo e datas, facilitando o processo de cobrança dos seus clientes. Também é possível enviar notificações de títulos em aberto via e-mail. 
+Através do painel de cobrança, você tem acesso às principais informações dos títulos, como status (vencido ou em aberto), valor, juros, saldo e datas, facilitando o processo de cobrança dos seus clientes. Também é possível enviar notificações de títulos em aberto via e-mail.
 
 ---
 
 import HabilitarMelhorias from '@site/src/components/HabilitarMelhorias';
+import Selo from '@site/src/components/shared/Selo';
 
 ## Habilitar Melhorias
 

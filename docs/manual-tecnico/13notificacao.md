@@ -60,4 +60,3 @@ A seção **Discord** permite configurar a integração com um servidor do Disco
 - **Channel ID** – Identificador do canal onde as notificações serão enviadas.
 
 </ListaCard>
-

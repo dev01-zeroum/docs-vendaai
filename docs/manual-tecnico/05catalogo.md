@@ -74,4 +74,3 @@ A seção **Produtos** permite configurar o comportamento da pesquisa de produto
 - **Modelo da busca de produtos** – Define o método utilizado para localizar produtos durante a pesquisa no catálogo.
 
 </ListaCard>
-

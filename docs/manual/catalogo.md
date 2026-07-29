@@ -1,5 +1,6 @@
 ---
 title: 'Catálogo'
+description: 'O Catálogo do VendaAI: consulta de produtos, preços personalizados por cliente e filtros de estoque.'
 hide_title: true
 ---
 
@@ -13,6 +14,8 @@ O painel da aba **Catálogo** exibe uma **janela modal de seleção de clientes*
 
 </ManualHeader>
 
+## Seleção do cliente
+
 A interface conta com um **campo de pesquisa na parte superior**, que facilita a localização de **clientes específicos** de forma rápida e eficiente:
 
 ![Janela de seleção de clientes, com campo de pesquisa no topo](https://i.imgur.com/h72thdl.png)
@@ -22,6 +25,8 @@ A tabela apresentada organiza as informações em **colunas estruturadas**, como
 Ao lado de cada registro, há o botão azul **“Selecionar”**, que permite escolher o **cliente desejado** para consulta de **preços personalizados**:
 
 ![Botão “Selecionar” ao lado de cada cliente da lista](https://i.imgur.com/gMeQgat.png)
+
+## Filtros de busca
 
 Na parte inferior da tela principal, encontram-se **filtros relacionados ao Estoque**, que permitem exibir **produtos disponíveis ou indisponíveis**.
 
@@ -33,9 +38,10 @@ A seguir, é apresentada a **imagem da janela**:
 
 ![Filtros do catálogo: estoque, preço máximo, categorias e grupos](https://i.imgur.com/wHCw1LV.png)
 
+## Lista de produtos
+
 Os **produtos** são organizados em **cartões individuais**, que contêm informações como **nome**, **código do produto**, **quantidade em estoque** e **preço unitário**.
 
 Cada item possui um botão de **adição ao carrinho**, permitindo sua **inclusão rápida na compra**:
 
 ![Produtos do catálogo em cartões, com botão de adicionar ao carrinho](https://i.imgur.com/KbHgJ0m.png)
-

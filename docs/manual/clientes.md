@@ -1,5 +1,6 @@
 ---
 title: 'Clientes'
+description: 'A aba Clientes do VendaAI: cadastro, consulta e gestão da carteira, com informações detalhadas de cada cliente.'
 hide_title: true
 ---
 
@@ -14,11 +15,15 @@ O painel da aba **Clientes** exibe a **lista de clientes cadastrados**, permitin
 
 </ManualHeader>
 
+## Lista de clientes
+
 A interface apresenta um **campo de pesquisa no topo**, facilitando a localização de **clientes específicos**.
 
 Os clientes são organizados em uma **tabela estruturada**, com colunas que exibem dados como **nome**, **CPF/CNPJ**, **telefone**, **WhatsApp**, **tipo de cliente**, **vendedor associado**, **código** e **status de atividade**.
 
 Cada linha da tabela possui um botão de **ações**, permitindo **interações rápidas** com os registros.
+
+## Filtros e exportação
 
 Na lateral direita da tela, há um botão de **filtros**, que possibilita a **segmentação dos clientes** conforme critérios específicos. Além disso, estão disponíveis opções para **exportação de dados para Excel** e **criação de novos clientes**, tornando a gestão mais **eficiente**.
 
@@ -49,11 +54,10 @@ Para criar um cliente, é necessário clicar no botão **“Criar novo cliente�
 
 ![Cadastro de cliente — dados principais](https://i.imgur.com/WtAikmm.png)
 
+## Endereço e conclusão
+
 Após isso, devem ser preenchidas as **informações de endereço do cliente**:
 
 ![Cadastro de cliente — endereço](https://i.imgur.com/xK0h9Yz.png)
 
 Por fim, clique em **”Salvar”**. Pronto, o **cliente foi criado com sucesso**.
-
-
-

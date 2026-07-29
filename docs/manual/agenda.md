@@ -1,5 +1,6 @@
 ---
 title: 'Agenda'
+description: 'A Agenda do VendaAI: tarefas, compromissos e relatórios de atividades da equipe comercial.'
 hide_title: true
 ---
 
@@ -13,6 +14,8 @@ import ListaCard from '@site/src/components/shared/ListaCard';
 Na **Agenda**, os usuários podem acessar **relatórios específicos de vendedores**, permitindo uma visão detalhada do **desempenho** e das **atividades realizadas**.
 
 </ManualHeader>
+
+## Modos de visualização
 
 A interface possibilita a visualização das **tarefas e compromissos**, com opções para alternar entre os modos:
 
@@ -28,13 +31,15 @@ Esses modos facilitam a **organização da rotina** e o **acompanhamento das ati
 
 ![Agenda em grade horária, com os compromissos distribuídos ao longo do dia](https://i.imgur.com/ve49aOh.png)
 
+## Criando e localizando atividades
+
 Na parte superior da tela, no canto superior direito, encontra-se o botão azul **“+ Atividade”**, que permite a **adição de compromissos diretamente no sistema**.
 
 Além disso, os **filtros** e o **campo de pesquisa** possibilitam refinar as buscas e localizar **atividades específicas** com mais facilidade.
 
 O layout apresenta uma **grade horária**, na qual os compromissos podem ser distribuídos ao longo do dia. Esse formato estruturado facilita o **planejamento**, o **acompanhamento das atividades** e proporciona maior **controle sobre as tarefas agendadas**.
 
-### Principais funcionalidades da Agenda
+## Principais funcionalidades
 
 <ListaCard>
 
@@ -45,4 +50,3 @@ O layout apresenta uma **grade horária**, na qual os compromissos podem ser dis
 5. **Defina Metas** – Estabeleça **metas diárias ou semanais** para manter as atividades alinhadas aos objetivos comerciais.
 
 </ListaCard>
-

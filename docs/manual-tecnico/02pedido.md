@@ -336,4 +336,3 @@ A seção **Regras de Negócio** permite definir validações obrigatórias dura
 - **Exigir regra para condição de pagamento** – Obriga a utilização de uma regra válida para a condição de pagamento selecionada.
 
 </ListaCard>
-

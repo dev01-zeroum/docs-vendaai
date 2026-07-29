@@ -1,5 +1,6 @@
 ---
 title: 'Página Inicial'
+description: 'A Página Inicial do VendaAI: campanhas, comunicados e conteúdos institucionais do painel.'
 hide_title: true
 ---
 
@@ -31,6 +32,8 @@ Após iniciar a criação, preencha os **campos disponíveis** para inserir o **
 
 ![Formulário de criação de conteúdo da Página Inicial](https://i.imgur.com/KVgC4pz.png)
 
+## Campos do conteúdo
+
 Preencha os seguintes **campos** para configurar o conteúdo:
 
 <ListaCard>
@@ -46,6 +49,8 @@ Preencha os seguintes **campos** para configurar o conteúdo:
 
 ![Configurações de datas e código](https://i.imgur.com/s4a4bKG.png)
 
+## Período de exibição
+
 E os campos adicionais de período e identificação:
 
 <ListaCard>
@@ -57,8 +62,3 @@ E os campos adicionais de período e identificação:
 </ListaCard>
 
 Após preencher os **campos necessários**, clique em **“Salvar”** para disponibilizar o conteúdo na **Página Inicial**.
-
-
-
-
-

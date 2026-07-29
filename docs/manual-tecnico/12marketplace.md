@@ -36,4 +36,3 @@ A seção **Wake** permite configurar a integração com a plataforma **Wake**, 
 - **Armazém do estoque** – Define o armazém utilizado para consulta e baixa de estoque dos pedidos integrados.
 
 </ListaCard>
-
