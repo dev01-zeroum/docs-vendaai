@@ -80,5 +80,103 @@ module.exports = {
         {type: 'doc', id: 'manual/registros', label: 'Registros'},
       ],
     },
+    {
+      type: 'category',
+      label: 'Manual Dosan',
+      collapsed: false,
+      items: [
+        {type: 'doc', id: 'manual-dosan/00inicio', label: 'Sobre o Dosan'},
+        {type: 'doc', id: 'manual-dosan/01acesso', label: 'Acessando o Dosan'},
+        {
+          type: 'doc',
+          id: 'manual-dosan/02paginainicial',
+          label: 'Página Inicial',
+          key: 'home-manual-dosan',
+        },
+        {
+          type: 'doc',
+          id: 'manual-dosan/03dashboard',
+          label: 'Dashboard',
+          key: 'dashboard-manual-dosan',
+        },
+        {
+          type: 'doc',
+          id: 'manual-dosan/04rotas',
+          label: 'Rotas',
+          key: 'routes-manual-dosan',
+        },
+        {type: 'doc', id: 'manual-dosan/05rastreio', label: 'Rastreio'},
+        {
+          type: 'doc',
+          id: 'manual-dosan/06distribuicao',
+          label: 'Distribuição',
+          key: 'distribution-manual-dosan',
+        },
+        {type: 'doc', id: 'manual-dosan/07entregas', label: 'Entregas'},
+        {type: 'doc', id: 'manual-dosan/08cargas', label: 'Cargas'},
+        {type: 'doc', id: 'manual-dosan/09contratantes', label: 'Contratantes'},
+        {
+          type: 'doc',
+          id: 'manual-dosan/10aplicativo-movel',
+          label: 'Uso em dispositivos móveis',
+        },
+      ],
+    },
+  ],
+
+  // Menu lateral próprio do Manual Técnico do Dosan — mesmo esquema do
+  // Manual Técnico do VendaAI: acesso por link, fora do menu principal.
+  manualTecnicoDosan: [
+    {
+      type: 'doc',
+      id: 'manual-tecnico-dosan/00inicio',
+      label: 'Página Inicial',
+      key: 'home-manual-tecnico-dosan',
+    },
+    {
+      type: 'category',
+      label: 'Fluxos',
+      key: 'fluxos-manual-tecnico-dosan',
+      collapsed: false,
+      items: [
+        {type: 'doc', id: 'manual-tecnico-dosan/01carga', label: 'Carga'},
+        {type: 'doc', id: 'manual-tecnico-dosan/02entrega', label: 'Entrega'},
+        {
+          type: 'doc',
+          id: 'manual-tecnico-dosan/03distribuicao',
+          label: 'Distribuição',
+          key: 'distribution-manual-tecnico-dosan',
+        },
+        {
+          type: 'doc',
+          id: 'manual-tecnico-dosan/04rotas',
+          label: 'Rotas',
+          key: 'routes-manual-tecnico-dosan',
+        },
+        {type: 'doc', id: 'manual-tecnico-dosan/05retira', label: 'Retira'},
+        {
+          type: 'doc',
+          id: 'manual-tecnico-dosan/09dashboard',
+          label: 'Dashboard',
+          key: 'dashboard-manual-tecnico-dosan',
+        },
+        {
+          type: 'doc',
+          id: 'manual-tecnico-dosan/06status-integracoes',
+          label: 'Status e integrações',
+        },
+        {
+          type: 'doc',
+          id: 'manual-tecnico-dosan/07registros',
+          label: 'Registros',
+          key: 'records-manual-tecnico-dosan',
+        },
+        {
+          type: 'doc',
+          id: 'manual-tecnico-dosan/08administracao',
+          label: 'Administração',
+        },
+      ],
+    },
   ],
 };
