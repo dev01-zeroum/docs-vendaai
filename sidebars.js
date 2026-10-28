@@ -38,10 +38,11 @@ module.exports = {
         {type: 'doc', id: 'boletim/atualizacoes-06-2025', label: 'Atualizações - Jun/25'},
         {type: 'doc', id: 'boletim/atualizacoes-01-2026', label: 'Atualizações - Jan/26'},
         {type: 'doc', id: 'boletim/atualizacoes-06-2026', label: 'Atualizações - Jun/26'},
+        {type: 'doc', id: 'boletim/atualizacoes-07-2026', label: 'Atualizações - Jul/26'},
         {
           type: 'doc',
-          id: 'boletim/atualizacoes-07-2026',
-          label: 'Atualizações - Jul/26',
+          id: 'boletim/atualizacoes-08-2026',
+          label: 'Atualizações - Ago/26',
           className: 'sidebar-edicao-atual',
         },
       ],
