@@ -20,8 +20,6 @@ Este documento apresenta melhorias padrão e novos recursos modulados disponibil
 
 As melhorias abaixo já estão prontas e podem ser habilitadas gratuitamente sob demanda. Todas passam por validação junto ao time de suporte e testes antes da ativação definitiva.
 
-{/* TODO: CRM com novas funcionalidades, Templates de e-mail configuráveis */}
-
 ---
 
 ### 1. Tela de Login com carrossel
@@ -120,8 +118,6 @@ Com a rota publicada, o vendedor tem tudo na mão: as visitas em sequência, com
 Pela aba **Mapa**, a execução é acompanhada de perto: visitas concluídas e pendentes, progresso da rota, pedidos realizados, quilômetros percorridos e próxima visita, com acesso direto à navegação.
 
 Com a Roteirização, sua empresa ganha tempo no planejamento, reduz custos de deslocamento e transforma mais visitas em pedidos, com visibilidade total da produtividade da equipe em campo.
-
-{/* TODO: Premiação, Painel de Telefonia + IA Telefonia */}
 
 ---
 
