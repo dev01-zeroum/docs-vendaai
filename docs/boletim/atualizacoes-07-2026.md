@@ -54,7 +54,7 @@ Com essa melhoria, a busca por clientes torna-se mais prática, facilitando a lo
 
 ## Novos Recursos Modulados
 
-### 3. painel de análise de Crédito
+### 3. Painel de análise de Crédito
 
 <Selo tipo="modulado" />
 
@@ -63,8 +63,6 @@ O VendaAI passa a contar com um painel de análise de crédito, centralizando in
 ![Painel de análise de Crédito](https://imgur.com/Hf1Dsb7.png)
 
 O painel apresenta indicadores como score de crédito, nível de risco, percentual de inadimplência, utilização do limite, vencimento do crédito e recomendações de aprovação, revisão ou bloqueio. Com essas informações, é possível acompanhar a situação financeira dos clientes e realizar análises de forma mais rápida e assertiva.
-
----
 
 ---
 

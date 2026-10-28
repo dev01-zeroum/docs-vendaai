@@ -120,7 +120,7 @@ const COLUNAS = [
       {
         icone: 'changelog',
         label: 'Última Atualização',
-        to: '/boletim/atualizacoes-07-2026',
+        to: '/boletim/atualizacoes-08-2026',
       },
       {icone: 'sugestoes', label: 'Sugestões', to: '/fale-conosco/sugestoes'},
     ],
