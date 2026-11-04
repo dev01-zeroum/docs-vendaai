@@ -121,31 +121,45 @@ Com a Roteirização, sua empresa ganha tempo no planejamento, reduz custos de d
 
 ---
 
-### 4. Painel de E-mail, WhatsApp, Telegram e Instagram
+### 4. Painel de Atendimento: WhatsApp, E-mail, Telefone, Telegram e Instagram
 
 <Selo tipo="modulado" />
 
-O VendaAI passa a centralizar o atendimento aos clientes em um único ambiente, integrando e-mail, WhatsApp, Telegram e Instagram ao CRM e permitindo que a equipe acompanhe todas as conversas sem sair do sistema.
+Tudo em um único lugar. Com o Painel de Atendimento do VendaAI, sua equipe conversa com os clientes por WhatsApp, e-mail, telefone, Telegram e Instagram sem sair do CRM. Cada mensagem, e-mail e ligação ficam registrados junto ao cliente e ao negócio, e a inteligência artificial grava, transcreve e resume as conversas para que nenhuma informação se perca.
 
-![Integração de canais](https://imgur.com/3cvlRi4.png)
+- Todos os canais de atendimento em uma só tela
+- Telefone integrado: ligue para o cliente com um clique, pelo ramal da empresa
+- Gravação, transcrição e resumo das ligações com IA
+- Cada conversa vinculada ao cliente, ao contato e ao negócio
+- Novos prospects, contatos e negócios criados direto do atendimento
+
+**Menu → Prospecção → Vendas → Conversas**
+
+![Painel de Atendimento - Conversas](https://imgur.com/fqUX2Jc.png)
+
+As conversas de WhatsApp, Telegram e Instagram chegam em uma única fila, separadas entre aguardando, em atendimento e em atendimento automático por bot. O vendedor busca por nome, telefone ou mensagem, ouve os áudios, responde e finaliza o atendimento ali mesmo, com o histórico completo do cliente.
+
+E o telefone está sempre à mão: pelo discador integrado, o vendedor liga para o cliente usando o ramal da empresa e consulta as últimas ligações sem trocar de tela.
+
+**Menu → Prospecção → Vendas → Caixa de entrada**
+
+![Painel de Atendimento - Caixa de entrada](https://imgur.com/Fds2nex.png)
+
+Os e-mails da equipe também chegam ao VendaAI. Direto da mensagem, é possível responder, responder a todos e encaminhar, além de vincular o e-mail a um cliente, contato ou negócio já existente, ou cadastrar na hora um novo prospect, contato ou negócio. O e-mail deixa de ficar perdido na caixa pessoal e passa a fazer parte do histórico comercial.
+
+**Menu → Prospecção → Vendas → Ligações**
+
+![Painel de Atendimento - Ligações](https://imgur.com/qpagdTe.png)
+
+Toda ligação fica registrada com data, duração, direção e status. As chamadas são **gravadas** e podem ser ouvidas em outras velocidades ou baixadas, e a **transcrição** automática mostra quem disse o quê, minuto a minuto, com busca dentro da conversa. Com a **inteligência artificial**, cada ligação ganha um **resumo** com os principais pontos tratados. E o VendaAI ainda sugere o cliente certo a partir dos contatos da ligação, para vincular com um clique.
 
 **Menu → Conversas → Canais de atendimento**
 
-Nos canais de atendimento, é possível conectar números de WhatsApp pelo QR code ou pela API oficial do WhatsApp Business (Meta Cloud API), com modelos de mensagem aprovados, além de bots do Telegram e contas do Instagram para mensagens diretas. Cada canal apresenta o seu status de conexão e pode ser editado, ter membros definidos, ser atualizado ou desconectado.
+![Painel de Atendimento - Canais](https://imgur.com/3cvlRi4.png)
 
-![Integração de canais 2](https://imgur.com/WdjwklZ.png)
+Para começar, basta conectar os canais da empresa: números de WhatsApp pelo QR code ou pela API oficial do WhatsApp Business (Meta Cloud API), bots do Telegram, contas do Instagram e contas de e-mail, com escolha das pastas sincronizadas e Cco inteligente. Cada canal mostra o seu status de conexão e tem os membros definidos.
 
-**Menu → Conversas → Conversas**
-
-As conversas ficam organizadas entre aguardando atendimento, em atendimento e em atendimento automático por bot, com busca por nome, telefone ou mensagem. Ao selecionar uma conversa, o sistema apresenta o cliente, os contatos e o negócio vinculados, mantendo o histórico comercial junto ao atendimento.
-
-![Integração de canais 3](https://imgur.com/3kG0OzS.png)
-
-**Menu → Conversas → Caixa de entrada**
-
-Na caixa de entrada, as contas de e-mail são conectadas ao VendaAI, com a escolha das pastas sincronizadas, configurações de sincronismo, remetentes para envio e Cco inteligente, centralizando também a comunicação por e-mail.
-
-Com essa integração, o relacionamento com o cliente fica concentrado em um só lugar, agilizando o atendimento e dando mais visibilidade sobre as negociações em andamento.
+Com o Painel de Atendimento, o relacionamento com o cliente fica concentrado em um só lugar: menos tempo trocando de ferramenta, nenhuma conversa perdida e o histórico completo de cada negociação.
 
 ---
 
